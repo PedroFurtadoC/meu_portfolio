@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Meu Portfólio</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fale Conosco</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Entre em Contato</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required minlength="3"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required><br>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required minlength="10"></textarea><br>
+
+            <label for="assunto">Assunto:</label>
+            <select id="assunto" name="assunto">
+                <option value="servicos">Serviços</option>
+                <option value="duvidas">Dúvidas</option>
+                <option value="outros">Outros</option>
+            </select><br>
+
+            <label for="contato_preferencial">Contato Preferencial:</label><br>
+            <input type="radio" id="email_contato" name="contato_preferencial" value="email" checked>Email
+            <input type="radio" id="telefone_contato" name="contato_preferencial" value="telefone">Telefone<br>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </section>
+    <footer>
+        <p>Todos os direitos reservados © 2024</p>
+    </footer>
+</body>
+</html>
