@@ -2,13 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Meu Portfólio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS Externo -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Meu Portfólio</h1>
-        <nav>
+
+    <!-- Header fixo -->
+    <header class="main-header">
+        <nav class="navbar">
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -19,13 +26,59 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>Bem-vindo!</h2>
-        <p style="color: blue;">Este é um exemplo de CSS Inline para demonstração.</p>
-        <p>Meu portfólio está aqui para demonstrar minhas habilidades em desenvolvimento web.</p>
+
+    <!-- Seção inicial com texto e foto -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <!-- Texto de saudação e botão -->
+            <div class="intro-content" data-aos="fade-right">
+                <h1>Olá, eu sou <span>Pedro</span></h1>
+                <p>Estudante de Engenharia da Computação, amante de tecnologia e inovação!</p>
+                <a href="#timeline" class="btn-primary">Conheça-me</a>
+
+                <!-- Links para Redes Sociais e Currículo -->
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/pedro-furtado-33159023b" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/PedroFurtadoC" target="_blank">GitHub</a>
+                    <a href="https://linktr.ee/Pedro_Furtado1" target="_blank">Linktree</a>
+                    <a href="../assets/curriculo.pdf" download>Baixar Currículo</a>
+                </div>
+            </div>
+
+            <!-- Foto de Perfil responsiva e sem sombra -->
+            <div class="intro-picture" data-aos="fade-left">
+                <img src="../assets/images/profile-picture.png" alt="Foto de Perfil">
+            </div>
+        </div>
     </section>
+
+    <!-- Linha do tempo dos projetos -->
+    <section id="timeline" class="timeline-section">
+        <h2 data-aos="fade-up">Meus Projetos e Quem Sou Eu</h2>
+        <div class="timeline-container" data-aos="fade-up">
+            <div class="timeline-item">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
         <p>Todos os direitos reservados © 2024</p>
     </footer>
+
+    <!-- Script para AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+    </script>
 </body>
 </html>
