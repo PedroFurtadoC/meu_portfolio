@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades - Meu Portfólio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header fixo -->
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="habilidades.html" class="active">Habilidades</a></li>
+                <li><a href="experiencias.html">Experiências</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Habilidades -->
+    <section class="skills-section">
+        <div class="skills-header" data-aos="fade-down">
+            <h1>Minhas Habilidades</h1>
+            <p>Aqui estão as principais habilidades que desenvolvi ao longo dos anos, seja em projetos pessoais, profissionais ou acadêmicos. Confira meu nível de proficiência em cada uma.</p>
+        </div>
+
+        <div class="skills-container">
+            <!-- Desenvolvimento Web -->
+            <div class="skill-card" data-aos="fade-up">
+                <img src="../assets/icons/html-5.png" alt="HTML5" class="skill-icon">
+                <img src="../assets/icons/css-3.png" alt="CSS3" class="skill-icon">
+                <img src="../assets/icons/react.png" alt="React" class="skill-icon">
+                <h2>Desenvolvimento Web</h2>
+                <p>Criação de sites e aplicações responsivas, usando tecnologias modernas como HTML5, CSS3 e React.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                    <span class="progress-label">90%</span>
+                </div>
+            </div>
+
+            <!-- Desenvolvimento Mobile -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="../assets/icons/react-native.png" alt="React Native" class="skill-icon">
+                <h2>Desenvolvimento Mobile</h2>
+                <p>Criação de aplicativos mobile multiplataforma usando React Native e outras ferramentas modernas.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                    <span class="progress-label">85%</span>
+                </div>
+            </div>
+
+            <!-- Python e Automação -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="../assets/icons/python.png" alt="Python" class="skill-icon">
+                <h2>Automação com Python</h2>
+                <p>Automação de tarefas e criação de scripts poderosos usando Python, seja para dados ou soluções de IA.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                    <span class="progress-label">80%</span>
+                </div>
+            </div>
+
+            <!-- Java -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="../assets/icons/java.png" alt="Java" class="skill-icon">
+                <h2>Desenvolvimento em Java</h2>
+                <p>Desenvolvimento de aplicações robustas em Java, com foco em backend e soluções escaláveis.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                    <span class="progress-label">75%</span>
+                </div>
+            </div>
+
+            <!-- Hardware & Sistemas Operacionais -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="../assets/icons/hardware.png" alt="Hardware" class="skill-icon">
+                <img src="../assets/icons/linux.png" alt="Linux" class="skill-icon">
+                <h2>Manutenção de Sistemas & Hardware</h2>
+                <p>Experiência na manutenção de sistemas operacionais (Linux, Windows) e montagem de soluções de hardware.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                    <span class="progress-label">70%</span>
+                </div>
+            </div>
+
+            <!-- Git & Controle de Versão -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                <img src="../assets/icons/git.png" alt="Git" class="skill-icon">
+                <h2>Git & Controle de Versão</h2>
+                <p>Gerenciamento de repositórios de código e controle de versões utilizando Git, GitHub e GitLab.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                    <span class="progress-label">90%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Todos os direitos reservados © 2024</p>
+    </footer>
+
+    <!-- Script para AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+    </script>
+</body>
+</html>
