@@ -13,19 +13,22 @@
 </head>
 <body>
 
-    <!-- Header fixo -->
+    <!-- Header fixo com ícone do menu -->
     <header class="main-header">
         <nav class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html" class="active">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="habilidades.html">Habilidades</a></li>
-                <li><a href="experiencias.html">Experiências</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+          <span class="menu-toggle">
+            <img src="../assets/images/hamburguer.png" alt="Menu">
+          </span>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="experiencias.html">Experiências</a></li>
+            <li><a href="contato.html" class="active">Contato</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <!-- Seção sobre mim -->
     <section class="about-section">
@@ -66,5 +69,6 @@
         once: true,
       });
     </script>
+    <script src="../assets/js/navbar.js"></script>
 </body>
 </html>

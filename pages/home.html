@@ -1,98 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Meu Portfólio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <!-- AOS Library for Scroll Animations -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-</head>
-<body>
-
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header fixo -->
     <header class="main-header">
-        <nav class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="habilidades.html">Habilidades</a></li>
-                <li><a href="experiencias.html">Experiências</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+      <nav class="navbar">
+        <span class="menu-toggle">
+          <img src="../assets/images/hamburguer.png" alt="Menu">
+        </span>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="experiencias.html">Experiências</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>    
 
     <!-- Seção inicial com texto e foto -->
     <section class="intro-section">
-        <div class="intro-container">
-            <!-- Texto de saudação e botão -->
-            <div class="intro-content" data-aos="fade-right">
-                <h1>Olá, eu sou o <span>Pedro</span></h1>
-                <p>Estudante de Engenharia da Computação, amante de tecnologia e inovação!</p>
-                <a href="#timeline" class="btn-primary">Conheça-me</a>
+      <div class="intro-container">
+        <!-- Texto de saudação e botão -->
+        <div class="intro-content" data-aos="fade-right">
+          <h1>Olá, eu sou o <span>Pedro</span></h1>
+          <p>
+            Estudante de Engenharia da Computação, amante de tecnologia e
+            inovação!
+          </p>
+          <a href="#timeline" class="btn-primary">Conheça-me</a>
 
-                <!-- Links para Redes Sociais e Currículo -->
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/pedro-furtado-33159023b" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/PedroFurtadoC" target="_blank">GitHub</a>
-                    <a href="https://linktr.ee/Pedro_Furtado1" target="_blank">Linktree</a>
-                    <a href="../assets/curriculo.pdf" download>Baixar Currículo</a>
-                </div>
-            </div>
-
-            <!-- Foto de Perfil responsiva e sem sombra -->
-            <div class="intro-picture" data-aos="fade-left">
-                <img src="../assets/images/profile-picture.png" alt="Foto de Perfil">
-            </div>
+          <!-- Links para Redes Sociais e Currículo -->
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/pedro-furtado-33159023b"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/PedroFurtadoC" target="_blank"
+              >GitHub</a
+            >
+            <a href="https://linktr.ee/Pedro_Furtado1" target="_blank"
+              >Linktree</a
+            >
+            <a href="../assets/curriculo.pdf" download>Baixar Currículo</a>
+          </div>
         </div>
+
+        <!-- Foto de Perfil responsiva e sem sombra -->
+        <div class="intro-picture" data-aos="fade-left">
+          <img
+            src="../assets/images/profile-picture.png"
+            alt="Foto de Perfil"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Linha do tempo dos projetos -->
     <section id="timeline" class="timeline-section">
-        <h2 data-aos="fade-up">Meus Projetos</h2>
-        <div class="timeline-container">
-            <!-- Projeto 1 -->
-            <div class="timeline-item" data-aos="fade-up">
-                <div class="timeline-content">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-            </div>
-
-            <!-- Projeto 2 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="timeline-content">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-            </div>
-
-            <!-- Projeto 3 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="timeline-content">
-                    <h3>Projeto 3</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-            </div>
-
-            <!-- Projeto 4 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="timeline-content">
-                    <h3>Projeto 4</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-            </div>
+      <h2 data-aos="fade-up">Meus Projetos</h2>
+      <div class="timeline-container">
+        <!-- Projeto 1 -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-content">
+            <h3>Projeto 1</h3>
+            <p>Descrição breve do projeto.</p>
+          </div>
         </div>
+
+        <!-- Projeto 2 -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-content">
+            <h3>Projeto 2</h3>
+            <p>Descrição breve do projeto.</p>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-content">
+            <h3>Projeto 3</h3>
+            <p>Descrição breve do projeto.</p>
+          </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="timeline-content">
+            <h3>Projeto 4</h3>
+            <p>Descrição breve do projeto.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>Todos os direitos reservados © 2024</p>
+      <p>Todos os direitos reservados © 2024</p>
     </footer>
 
     <!-- Script para AOS -->
@@ -102,5 +124,6 @@
         duration: 1200, // Duração da animação
       });
     </script>
-</body>
+    <script src="../assets/js/navbar.js"></script>
+  </body>
 </html>
