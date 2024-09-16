@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre - Meu Portfólio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <!-- AOS Library for Scroll Animations -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-</head>
-<body>
-
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header fixo com ícone do menu -->
     <header class="main-header">
-        <nav class="navbar">
-          <span class="menu-toggle">
-            <img src="../assets/images/hamburguer.png" alt="Menu">
-          </span>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
-            <li><a href="experiencias.html">Experiências</a></li>
-            <li><a href="contato.html" class="active">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav class="navbar">
+        <span class="menu-toggle">
+          <img src="../assets/images/hamburguer.png" alt="Menu" />
+        </span>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="sobre.html" class="active">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="experiencias.html">Experiências</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Seção sobre mim -->
+    <!-- Seção unificada para Sobre Mim e Sobre o Projeto -->
     <section class="about-section">
-        <div class="about-container" data-aos="fade-right">
-            <h1>Sobre Mim</h1>
-            <p>
-                Sou Pedro, estudante de Engenharia da Computação com grande interesse por tecnologia, inovação e soluções digitais. 
-                Estou constantemente buscando aprender e melhorar minhas habilidades no desenvolvimento de projetos que possam impactar positivamente o mundo ao meu redor.
-            </p>
-            <p>
-                Tenho paixão por várias áreas da computação, especialmente no desenvolvimento web, automação e IA. Este portfólio foi criado com a intenção de compartilhar minha jornada e os projetos que desenvolvi ao longo do tempo, além de criar um espaço onde você possa conhecer um pouco mais sobre mim.
-            </p>
+      <div class="about-container" data-aos="fade-right">
+        <div class="about-box">
+          <h1>Sobre Mim</h1>
+          <p>
+            Meu nome é Pedro Furtado Cunha, tenho 20 anos e sou estudante de
+            Engenharia da Computação na Universidade de Ribeirão Preto (UNAERP).
+            Sou apaixonado por tecnologia e inovação, sempre buscando aprimorar
+            minhas habilidades e explorar novas fronteiras na área de TI.
+          </p>
+          <p>
+            Ao longo da minha jornada acadêmica e profissional, tenho me
+            dedicado a desenvolver projetos que combinam tecnologia e
+            criatividade para impactar positivamente o mundo ao meu redor. Este
+            portfólio é uma maneira de compartilhar essa trajetória, onde cada
+            projeto reflete o meu compromisso com o aprendizado contínuo e a
+            entrega de resultados de alta qualidade.
+          </p>
         </div>
+      </div>
     </section>
 
-    <!-- Seção sobre o projeto -->
-    <section class="project-section" data-aos="fade-up">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            Este site foi desenvolvido utilizando as melhores práticas de HTML5 e CSS3, focando em um design moderno, funcional e responsivo. 
-            O objetivo é mostrar minha evolução como desenvolvedor e compartilhar um pouco dos projetos que venho criando, além de criar uma conexão com aqueles que se interessam pelo meu trabalho.
-        </p>
-        <p>
-            Busquei criar uma experiência de navegação fluida e envolvente, utilizando animações suaves, tipografia elegante e um layout limpo e agradável para quem visita.
-        </p>
+    <!-- Seção de informações sobre o projeto -->
+    <section class="about-section">
+      <div class="about-container" data-aos="fade-up">
+        <div class="about-box">
+          <h1>Sobre o Projeto</h1>
+          <p>
+            Este site foi desenvolvido utilizando as melhores práticas de HTML5
+            e CSS3, com o objetivo de oferecer um design moderno, responsivo e
+            funcional. Ele reflete minha evolução como desenvolvedor e serve
+            como uma vitrine dos projetos que realizei ao longo da minha
+            formação.
+          </p>
+          <p>
+            O objetivo deste portfólio é não apenas mostrar minha experiência
+            técnica, mas também criar uma conexão com pessoas que compartilham
+            da mesma paixão por tecnologia. Busquei criar uma experiência de
+            navegação fluida e envolvente, com animações suaves, tipografia
+            elegante e um layout limpo que proporciona uma experiência agradável
+            para quem visita.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>Todos os direitos reservados © 2024</p>
+      <p>Todos os direitos reservados © 2024</p>
     </footer>
 
     <!-- Script para AOS -->
@@ -70,5 +96,5 @@
       });
     </script>
     <script src="../assets/js/navbar.js"></script>
-</body>
+  </body>
 </html>

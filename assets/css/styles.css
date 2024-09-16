@@ -103,6 +103,11 @@ h4 {
   }
 }
 
+
+
+
+
+
 /* Seção inicial ajustada */
 .intro-section {
   display: flex;
@@ -161,6 +166,11 @@ h4 {
 .btn-primary:hover {
   background-color: #e55555;
 }
+
+
+
+
+
 
 /* Redes Sociais */
 .social-links {
@@ -222,6 +232,11 @@ h4 {
   }
 }
 
+
+
+
+
+
 /* Foto de Perfil */
 .intro-picture img {
   width: auto;
@@ -230,6 +245,11 @@ h4 {
   border: none;
   box-shadow: none;
 }
+
+
+
+
+
 
 
 /* Linha do tempo dos projetos */
@@ -311,6 +331,12 @@ h4 {
   }
 }
 
+
+
+
+
+
+
 /* Rodapé */
 footer {
     background-color: rgba(46, 43, 64, 0.95);
@@ -351,132 +377,67 @@ footer {
   }
 }
 
-/* Seção Sobre */
+
+
+
+
+
+
+/* Seção unificada para Sobre Mim e Sobre o Projeto */
 .about-section {
-  padding: 8rem 10%;
-  background-color: #2e2b40;
-  color: #e8e8e8;
-  text-align: center;
-}
-
-.about-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.about-section h1,
-.project-section h2 {
-  font-size: 3rem;
-  font-family: "Montserrat", sans-serif;
-  color: #f76c6c;
-  margin-bottom: 2rem;
-}
-
-.about-section p,
-.project-section p {
-  font-size: 1.2rem;
-  font-family: "Poppins", sans-serif;
-  color: #ddd;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
-}
-
-/* Ajustes visuais e de espaçamento */
-.about-section,
-.project-section {
-  padding: 6rem 10%; /* Aumenta o espaçamento interno */
-  background-color: #2e2b40;
-  color: #e8e8e8;
-  text-align: center;
-}
-
-.about-container,
-.project-section p {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.about-section h1,
-.project-section h2 {
-  font-size: 3rem;
-  font-family: "Montserrat", sans-serif;
-  color: #f76c6c;
-  margin-bottom: 2rem;
-}
-
-.about-section p,
-.project-section p {
-  font-size: 1.2rem;
-  font-family: "Poppins", sans-serif;
-  color: #ddd;
-  line-height: 1.8;
-  text-align: justify;
-}
-
-/* Ajuste de margens */
-.about-section {
-  margin-bottom: 50px;
-}
-
-.project-section {
-  margin-top: 50px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .about-section,
-  .project-section {
-    padding: 4rem 5%;
-  }
-
-  .about-section h1,
-  .project-section h2 {
-    font-size: 2.2rem;
-  }
-
-  .about-section p,
-  .project-section p {
-    font-size: 1rem;
-  }
-}
-
-/* Seção Sobre o Projeto */
-.project-section {
   padding: 5rem 10%;
   background-color: #2e2b40;
   color: #e8e8e8;
   text-align: center;
+  margin-bottom: 3rem; /* Alinhado com a seção de experiências */
 }
 
-.project-section h2 {
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-box {
+  background-color: #3c3a50;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-box h1 {
   font-size: 3rem;
-  font-family: "Montserrat", sans-serif;
   color: #f76c6c;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-box p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .about-section,
-  .project-section {
+  .about-section {
     padding: 4rem 5%;
   }
 
-  .about-section h1,
-  .project-section h2 {
+  .about-box h1 {
     font-size: 2.2rem;
   }
 
-  .about-section p,
-  .project-section p {
+  .about-box p {
     font-size: 1rem;
-    text-align: justify;
   }
 }
+
+
+
+
+
+
+
 
 /* Seção de Serviços */
 .services-section {
@@ -847,23 +808,6 @@ footer {
   flex-direction: row-reverse;
 }
 
-.timeline-icon {
-  background-color: #3c3a50;
-  padding: 1rem;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-right: 2rem;
-}
-
-.timeline-item:nth-child(even) .timeline-icon {
-  margin-left: 2rem;
-  margin-right: 0;
-}
-
-.timeline-icon img {
-  width: 50px;
-}
-
 .timeline-content {
   background-color: #3c3a50;
   padding: 2rem;
@@ -907,9 +851,5 @@ footer {
 
   .timeline-item:nth-child(even) {
     flex-direction: column;
-  }
-
-  .timeline-icon {
-    margin: 0 auto 1.5rem auto;
   }
 }
