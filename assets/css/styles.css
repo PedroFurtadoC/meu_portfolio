@@ -130,70 +130,48 @@ h1, h2, h3, h4 {
     box-shadow: none;
 }
 
-
 /* Linha do tempo dos projetos */
 .timeline-section {
     padding: 4rem 10%;
     background-color: #ffffff;
     color: #000000;
     text-align: center;
+    position: relative;
 }
 
 .timeline-section h2 {
-    margin-bottom: 2rem; /* Espaçamento entre o título e os containers */
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     color: #f76c6c;
 }
 
 .timeline-container {
     position: relative;
-    max-width: 700px; /* Diminui a largura total para centralizar melhor os projetos */
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .timeline-item {
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: center;
     align-items: center;
-    margin-bottom: 4rem; /* Aumenta o espaçamento entre os itens para criar uma sensação de verticalidade */
+    margin-bottom: 4rem;
     position: relative;
     width: 100%;
-}
-
-.timeline-dot {
-    width: 20px;
-    height: 20px;
-    background-color: #f76c6c;
-    border-radius: 50%;
     z-index: 2;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    border-left: 2px dashed #000000; /* Linha tracejada */
-    z-index: 1;
 }
 
 .timeline-content {
     background-color: #3c3a50;
-    padding: 2rem 1.5rem; /* Ajusta o padding para dar mais altura e menos largura */
+    padding: 2rem 1.5rem;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     color: #e8e8e8;
-    width: 65%; /* Diminui a largura para deixá-los mais estreitos */
-    min-height: 180px; /* Aumenta a altura mínima para dar mais espaço */
+    width: 65%;
+    min-height: 180px;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    z-index: 2;
 }
 
 .timeline-content:hover {
@@ -212,18 +190,6 @@ h1, h2, h3, h4 {
     color: #ddd;
 }
 
-.timeline-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    border-left: 1px dashed #000000;
-    z-index: 0;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
     .timeline-container {
@@ -235,28 +201,13 @@ h1, h2, h3, h4 {
         align-items: center;
     }
 
-    .timeline-dot {
-        position: static;
-        margin-bottom: 1rem;
-    }
-
-    .timeline-line {
-        display: none;
-    }
-
     .timeline-content {
         margin-left: 0;
         margin-right: 0;
         text-align: center;
         width: 100%;
     }
-
-    .timeline-container::before {
-        display: none; /* Esconde a linha tracejada em telas menores */
-    }
 }
-
-
 
 /* Rodapé */
 footer {
@@ -323,7 +274,7 @@ footer {
 /* Seção Sobre o Projeto */
 .project-section {
     padding: 5rem 10%;
-    background-color: #e8e8e8;
+    background-color: #2e2b40;
     color: #000000;
     text-align: center;
 }
@@ -338,7 +289,7 @@ footer {
 .project-section p {
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #e8e8e8;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     max-width: 800px;
