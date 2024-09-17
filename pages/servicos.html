@@ -1,108 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serviços - Meu Portfólio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <!-- AOS Library for Scroll Animations -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-</head>
-<body>
-
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header fixo com ícone do menu -->
     <header class="main-header">
-        <nav class="navbar">
-          <span class="menu-toggle">
-            <img src="../assets/images/hamburguer.png" alt="Menu">
-          </span>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
-            <li><a href="experiencias.html">Experiências</a></li>
-            <li><a href="contato.html" class="active">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav class="navbar">
+        <span class="menu-toggle">
+          <img src="../assets/images/hamburguer.png" alt="Menu" />
+        </span>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="experiencias.html">Experiências</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Seção de Serviços -->
     <section class="services-section">
-        <div class="services-header" data-aos="fade-down">
-            <h1>Meus Serviços</h1>
-            <p>Confira os serviços que realizo e como posso ajudar você ou sua empresa a crescer com soluções tecnológicas modernas e eficientes.</p>
+      <div class="services-header" data-aos="fade-down">
+        <h1>Meus Serviços</h1>
+        <p>
+          Confira os serviços que realizo e como posso ajudar você ou sua
+          empresa a crescer com soluções tecnológicas modernas e eficientes.
+        </p>
+      </div>
+
+      <div class="services-container">
+        <!-- Desenvolvimento Mobile -->
+        <div class="service-card" data-aos="fade-up">
+          <img src="../assets/icons/react-native.png" alt="React Native" />
+          <h2>Desenvolvimento de Aplicações Mobile</h2>
+          <p>
+            Criação de aplicativos móveis usando React Native, uma tecnologia de
+            ponta para soluções multiplataforma.
+          </p>
         </div>
 
-        <div class="services-container">
-            <!-- Desenvolvimento Mobile -->
-            <div class="service-card" data-aos="fade-up">
-                <img src="../assets/icons/react-native.png" alt="React Native">
-                <h2>Desenvolvimento de Aplicações Mobile</h2>
-                <p>Criação de aplicativos móveis usando React Native, uma tecnologia de ponta para soluções multiplataforma.</p>
-            </div>
-
-            <!-- Desenvolvimento Web (Com ícones HTML5 e CSS3) -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="icons-container">
-                    <img src="../assets/icons/html-5.png" alt="HTML5" class="icon-small">
-                    <img src="../assets/icons/css-3.png" alt="CSS3" class="icon-small">
-                    <img src="../assets/icons/react.png" alt="React" class="icon-small">
-                </div>
-                <h2>Desenvolvimento Web</h2>
-                <p>Desenvolvimento de sites e aplicações web utilizando HTML5, CSS3, React e outras tecnologias modernas.</p>
-            </div>
-
-            <!-- Desenvolvimento em Java -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="../assets/icons/java.png" alt="Java Development">
-                <h2>Desenvolvimento de Aplicações Java</h2>
-                <p>Construção de soluções robustas e escaláveis em Java, com foco em performance e segurança.</p>
-            </div>
-
-            <!-- Soluções em Python -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="../assets/icons/python.png" alt="Python Automation">
-                <h2>Automação com Python</h2>
-                <p>Automação de processos e criação de scripts personalizados usando Python para aumentar a produtividade e eficiência.</p>
-            </div>
-
-            <!-- Soluções de Hardware -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="../assets/icons/hardware.png" alt="Hardware Solutions">
-                <h2>Estruturação de Soluções de Hardware</h2>
-                <p>Planejamento, montagem e otimização de sistemas de hardware para suportar aplicações complexas.</p>
-            </div>
-
-            <!-- Manutenção de Sistemas Operacionais -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                <img src="../assets/icons/linux.png" alt="OS Maintenance">
-                <h2>Manutenção de Sistemas Operacionais</h2>
-                <p>Serviços de manutenção, instalação e suporte para sistemas operacionais Windows, Linux e macOS.</p>
-            </div>
-
-            <!-- Consultoria em Segurança Digital -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                <img src="../assets/icons/security.png" alt="Security Consulting">
-                <h2>Consultoria em Segurança Digital</h2>
-                <p>Avaliação e implementação de estratégias de segurança digital para proteger dados e sistemas de ameaças cibernéticas.</p>
-            </div>
-
-            <!-- Implementação de Infraestrutura em Cloud -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="700">
-                <img src="../assets/icons/cloud.png" alt="Cloud Infrastructure">
-                <h2>Implementação de Infraestrutura em Cloud</h2>
-                <p>Desenvolvimento e manutenção de soluções em nuvem utilizando Azure para escalabilidade e flexibilidade.</p>
-            </div>
+        <!-- Desenvolvimento Web (Com ícones HTML5 e CSS3) -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="icons-container">
+            <img
+              src="../assets/icons/html-5.png"
+              alt="HTML5"
+              class="icon-small"
+            />
+            <img
+              src="../assets/icons/css-3.png"
+              alt="CSS3"
+              class="icon-small"
+            />
+            <img
+              src="../assets/icons/react.png"
+              alt="React"
+              class="icon-small"
+            />
+          </div>
+          <h2>Desenvolvimento Web</h2>
+          <p>
+            Desenvolvimento de sites e aplicações web utilizando HTML5, CSS3,
+            React e outras tecnologias modernas.
+          </p>
         </div>
+
+        <!-- Desenvolvimento em Java -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="../assets/icons/java.png" alt="Java Development" />
+          <h2>Desenvolvimento de Aplicações Java</h2>
+          <p>
+            Construção de soluções robustas e escaláveis em Java, com foco em
+            performance e segurança.
+          </p>
+        </div>
+
+        <!-- Soluções em Python -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="../assets/icons/python.png" alt="Python Automation" />
+          <h2>Automação com Python</h2>
+          <p>
+            Automação de processos e criação de scripts personalizados usando
+            Python para aumentar a produtividade e eficiência.
+          </p>
+        </div>
+
+        <!-- Soluções de Hardware -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="../assets/icons/hardware.png" alt="Hardware Solutions" />
+          <h2>Estruturação de Soluções de Hardware</h2>
+          <p>
+            Planejamento, montagem e otimização de sistemas de hardware para
+            suportar aplicações complexas.
+          </p>
+        </div>
+
+        <!-- Manutenção de Sistemas Operacionais -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <img src="../assets/icons/linux.png" alt="OS Maintenance" />
+          <h2>Manutenção de Sistemas Operacionais</h2>
+          <p>
+            Serviços de manutenção, instalação e suporte para sistemas
+            operacionais Windows, Linux e macOS.
+          </p>
+        </div>
+
+        <!-- Consultoria em Segurança Digital -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+          <img src="../assets/icons/security.png" alt="Security Consulting" />
+          <h2>Consultoria em Segurança Digital</h2>
+          <p>
+            Avaliação e implementação de estratégias de segurança digital para
+            proteger dados e sistemas de ameaças cibernéticas.
+          </p>
+        </div>
+
+        <!-- Implementação de Infraestrutura em Cloud -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+          <img src="../assets/icons/cloud.png" alt="Cloud Infrastructure" />
+          <h2>Implementação de Infraestrutura em Cloud</h2>
+          <p>
+            Desenvolvimento e manutenção de soluções em nuvem utilizando Azure
+            para escalabilidade e flexibilidade.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>Todos os direitos reservados © 2024</p>
+      <p>Todos os direitos reservados © 2024</p>
     </footer>
 
     <!-- Script para AOS -->
@@ -114,5 +158,5 @@
       });
     </script>
     <script src="../assets/js/navbar.js"></script>
-</body>
+  </body>
 </html>

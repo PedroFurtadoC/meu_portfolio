@@ -103,19 +103,18 @@ h4 {
   }
 }
 
-
-
-
-
-
 /* Seção inicial ajustada */
 .intro-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: calc(100vh - 60px); /* Calcula a altura da seção com base no header */
+  min-height: calc(
+    100vh - 60px
+  ); /* Calcula a altura da seção com base no header */
   padding: 0 5%;
-  padding-top: calc(10px + 2rem); /* Ajusta o padding-top com base no header e um espaçamento adicional */
+  padding-top: calc(
+    10px + 2rem
+  ); /* Ajusta o padding-top com base no header e um espaçamento adicional */
   background-color: #2e2b40;
   margin-top: 60px; /* Para compensar o header fixo */
 }
@@ -166,11 +165,6 @@ h4 {
 .btn-primary:hover {
   background-color: #e55555;
 }
-
-
-
-
-
 
 /* Redes Sociais */
 .social-links {
@@ -232,11 +226,6 @@ h4 {
   }
 }
 
-
-
-
-
-
 /* Foto de Perfil */
 .intro-picture img {
   width: auto;
@@ -245,12 +234,6 @@ h4 {
   border: none;
   box-shadow: none;
 }
-
-
-
-
-
-
 
 /* Linha do tempo dos projetos */
 .timeline-section {
@@ -331,25 +314,19 @@ h4 {
   }
 }
 
-
-
-
-
-
-
 /* Rodapé */
 footer {
-    background-color: rgba(46, 43, 64, 0.95);
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+  background-color: rgba(46, 43, 64, 0.95);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem 0;
   }
-  
-  @media (max-width: 768px) {
-    footer {
-      padding: 0.5rem 0;
-    }
-  }
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -376,12 +353,6 @@ footer {
     margin-bottom: 1rem;
   }
 }
-
-
-
-
-
-
 
 /* Seção unificada para Sobre Mim e Sobre o Projeto */
 .about-section {
@@ -431,13 +402,6 @@ footer {
     font-size: 1rem;
   }
 }
-
-
-
-
-
-
-
 
 /* Seção de Serviços */
 .services-section {
