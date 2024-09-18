@@ -9,20 +9,52 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS Global (header e footer) -->
+    <link rel="stylesheet" href="../assets/css/header-footer.css" />
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/contato.css" />
     <!-- AOS Library for Scroll Animations -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
+
+    <!-- CSS Interno -->
+    <style>
+      /* Estilos globais da página de contato */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #2e2b40;
+        color: #e8e8e8;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
   </head>
+
   <body>
     <!-- Header fixo com ícone do menu -->
     <header class="main-header">
       <nav class="navbar">
         <span class="menu-toggle">
-          <img src="../assets/images/hamburguer.png" alt="Menu" />
+          <img
+            src="../assets/images/hamburguer.png"
+            alt="Menu"
+            style="width: 30px; height: 30px"
+          />
         </span>
         <ul>
           <li><a href="home.html">Home</a></li>
@@ -30,106 +62,115 @@
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="habilidades.html">Habilidades</a></li>
           <li><a href="experiencias.html">Experiências</a></li>
-          <li><a href="contato.html" class="active">Contato</a></li>
+          <li>
+            <a href="contato.html" class="active" style="color: #f76c6c"
+              >Contato</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
     <!-- Seção de Contato -->
-    <section class="contact-section">
-      <div class="contact-header" data-aos="fade-down">
-        <h1>Entre em Contato</h1>
-        <p>
-          Gostaria de trabalhar comigo ou me conhecer? Preencha o formulário
-          abaixo ou me envie uma mensagem diretamente através dos links ao lado.
-        </p>
-      </div>
-
-      <div class="contact-container">
-        <!-- Formulário de Contato -->
-        <div class="contact-form" data-aos="fade-up">
-          <form
-            action="mailto:pedrocunha.furtado@gmail.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Seu nome completo"
-                required
-                minlength="3"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Seu email"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Assunto</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Motivo do contato"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Mensagem</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Escreva sua mensagem aqui..."
-                required
-                minlength="10"
-              ></textarea>
-            </div>
-
-            <div class="form-group">
-              <button type="submit" class="btn-primary">Enviar Mensagem</button>
-              <button type="reset" class="btn-secondary">Limpar</button>
-            </div>
-          </form>
+    <main>
+      <section class="contact-section">
+        <div class="contact-header" data-aos="fade-down">
+          <h1>Entre em Contato</h1>
+          <p>
+            Gostaria de trabalhar comigo ou me conhecer? Preencha o formulário
+            abaixo ou me envie uma mensagem diretamente através dos links ao
+            lado.
+          </p>
         </div>
 
-        <!-- Informações adicionais -->
-        <div class="contact-info" data-aos="fade-left">
-          <h3>Informações de Contato</h3>
-          <p><strong>Email:</strong> pedrocunha.furtado@gmail.com</p>
-          <p><strong>Telefone:</strong> (16) 99233-4629</p>
-          <p><strong>Endereço:</strong> Sertãozinho, SP - Brasil</p>
+        <div class="contact-container">
+          <!-- Formulário de Contato -->
+          <div class="contact-form" data-aos="fade-up">
+            <form
+              action="mailto:pedrocunha.furtado@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Seu nome completo"
+                  required
+                  minlength="3"
+                />
+              </div>
 
-          <!-- Links para Redes Sociais -->
-          <div class="social-links">
-            <a
-              href="https://linkedin.com/in/pedro-furtado-33159023b"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <a href="https://github.com/PedroFurtadoC" target="_blank"
-              >GitHub</a
-            >
-            <a href="https://linktr.ee/Pedro_Furtado1" target="_blank"
-              >Linktree</a
-            >
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Seu email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Assunto</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Motivo do contato"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Escreva sua mensagem aqui..."
+                  required
+                  minlength="10"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn-primary">
+                  Enviar Mensagem
+                </button>
+                <button type="reset" class="btn-secondary">Limpar</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Informações adicionais -->
+          <div class="contact-info" data-aos="fade-left">
+            <h3>Informações de Contato</h3>
+            <p><strong>Email:</strong> pedrocunha.furtado@gmail.com</p>
+            <p><strong>Telefone:</strong> (16) 99233-4629</p>
+            <p><strong>Endereço:</strong> Sertãozinho, SP - Brasil</p>
+
+            <!-- Links para Redes Sociais -->
+            <div class="social-links">
+              <a
+                href="https://linkedin.com/in/pedro-furtado-33159023b"
+                target="_blank"
+                >LinkedIn</a
+              >
+              <a href="https://github.com/PedroFurtadoC" target="_blank"
+                >GitHub</a
+              >
+              <a href="https://linktr.ee/Pedro_Furtado1" target="_blank"
+                >Linktree</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Rodapé -->
     <footer>

@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre - Meu Portfólio</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <!-- AOS Library for Scroll Animations -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header fixo com ícone do menu -->
-    <header class="main-header">
-      <nav class="navbar">
-        <span class="menu-toggle">
-          <img src="../assets/images/hamburguer.png" alt="Menu" />
-        </span>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="sobre.html" class="active">Sobre</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="habilidades.html">Habilidades</a></li>
-          <li><a href="experiencias.html">Experiências</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - Meu Portfólio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS Global (header e footer) -->
+  <link rel="stylesheet" href="../assets/css/header-footer.css" />
+
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="../assets/css/sobre.css" />
+
+  <!-- AOS Library for Scroll Animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <!-- CSS Interno -->
+  <style>
+    /* Estilo global da página Sobre */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #2e2b40;
+      color: #e8e8e8;
+      line-height: 1.6;
+      min-height: 100vh;
+      /* Garantindo que o footer fique ao final da página */
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex-grow: 1;
+      /* O conteúdo principal cresce para preencher o espaço */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header fixo com menu hamburguer -->
+  <header class="main-header">
+    <nav class="navbar">
+      <!-- Ícone de menu para dispositivos móveis -->
+      <span class="menu-toggle" id="menuToggle">
+        <img src="../assets/images/hamburguer.png" alt="Menu" style="width: 30px; height: 30px;" />
+      </span>
+      <ul id="navMenu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="sobre.html" class="active" style="color: #f76c6c">Sobre</a></li>
+        <!-- Estilo inline para página ativa -->
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="experiencias.html">Experiências</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <!-- Seção unificada para Sobre Mim e Sobre o Projeto -->
     <section class="about-section">
       <div class="about-container" data-aos="fade-right">
         <div class="about-box">
-          <h1>Sobre Mim</h1>
-          <p>
-            Meu nome é Pedro Furtado Cunha, tenho 20 anos e sou estudante de
-            Engenharia da Computação na Universidade de Ribeirão Preto (UNAERP).
-            Sou apaixonado por tecnologia e inovação, sempre buscando aprimorar
-            minhas habilidades e explorar novas fronteiras na área de TI.
+          <h1 style="color: #f76c6c; font-size: 3rem">Sobre Mim</h1>
+          <p style="font-size: 1.2rem; color: #ddd">
+            Meu nome é Pedro Furtado Cunha, tenho 20 anos e sou estudante de Engenharia da Computação na Universidade de
+            Ribeirão Preto (UNAERP). Sou apaixonado por tecnologia e inovação, sempre buscando aprimorar minhas
+            habilidades e explorar novas fronteiras na área de TI.
           </p>
-          <p>
-            Ao longo da minha jornada acadêmica e profissional, tenho me
-            dedicado a desenvolver projetos que combinam tecnologia e
-            criatividade para impactar positivamente o mundo ao meu redor. Este
-            portfólio é uma maneira de compartilhar essa trajetória, onde cada
-            projeto reflete o meu compromisso com o aprendizado contínuo e a
+          <p style="font-size: 1.2rem; color: #ddd">
+            Ao longo da minha jornada acadêmica e profissional, tenho me dedicado a desenvolver projetos que combinam
+            tecnologia e criatividade para impactar positivamente o mundo ao meu redor. Este portfólio é uma maneira de
+            compartilhar essa trajetória, onde cada projeto reflete o meu compromisso com o aprendizado contínuo e a
             entrega de resultados de alta qualidade.
           </p>
         </div>
@@ -62,39 +92,39 @@
     <section class="about-section">
       <div class="about-container" data-aos="fade-up">
         <div class="about-box">
-          <h1>Sobre o Projeto</h1>
-          <p>
-            Este site foi desenvolvido utilizando as melhores práticas de HTML5
-            e CSS3, com o objetivo de oferecer um design moderno, responsivo e
-            funcional. Ele reflete minha evolução como desenvolvedor e serve
-            como uma vitrine dos projetos que realizei ao longo da minha
-            formação.
+          <h1 style="color: #f76c6c; font-size: 3rem">Sobre o Projeto</h1>
+          <p style="font-size: 1.2rem; color: #ddd">
+            Este site foi desenvolvido utilizando as melhores práticas de HTML5 e CSS3, com o objetivo de oferecer um
+            design moderno, responsivo e funcional. Ele reflete minha evolução como desenvolvedor e serve como uma
+            vitrine dos projetos que realizei ao longo da minha formação.
           </p>
-          <p>
-            O objetivo deste portfólio é não apenas mostrar minha experiência
-            técnica, mas também criar uma conexão com pessoas que compartilham
-            da mesma paixão por tecnologia. Busquei criar uma experiência de
-            navegação fluida e envolvente, com animações suaves, tipografia
-            elegante e um layout limpo que proporciona uma experiência agradável
-            para quem visita.
+          <p style="font-size: 1.2rem; color: #ddd">
+            O objetivo deste portfólio é não apenas mostrar minha experiência técnica, mas também criar uma conexão com
+            pessoas que compartilham da mesma paixão por tecnologia. Busquei criar uma experiência de navegação fluida e
+            envolvente, com animações suaves, tipografia elegante e um layout limpo que proporciona uma experiência
+            agradável para quem visita.
           </p>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Rodapé -->
-    <footer>
-      <p>Todos os direitos reservados © 2024</p>
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    <p>Todos os direitos reservados © 2024</p>
+  </footer>
 
-    <!-- Script para AOS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1200,
-        once: true,
-      });
-    </script>
-    <script src="../assets/js/navbar.js"></script>
-  </body>
+  <!-- Script para AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
+
+  <!-- Script para controlar o menu hamburguer -->
+  <script src="../assets/js/navbar.js"></script>
+</body>
+
 </html>

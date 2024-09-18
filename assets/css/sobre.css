@@ -1,0 +1,133 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Seção Sobre Mim e Sobre o Projeto */
+.about-section {
+  padding: 5rem 10%;
+  text-align: center;
+  background-color: #2e2b40;
+  color: #e8e8e8;
+  margin-bottom: 3rem;
+}
+
+.about-box {
+  background-color: #3c3a50;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-box h1 {
+  font-size: 3rem;
+  color: #f76c6c;
+  margin-bottom: 1.5rem;
+}
+
+.about-box p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Responsividade para diferentes tamanhos */
+
+/* 4K - 2560px */
+@media (min-width: 2560px) {
+  .about-section {
+    padding: 8rem 12%;
+  }
+  .about-box h1 {
+    font-size: 4rem;
+  }
+  .about-box p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Laptop L - 1440px */
+@media (max-width: 1440px) {
+  .about-section {
+    padding: 6rem 8%;
+  }
+  .about-box h1 {
+    font-size: 3.5rem;
+  }
+  .about-box p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 5rem 7%;
+  }
+  .about-box h1 {
+    font-size: 3rem;
+  }
+  .about-box p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 5%;
+  }
+  .about-box h1 {
+    font-size: 2.5rem;
+  }
+  .about-box p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile L - 425px */
+@media (max-width: 425px) {
+  .about-section {
+    padding: 3rem 4%;
+  }
+  .about-box h1 {
+    font-size: 2rem;
+  }
+  .about-box p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile M - 375px */
+@media (max-width: 375px) {
+  .about-section {
+    padding: 3rem 3%;
+  }
+  .about-box h1 {
+    font-size: 1.8rem;
+  }
+  .about-box p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 320px) {
+  .about-section {
+    padding: 2rem 2%;
+  }
+  .about-box h1 {
+    font-size: 1.6rem;
+  }
+  .about-box p {
+    font-size: 0.8rem;
+  }
+}

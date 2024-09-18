@@ -4,33 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Habilidades - Meu Portfólio</title>
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- CSS Global (header e footer) -->
+    <link rel="stylesheet" href="../assets/css/header-footer.css" />
+
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/habilidades.css" />
+
     <!-- AOS Library for Scroll Animations -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
+
+    <!-- CSS Interno -->
+    <style>
+      /* Estilo global da página de Habilidades */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #2e2b40;
+        color: #e8e8e8;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
   </head>
+
   <body>
     <!-- Header fixo com ícone do menu -->
     <header class="main-header">
       <nav class="navbar">
         <span class="menu-toggle">
-          <img src="../assets/images/hamburguer.png" alt="Menu" />
+          <img
+            src="../assets/images/hamburguer.png"
+            alt="Menu"
+            style="width: 30px; height: 30px"
+          />
+          <!-- Estilo inline -->
         </span>
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="habilidades.html">Habilidades</a></li>
+          <li>
+            <a href="habilidades.html" class="active" style="color: #f76c6c"
+              >Habilidades</a
+            >
+          </li>
+          <!-- Estilo inline -->
           <li><a href="experiencias.html">Experiências</a></li>
-          <li><a href="contato.html" class="active">Contato</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </header>
@@ -63,6 +98,7 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 85%"></div>
+            <!-- Estilo inline -->
             <span class="progress-label">85%</span>
           </div>
         </div>
@@ -81,6 +117,7 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 85%"></div>
+            <!-- Estilo inline -->
             <span class="progress-label">85%</span>
           </div>
         </div>
@@ -99,6 +136,7 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 80%"></div>
+            <!-- Estilo inline -->
             <span class="progress-label">80%</span>
           </div>
         </div>
@@ -113,6 +151,7 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 75%"></div>
+            <!-- Estilo inline -->
             <span class="progress-label">75%</span>
           </div>
         </div>
@@ -132,6 +171,7 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 70%"></div>
+            <!-- Estilo inline -->
             <span class="progress-label">70%</span>
           </div>
         </div>
@@ -146,6 +186,7 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 90%"></div>
+            <!-- Estilo inline -->
             <span class="progress-label">90%</span>
           </div>
         </div>
@@ -165,6 +206,8 @@
         once: true,
       });
     </script>
+
+    <!-- Script para controlar o menu hamburguer -->
     <script src="../assets/js/navbar.js"></script>
   </body>
 </html>

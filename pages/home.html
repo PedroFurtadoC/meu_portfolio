@@ -9,23 +9,56 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS Global (header e footer) -->
+    <link rel="stylesheet" href="../assets/css/header-footer.css" />
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
     <!-- AOS Library for Scroll Animations -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
+
+    <!-- CSS Interno -->
+    <style>
+      /* Estilos globais da página Home */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #2e2b40;
+        color: #e8e8e8;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header fixo -->
+    <!-- Header fixo com menu -->
     <header class="main-header">
       <nav class="navbar">
         <span class="menu-toggle">
-          <img src="../assets/images/hamburguer.png" alt="Menu" />
+          <img
+            src="../assets/images/hamburguer.png"
+            alt="Menu"
+            style="width: 30px; height: 30px"
+          />
         </span>
         <ul>
-          <li><a href="home.html">Home</a></li>
+          <li>
+            <a href="home.html" class="active" style="color: #f76c6c">Home</a>
+          </li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="habilidades.html">Habilidades</a></li>
@@ -35,10 +68,10 @@
       </nav>
     </header>
 
-    <!-- Seção inicial com texto e foto -->
+    <!-- Seção de introdução com saudação e foto -->
     <section class="intro-section">
       <div class="intro-container">
-        <!-- Texto de saudação e botão -->
+        <!-- Conteúdo de saudação -->
         <div class="intro-content" data-aos="fade-right">
           <h1>Olá, eu sou o <span>Pedro</span></h1>
           <p>
@@ -47,7 +80,7 @@
           </p>
           <a href="#timeline" class="btn-primary">Conheça-me</a>
 
-          <!-- Links para Redes Sociais e Currículo -->
+          <!-- Links para redes sociais e currículo -->
           <div class="social-links">
             <a
               href="https://linkedin.com/in/pedro-furtado-33159023b"
@@ -64,7 +97,7 @@
           </div>
         </div>
 
-        <!-- Foto de Perfil responsiva e sem sombra -->
+        <!-- Foto de perfil -->
         <div class="intro-picture" data-aos="fade-left">
           <img
             src="../assets/images/profile-picture.png"
@@ -78,78 +111,61 @@
     <section id="timeline" class="timeline-section">
       <h2 data-aos="fade-up">Meus Projetos</h2>
       <div class="timeline-container">
-        <!-- Projeto 1 -->
+        <!-- Projetos exibidos com delays -->
         <div class="timeline-item" data-aos="fade-up">
           <div class="timeline-content">
             <h3>14° Desafio da Computação - Python Classroom</h3>
             <p>
-              O Python Classroom é um aplicativo mobile desenvolvido em Flutter,
-              um framework de código aberto da Google. O projeto teve como
-              objetivo ensinar os conceitos básicos da linguagem de programação
-              Python, oferecendo exercícios práticos e referências de estudo.
+              Um aplicativo mobile desenvolvido em Flutter para ensinar
+              programação em Python.
             </p>
           </div>
         </div>
 
-        <!-- Projeto 2 -->
         <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
           <div class="timeline-content">
             <h3>
               15° Desafio da Computação - Fechadura Eletrônica Inteligente
             </h3>
             <p>
-              A Fechadura Eletrônica Inteligente é um projeto que integrou
-              hardware e software de maneira eficiente, permitindo o controle de
-              uma trava que é destravada por sinais RFID de tags configuradas ou
-              dispositivos móveis com NFC cadastrados.
+              Controle inteligente de uma fechadura eletrônica via RFID e
+              dispositivos NFC.
             </p>
           </div>
         </div>
 
-        <!-- Projeto 3 -->
         <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
           <div class="timeline-content">
             <h3>16° Desafio da Computação - Battery Tracker</h3>
             <p>
-              O Battery Tracker é um aplicativo mobile desenvolvido em React
-              Native, um framework de código aberto da Meta. O objetivo do
-              projeto foi ensinar sobre o funcionamento de baterias em
-              dispositivos modernos, explicando como elas operam e como
-              tratá-las corretamente. Além disso, o aplicativo fornece insights
-              e informações sobre a bateria do smartphone.
+              Aplicativo em React Native que ensina e monitora o uso de baterias
+              em dispositivos móveis.
             </p>
           </div>
         </div>
 
-        <!-- Projeto 4 -->
         <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
           <div class="timeline-content">
             <h3>17° Desafio da Computação - Dome</h3>
             <p>
-              O Dome é uma aplicação mobile desenvolvida em React Native, que,
-              em conjunto com uma ESP-32 programada em MicroPython, permite o
-              controle interativo de ventiladores e lâmpadas de forma
-              inteligente. O aplicativo é capaz de controlar esses dispositivos
-              de maneira eficiente.
+              Controle inteligente de dispositivos eletrônicos via ESP-32 e
+              MicroPython.
             </p>
-            <p>
-              Conheça mais sobre o projeto no vídeo:
-              <a
-                href="https://youtu.be/Z-U9qm0S9mo"
-                target="_blank"
-                style="color: #f76c6c"
-                >YouTube</a
-              >
-            </p>
+            <a
+              href="https://youtu.be/Z-U9qm0S9mo"
+              target="_blank"
+              style="color: #f76c6c"
+              >YouTube</a
+            >
           </div>
         </div>
 
-        <!-- Projeto 5 -->
         <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
           <div class="timeline-content">
             <h3>18° Desafio da Computação - PawSync</h3>
             <p>
-              PawSync é o atual Projeto que estou desenvolvendo e participando!
+              PawSync é o atual projeto que estou desenvolvendo para gestão de
+              pets!
             </p>
           </div>
         </div>
@@ -161,12 +177,10 @@
       <p>Todos os direitos reservados © 2024</p>
     </footer>
 
-    <!-- Script para AOS -->
+    <!-- Scripts AOS e Navbar -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1200, // Duração da animação
-      });
+      AOS.init({ duration: 1200 });
     </script>
     <script src="../assets/js/navbar.js"></script>
   </body>

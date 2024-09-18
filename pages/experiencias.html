@@ -4,103 +4,147 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiências - Meu Portfólio</title>
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- CSS Global (header e footer) -->
+    <link rel="stylesheet" href="../assets/css/header-footer.css" />
+
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/experiencias.css" />
+
     <!-- AOS Library for Scroll Animations -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
+
+    <!-- CSS Interno -->
+    <style>
+      /* Estilo global da página de Experiências */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #2e2b40;
+        color: #e8e8e8;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
   </head>
+
   <body>
     <!-- Header fixo com ícone do menu -->
     <header class="main-header">
       <nav class="navbar">
         <span class="menu-toggle">
-          <img src="../assets/images/hamburguer.png" alt="Menu" />
+          <img
+            src="../assets/images/hamburguer.png"
+            alt="Menu"
+            style="width: 30px; height: 30px"
+          />
+          <!-- Estilo inline -->
         </span>
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="habilidades.html">Habilidades</a></li>
-          <li><a href="experiencias.html">Experiências</a></li>
-          <li><a href="contato.html" class="active">Contato</a></li>
+          <li>
+            <a href="experiencias.html" class="active" style="color: #f76c6c"
+              >Experiências</a
+            >
+          </li>
+          <!-- Estilo inline -->
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Seção de Experiências -->
-    <section class="experiences-section">
-      <div class="experiences-header" data-aos="fade-down">
-        <h1>Minhas Experiências</h1>
-        <p>
-          Veja as principais experiências profissionais e acadêmicas que
-          contribuíram para meu desenvolvimento como Engenheiro da Computação.
-        </p>
-      </div>
-
-      <!-- Linha do tempo de experiências -->
-      <div class="timeline">
-        <!-- Experiência Dimastec -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <h2>Estagiário em Apresentação de Software e Suporte Técnico</h2>
-            <h3>Dimastec, Ribeirão Preto</h3>
-            <span class="timeline-date">Abril de 2023 - Outubro de 2023</span>
-            <p>
-              Apresentava e demonstrava softwares de marcação e manutenção de
-              ponto para clientes, destacando funcionalidades e benefícios.
-              Conduzia provas de conceito para garantir que o software atendesse
-              às necessidades específicas dos clientes. Realizava a implantação
-              completa do software, assegurando a correta configuração e
-              integração com os sistemas dos clientes. Prestava suporte técnico
-              qualificado ao usuário, resolvendo dúvidas e problemas técnicos,
-              garantindo a satisfação do cliente.
-            </p>
-          </div>
+    <main>
+      <section class="experiences-section">
+        <div class="experiences-header" data-aos="fade-down">
+          <h1>Minhas Experiências</h1>
+          <p>
+            Veja as principais experiências profissionais e acadêmicas que
+            contribuíram para meu desenvolvimento como Engenheiro da Computação.
+          </p>
         </div>
 
-        <!-- Experiência de Monitoria -->
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-content">
-            <h2>Monitor Acadêmico - Laboratório de Banco de Dados</h2>
-            <h3>UNAERP</h3>
-            <span class="timeline-date">Atualmente</span>
-            <p>
-              Auxilio estudantes na compreensão dos conceitos fundamentais de
-              banco de dados, ajudando-os com explicações práticas e tirando
-              dúvidas em laboratórios. Suporte no desenvolvimento de projetos
-              acadêmicos e orientação em tarefas práticas.
-            </p>
+        <!-- Linha do tempo de experiências -->
+        <div class="timeline">
+          <!-- Experiência Dimastec -->
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-content">
+              <h2>Estagiário em Apresentação de Software e Suporte Técnico</h2>
+              <h3>Dimastec, Ribeirão Preto</h3>
+              <span class="timeline-date">Abril de 2023 - Outubro de 2023</span>
+              <p>
+                Apresentava e demonstrava softwares de marcação e manutenção de
+                ponto para clientes, destacando funcionalidades e benefícios.
+                Conduzia provas de conceito para garantir que o software
+                atendesse às necessidades específicas dos clientes. Realizava a
+                implantação completa do software, assegurando a correta
+                configuração e integração com os sistemas dos clientes. Prestava
+                suporte técnico qualificado ao usuário, resolvendo dúvidas e
+                problemas técnicos, garantindo a satisfação do cliente.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- Educação -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <h2>Bacharelado em Engenharia da Computação</h2>
-            <h3>Universidade de Ribeirão Preto (UNAERP)</h3>
-            <span class="timeline-date"
-              >(Atualmente) Fevereiro de 2022 - Novembro de 2026</span
-            >
-            <p>
-              Cursando Engenharia da Computação, adquirindo uma base sólida em
-              tecnologia e desenvolvendo habilidades práticas em diversas áreas
-              da TI. Focado em aplicar conhecimento em projetos desafiadores,
-              resolver problemas complexos e colaborar em equipes
-              multidisciplinares, com o objetivo de se preparar para os desafios
-              do mercado de trabalho.
-            </p>
+          <!-- Experiência de Monitoria -->
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-content">
+              <h2>Monitor Acadêmico - Laboratório de Banco de Dados</h2>
+              <h3>UNAERP</h3>
+              <span class="timeline-date">Atualmente</span>
+              <p>
+                Auxilio estudantes na compreensão dos conceitos fundamentais de
+                banco de dados, ajudando-os com explicações práticas e tirando
+                dúvidas em laboratórios. Suporte no desenvolvimento de projetos
+                acadêmicos e orientação em tarefas práticas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Educação -->
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-content">
+              <h2>Bacharelado em Engenharia da Computação</h2>
+              <h3>Universidade de Ribeirão Preto (UNAERP)</h3>
+              <span class="timeline-date"
+                >(Atualmente) Fevereiro de 2022 - Novembro de 2026</span
+              >
+              <p>
+                Cursando Engenharia da Computação, adquirindo uma base sólida em
+                tecnologia e desenvolvendo habilidades práticas em diversas
+                áreas da TI. Focado em aplicar conhecimento em projetos
+                desafiadores, resolver problemas complexos e colaborar em
+                equipes multidisciplinares, com o objetivo de se preparar para
+                os desafios do mercado de trabalho.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Rodapé -->
     <footer>
@@ -115,6 +159,8 @@
         once: true,
       });
     </script>
+
+    <!-- Script para controlar o menu hamburguer -->
     <script src="../assets/js/navbar.js"></script>
   </body>
 </html>
