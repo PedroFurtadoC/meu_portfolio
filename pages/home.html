@@ -11,8 +11,13 @@
     />
     <!-- CSS Global (header e footer) -->
     <link rel="stylesheet" href="../assets/css/header-footer.css" />
+
+    <!-- CSS Global (styles.css) -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
     <!-- CSS Externo -->
     <link rel="stylesheet" href="../assets/css/home.css" />
+
     <!-- AOS Library for Scroll Animations -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -21,26 +26,146 @@
 
     <!-- CSS Interno -->
     <style>
-      /* Estilos globais da página Home */
-      body {
-        font-family: "Poppins", sans-serif;
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Seção de introdução */
+      .intro-section {
+        padding: 5rem 10%;
         background-color: #2e2b40;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .intro-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .intro-content h1 {
+        font-size: 3.5rem;
+        color: #f76c6c;
+      }
+
+      .intro-content h1 span {
+        color: #fff;
+      }
+
+      .intro-content p {
+        font-size: 1.2rem;
+        color: #ddd;
+        margin-top: 1rem;
+        max-width: 500px;
+      }
+
+      .intro-content .btn-primary {
+        background-color: #f76c6c;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 20px;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .intro-content .btn-primary:hover {
+        background-color: #e55555;
+      }
+
+      /* Links para redes sociais */
+      .social-links {
+        margin-top: 2rem;
+      }
+
+      .social-links a {
+        font-size: 1.1rem;
+        color: #f76c6c;
+        margin-right: 1rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #fff;
+      }
+
+      .intro-picture img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      /* Linha do tempo de projetos */
+      .timeline-section {
+        padding: 5rem 10%;
+        background-color: #3c3a50;
         color: #e8e8e8;
-        line-height: 1.6;
-        min-height: 100vh;
+      }
+
+      .timeline-section h2 {
+        text-align: center;
+        font-size: 3rem;
+        color: #f76c6c;
+        margin-bottom: 3rem;
+      }
+
+      .timeline-container {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
       }
 
-      main {
-        flex-grow: 1;
+      .timeline-item {
+        background-color: #2e2b40;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: "Montserrat", sans-serif;
+      .timeline-item h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #f76c6c;
+      }
+
+      .timeline-item p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .timeline-item a {
+        font-size: 1rem;
+        color: #f76c6c;
+        text-decoration: none;
+      }
+
+      .timeline-item a:hover {
+        text-decoration: underline;
+      }
+
+      /* Estilos de rodapé */
+      footer {
+        background-color: rgba(46, 43, 64, 0.95);
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
       }
     </style>
   </head>

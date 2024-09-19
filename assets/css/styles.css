@@ -1,1 +1,23 @@
-/*Estilos Globais podem ser adicionados aqui evitando sobrecarga de código em estilos internos.*/
+/* Estilo do body para todas as páginas */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #2e2b40;
+  color: #e8e8e8;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O main vai ocupar todo o espaço disponível, permitindo que o footer fique no final */
+main {
+  flex-grow: 1;
+}
+
+/* Definição de estilos globais para os títulos */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
