@@ -1,23 +1,38 @@
 /* Responsividade */
 
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
+  .experiences-header h1 {
+    font-size: 4.5rem;
+  }
+  .experiences-header p {
+    font-size: 1.6rem;
+  }
+  .timeline-content h2 {
+    font-size: 2.8rem;
+  }
+  .timeline-content h3 {
+    font-size: 2rem;
+  }
+  .timeline-content p {
+    font-size: 1.5rem;
+  }
+}
+
 /* 4K - 2560px */
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3200px) {
   .experiences-header h1 {
     font-size: 4rem;
   }
-
   .experiences-header p {
     font-size: 1.5rem;
   }
-
   .timeline-content h2 {
     font-size: 2.5rem;
   }
-
   .timeline-content h3 {
     font-size: 1.8rem;
   }
-
   .timeline-content p {
     font-size: 1.4rem;
   }
@@ -28,19 +43,15 @@
   .experiences-header h1 {
     font-size: 3.5rem;
   }
-
   .experiences-header p {
     font-size: 1.3rem;
   }
-
   .timeline-content h2 {
     font-size: 2.2rem;
   }
-
   .timeline-content h3 {
     font-size: 1.5rem;
   }
-
   .timeline-content p {
     font-size: 1.2rem;
   }
@@ -51,32 +62,25 @@
   .experiences-header h1 {
     font-size: 3rem;
   }
-
   .experiences-header p {
     font-size: 1.2rem;
   }
-
   .timeline-item {
     flex-direction: column;
     text-align: center;
   }
-
   .timeline-item:nth-child(even) {
     flex-direction: column;
   }
-
   .timeline-content {
     text-align: center;
   }
-
   .timeline-content h2 {
     font-size: 2rem;
   }
-
   .timeline-content h3 {
     font-size: 1.4rem;
   }
-
   .timeline-content p {
     font-size: 1.1rem;
   }
@@ -87,32 +91,25 @@
   .experiences-header h1 {
     font-size: 2.5rem;
   }
-
   .experiences-header p {
     font-size: 1.1rem;
   }
-
   .timeline-item {
     flex-direction: column;
     text-align: center;
   }
-
   .timeline-item:nth-child(even) {
     flex-direction: column;
   }
-
   .timeline-content {
     text-align: center;
   }
-
   .timeline-content h2 {
     font-size: 1.8rem;
   }
-
   .timeline-content h3 {
     font-size: 1.3rem;
   }
-
   .timeline-content p {
     font-size: 1rem;
   }
@@ -123,19 +120,15 @@
   .experiences-header h1 {
     font-size: 2.2rem;
   }
-
   .experiences-header p {
     font-size: 1rem;
   }
-
   .timeline-content h2 {
     font-size: 1.6rem;
   }
-
   .timeline-content h3 {
     font-size: 1.1rem;
   }
-
   .timeline-content p {
     font-size: 0.95rem;
   }
@@ -146,19 +139,15 @@
   .experiences-header h1 {
     font-size: 2rem;
   }
-
   .experiences-header p {
     font-size: 0.95rem;
   }
-
   .timeline-content h2 {
     font-size: 1.5rem;
   }
-
   .timeline-content h3 {
     font-size: 1rem;
   }
-
   .timeline-content p {
     font-size: 0.9rem;
   }
@@ -169,20 +158,75 @@
   .experiences-header h1 {
     font-size: 1.8rem;
   }
-
   .experiences-header p {
     font-size: 0.9rem;
   }
-
   .timeline-content h2 {
     font-size: 1.4rem;
   }
-
   .timeline-content h3 {
     font-size: 0.95rem;
   }
-
   .timeline-content p {
     font-size: 0.85rem;
+  }
+}
+
+/* Telas intermediárias para transições suaves */
+
+/* Entre Laptop e Tablet */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .experiences-header h1 {
+    font-size: 3.2rem;
+  }
+  .experiences-header p {
+    font-size: 1.25rem;
+  }
+  .timeline-content h2 {
+    font-size: 2.1rem;
+  }
+  .timeline-content h3 {
+    font-size: 1.6rem;
+  }
+  .timeline-content p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 767px) {
+  .experiences-header h1 {
+    font-size: 2.6rem;
+  }
+  .experiences-header p {
+    font-size: 1.15rem;
+  }
+  .timeline-content h2 {
+    font-size: 1.85rem;
+  }
+  .timeline-content h3 {
+    font-size: 1.4rem;
+  }
+  .timeline-content p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 424px) {
+  .experiences-header h1 {
+    font-size: 2.15rem;
+  }
+  .experiences-header p {
+    font-size: 1rem;
+  }
+  .timeline-content h2 {
+    font-size: 1.65rem;
+  }
+  .timeline-content h3 {
+    font-size: 1.15rem;
+  }
+  .timeline-content p {
+    font-size: 0.9rem;
   }
 }

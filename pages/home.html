@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Meu Portfólio</title>
+
+    <!-- Favicon  -->
+    <link
+      rel="icon"
+      href="../assets/images/favicon-portfolio.svg"
+      type="image/svg+xml"
+    />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
@@ -33,6 +41,43 @@
         box-sizing: border-box;
       }
 
+      /* Animação de Fade In */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Animação de Slide In */
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Animação ao passar o mouse nos projetos */
+      .timeline-item {
+        background-color: #2e2b40;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: slideIn 2s ease-in-out;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .timeline-item:hover {
+        transform: scale(1.05); /* Aumenta levemente o item */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+      }
+
       /* Seção de introdução */
       .intro-section {
         padding: 5rem 10%;
@@ -55,6 +100,7 @@
       .intro-content h1 {
         font-size: 3.5rem;
         color: #f76c6c;
+        animation: fadeIn 2s ease-in-out;
       }
 
       .intro-content h1 span {
@@ -66,6 +112,7 @@
         color: #ddd;
         margin-top: 1rem;
         max-width: 500px;
+        animation: fadeIn 2.5s ease-in-out;
       }
 
       .intro-content .btn-primary {
@@ -80,6 +127,7 @@
         display: inline-block;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        animation: fadeIn 3s ease-in-out;
       }
 
       .intro-content .btn-primary:hover {
@@ -107,6 +155,7 @@
         max-width: 100%;
         height: auto;
         border-radius: 50%;
+        animation: slideIn 2s ease-in-out;
       }
 
       /* Linha do tempo de projetos */
@@ -121,19 +170,13 @@
         font-size: 3rem;
         color: #f76c6c;
         margin-bottom: 3rem;
+        animation: fadeIn 2.5s ease-in-out;
       }
 
       .timeline-container {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-      }
-
-      .timeline-item {
-        background-color: #2e2b40;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       .timeline-item h3 {
@@ -155,17 +198,6 @@
 
       .timeline-item a:hover {
         text-decoration: underline;
-      }
-
-      /* Estilos de rodapé */
-      footer {
-        background-color: rgba(46, 43, 64, 0.95);
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        position: relative;
-        bottom: 0;
-        width: 100%;
       }
     </style>
   </head>
@@ -203,7 +235,9 @@
             Estudante de Engenharia da Computação, amante de tecnologia e
             inovação!
           </p>
-          <a href="#timeline" class="btn-primary">Conheça-me</a>
+          <a href="#timeline" class="btn-primary"
+            ><strong>Conheça-me</strong></a
+          >
 
           <!-- Links para redes sociais e currículo -->
           <div class="social-links">
@@ -241,8 +275,10 @@
           <div class="timeline-content">
             <h3>14° Desafio da Computação - Python Classroom</h3>
             <p>
-              Um aplicativo mobile desenvolvido em Flutter para ensinar
-              programação em Python.
+              O Python Classroom é um aplicativo mobile desenvolvido em Flutter,
+              um framework de código aberto da Google. O projeto teve como
+              objetivo ensinar os conceitos básicos da linguagem de programação
+              Python, oferecendo exercícios práticos e referências de estudo.
             </p>
           </div>
         </div>
@@ -253,8 +289,10 @@
               15° Desafio da Computação - Fechadura Eletrônica Inteligente
             </h3>
             <p>
-              Controle inteligente de uma fechadura eletrônica via RFID e
-              dispositivos NFC.
+              A Fechadura Eletrônica Inteligente é um projeto que integrou
+              hardware e software de maneira eficiente, permitindo o controle de
+              uma trava que é destravada por sinais RFID de tags configuradas ou
+              dispositivos móveis com NFC cadastrados.
             </p>
           </div>
         </div>
@@ -263,8 +301,12 @@
           <div class="timeline-content">
             <h3>16° Desafio da Computação - Battery Tracker</h3>
             <p>
-              Aplicativo em React Native que ensina e monitora o uso de baterias
-              em dispositivos móveis.
+              O Battery Tracker é um aplicativo mobile desenvolvido em React
+              Native, um framework de código aberto da Meta. O objetivo do
+              projeto foi ensinar sobre o funcionamento de baterias em
+              dispositivos modernos, explicando como elas operam e como
+              tratá-las corretamente. Além disso, o aplicativo fornece insights
+              e informações sobre a bateria do smartphone.
             </p>
           </div>
         </div>
@@ -273,9 +315,13 @@
           <div class="timeline-content">
             <h3>17° Desafio da Computação - Dome</h3>
             <p>
-              Controle inteligente de dispositivos eletrônicos via ESP-32 e
-              MicroPython.
+              O Dome é uma aplicação mobile desenvolvida em React Native, que,
+              em conjunto com uma ESP-32 programada em MicroPython, permite o
+              controle interativo de ventiladores e lâmpadas de forma
+              inteligente. O aplicativo é capaz de controlar esses dispositivos
+              de maneira eficiente.
             </p>
+            Conheça mais sobre o projeto no vídeo:
             <a
               href="https://youtu.be/Z-U9qm0S9mo"
               target="_blank"
@@ -290,16 +336,27 @@
             <h3>18° Desafio da Computação - PawSync</h3>
             <p>
               PawSync é o atual projeto que estou desenvolvendo para gestão de
-              pets!
+              pets! Futuro vencedor do Desafio da Computação!
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- Rodapé com Gradiente -->
     <footer>
-      <p>Todos os direitos reservados © 2024</p>
+      <p
+        style="
+          background: linear-gradient(90deg, #3c3a50, #c0c0c0, #ededed);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          font-weight: bold;
+          font-size: 1.1rem;
+        "
+      >
+        Todos os direitos reservados © 2024
+      </p>
     </footer>
 
     <!-- Scripts AOS e Navbar -->

@@ -1,7 +1,26 @@
 /* Responsividade */
 
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
+  .skills-header h1 {
+    font-size: 4.5rem;
+  }
+  .skills-header p {
+    font-size: 1.6rem;
+  }
+  .skill-card h2 {
+    font-size: 2.8rem;
+  }
+  .skill-icon {
+    width: 80px;
+  }
+  .skill-card p {
+    font-size: 1.4rem;
+  }
+}
+
 /* 4K - 2560px */
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3200px) {
   .skills-header h1 {
     font-size: 4rem;
   }
@@ -149,5 +168,64 @@
   }
   .progress-label {
     font-size: 0.7rem;
+  }
+}
+
+/* Telas intermediárias para transições suaves */
+
+/* Entre Laptop e Tablet */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .skills-header h1 {
+    font-size: 3.2rem;
+  }
+  .skills-header p {
+    font-size: 1.25rem;
+  }
+  .skill-card h2 {
+    font-size: 1.9rem;
+  }
+  .skill-card p {
+    font-size: 1.1rem;
+  }
+  .skill-icon {
+    width: 55px;
+  }
+}
+
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 767px) {
+  .skills-header h1 {
+    font-size: 2.3rem;
+  }
+  .skills-header p {
+    font-size: 1.05rem;
+  }
+  .skill-card h2 {
+    font-size: 1.5rem;
+  }
+  .skill-card p {
+    font-size: 0.95rem;
+  }
+  .skill-icon {
+    width: 42px;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 424px) {
+  .skills-header h1 {
+    font-size: 1.9rem;
+  }
+  .skills-header p {
+    font-size: 0.92rem;
+  }
+  .skill-card h2 {
+    font-size: 1.3rem;
+  }
+  .skill-card p {
+    font-size: 0.85rem;
+  }
+  .skill-icon {
+    width: 36px;
   }
 }

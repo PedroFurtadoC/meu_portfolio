@@ -1,7 +1,31 @@
 /* Responsividade */
 
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
+  .services-header h1 {
+    font-size: 4.5rem;
+  }
+
+  .services-header p {
+    font-size: 1.6rem;
+  }
+
+  .service-card h2 {
+    font-size: 2.8rem;
+  }
+
+  .service-card p {
+    font-size: 1.5rem;
+  }
+
+  .service-card img,
+  .icon-small {
+    width: 80px;
+  }
+}
+
 /* 4K - 2560px */
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3200px) {
   .services-header h1 {
     font-size: 4rem;
   }
@@ -173,5 +197,79 @@
 
   .service-card p {
     font-size: 0.8rem;
+  }
+}
+
+/* Telas intermediárias para transições suaves */
+
+/* Entre Laptop e Tablet */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .services-header h1 {
+    font-size: 3.2rem;
+  }
+
+  .services-header p {
+    font-size: 1.25rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.9rem;
+  }
+
+  .service-card p {
+    font-size: 1.15rem;
+  }
+
+  .service-card img,
+  .icon-small {
+    width: 55px;
+  }
+}
+
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 767px) {
+  .services-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .services-header p {
+    font-size: 1.05rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+
+  .service-card img,
+  .icon-small {
+    width: 42px;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 424px) {
+  .services-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .services-header p {
+    font-size: 0.92rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+
+  .service-card img,
+  .icon-small {
+    width: 36px;
   }
 }

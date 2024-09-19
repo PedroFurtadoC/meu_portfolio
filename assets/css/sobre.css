@@ -1,7 +1,20 @@
 /* Responsividade para diferentes tamanhos */
 
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
+  .about-section {
+    padding: 9rem 14%;
+  }
+  .about-box h1 {
+    font-size: 4.5rem;
+  }
+  .about-box p {
+    font-size: 1.6rem;
+  }
+}
+
 /* 4K - 2560px */
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3200px) {
   .about-section {
     padding: 8rem 12%;
   }
@@ -88,5 +101,46 @@
   }
   .about-box p {
     font-size: 0.8rem;
+  }
+}
+
+/* Telas intermediárias para transições suaves */
+
+/* Entre Laptop e Tablet */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .about-section {
+    padding: 5.5rem 6.5%;
+  }
+  .about-box h1 {
+    font-size: 3.2rem;
+  }
+  .about-box p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 767px) {
+  .about-section {
+    padding: 4.5rem 5.5%;
+  }
+  .about-box h1 {
+    font-size: 2.3rem;
+  }
+  .about-box p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 424px) {
+  .about-section {
+    padding: 2.5rem 3.5%;
+  }
+  .about-box h1 {
+    font-size: 1.9rem;
+  }
+  .about-box p {
+    font-size: 0.95rem;
   }
 }

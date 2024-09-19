@@ -1,23 +1,38 @@
 /* Responsividade */
 
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
+  .intro-content h1 {
+    font-size: 5.5rem;
+  }
+  .intro-content p {
+    font-size: 1.7rem;
+  }
+  .timeline-section h2 {
+    font-size: 4.5rem;
+  }
+  .timeline-item h3 {
+    font-size: 2.8rem;
+  }
+  .timeline-item p {
+    font-size: 1.6rem;
+  }
+}
+
 /* 4K - 2560px */
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3200px) {
   .intro-content h1 {
     font-size: 5rem;
   }
-
   .intro-content p {
     font-size: 1.5rem;
   }
-
   .timeline-section h2 {
     font-size: 4rem;
   }
-
   .timeline-item h3 {
     font-size: 2.5rem;
   }
-
   .timeline-item p {
     font-size: 1.4rem;
   }
@@ -28,19 +43,15 @@
   .intro-content h1 {
     font-size: 3.5rem;
   }
-
   .intro-content p {
     font-size: 1.3rem;
   }
-
   .timeline-section h2 {
     font-size: 3.5rem;
   }
-
   .timeline-item h3 {
     font-size: 2.2rem;
   }
-
   .timeline-item p {
     font-size: 1.2rem;
   }
@@ -51,19 +62,15 @@
   .intro-content h1 {
     font-size: 3rem;
   }
-
   .intro-content p {
     font-size: 1.2rem;
   }
-
   .timeline-section h2 {
     font-size: 3rem;
   }
-
   .timeline-item h3 {
     font-size: 1.8rem;
   }
-
   .timeline-item p {
     font-size: 1.1rem;
   }
@@ -76,36 +83,28 @@
     align-items: center;
     text-align: center;
   }
-
   .intro-container {
     flex-direction: column;
   }
-
   .intro-content {
     align-items: center;
   }
-
   .intro-content h1 {
     font-size: 2.7rem;
   }
-
   .intro-content p {
     font-size: 1.2rem;
   }
-
   .intro-picture img {
     width: 230px;
     margin-top: 20px;
   }
-
   .timeline-section h2 {
     font-size: 2.5rem;
   }
-
   .timeline-item h3 {
     font-size: 1.6rem;
   }
-
   .timeline-item p {
     font-size: 1rem;
   }
@@ -117,24 +116,19 @@
     font-size: 2.4rem;
     text-align: center;
   }
-
   .intro-content p {
     font-size: 1rem;
   }
-
   .intro-picture img {
     width: 250px;
     margin-top: 20px;
   }
-
   .timeline-section h2 {
     font-size: 2rem;
   }
-
   .timeline-item h3 {
     font-size: 1.4rem;
   }
-
   .timeline-item p {
     font-size: 0.9rem;
   }
@@ -146,24 +140,19 @@
     font-size: 2.2rem;
     text-align: center;
   }
-
   .intro-content p {
     font-size: 1rem;
   }
-
   .intro-picture img {
     width: 220px;
     margin-top: 20px;
   }
-
   .timeline-section h2 {
     font-size: 1.8rem;
   }
-
   .timeline-item h3 {
     font-size: 1.3rem;
   }
-
   .timeline-item p {
     font-size: 0.9rem;
   }
@@ -175,25 +164,79 @@
     font-size: 2rem;
     text-align: center;
   }
-
   .intro-content p {
     font-size: 0.9rem;
   }
-
   .intro-picture img {
     width: 200px;
     margin-top: 20px;
   }
-
   .timeline-section h2 {
     font-size: 1.6rem;
   }
-
   .timeline-item h3 {
     font-size: 1.2rem;
   }
-
   .timeline-item p {
     font-size: 0.8rem;
+  }
+}
+
+/* Telas intermediárias para transições suaves */
+
+/* Entre Laptop e Tablet */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .intro-content h1 {
+    font-size: 3.2rem;
+  }
+  .intro-content p {
+    font-size: 1.25rem;
+  }
+  .timeline-section h2 {
+    font-size: 3.1rem;
+  }
+  .timeline-item h3 {
+    font-size: 1.9rem;
+  }
+  .timeline-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 767px) {
+  .intro-content h1 {
+    font-size: 2.5rem;
+  }
+  .intro-content p {
+    font-size: 1.15rem;
+  }
+  .timeline-section h2 {
+    font-size: 2.6rem;
+  }
+  .timeline-item h3 {
+    font-size: 1.7rem;
+  }
+  .timeline-item p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 424px) {
+  .intro-content h1 {
+    font-size: 2.1rem;
+  }
+  .intro-content p {
+    font-size: 0.95rem;
+  }
+  .timeline-section h2 {
+    font-size: 1.9rem;
+  }
+  .timeline-item h3 {
+    font-size: 1.3rem;
+  }
+  .timeline-item p {
+    font-size: 0.85rem;
   }
 }
