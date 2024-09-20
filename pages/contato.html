@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato - Meu Portfólio</title>
 
-    <!-- Favicon  -->
+    <!-- Favicon -->
     <link
       rel="icon"
       href="../assets/images/favicon-portfolio.svg"
@@ -67,10 +67,9 @@
         display: flex;
         justify-content: space-between;
         gap: 2rem;
-        flex-wrap: wrap; /* Garantir flexibilidade no layout */
+        flex-wrap: wrap;
       }
 
-      /* Formulário de Contato */
       .contact-form {
         flex-basis: 60%;
       }
@@ -88,7 +87,8 @@
       }
 
       .form-group input,
-      .form-group textarea {
+      .form-group textarea,
+      .form-group select {
         width: 100%;
         padding: 12px;
         font-size: 1rem;
@@ -100,12 +100,12 @@
       }
 
       .form-group input:focus,
-      .form-group textarea:focus {
+      .form-group textarea:focus,
+      .form-group select:focus {
         outline: none;
         border-color: #f76c6c;
       }
 
-      /* Botões */
       .btn-primary,
       .btn-secondary {
         display: inline-block;
@@ -138,7 +138,6 @@
         background-color: #444;
       }
 
-      /* Informações de Contato */
       .contact-info {
         flex-basis: 35%;
         text-align: left;
@@ -156,7 +155,6 @@
         margin-bottom: 0.5rem;
       }
 
-      /* Redes Sociais */
       .social-links {
         margin-top: 1.5rem;
       }
@@ -266,6 +264,18 @@
                   required
                   minlength="10"
                 ></textarea>
+              </div>
+
+              <!-- Campo Select -->
+              <div class="form-group">
+                <label for="contact-method">Preferência de Contato</label>
+                <select id="contact-method" name="contact-method" required>
+                  <option value="" disabled selected>
+                    Selecione uma opção
+                  </option>
+                  <option value="email">Email</option>
+                  <option value="telefone">Telefone</option>
+                </select>
               </div>
 
               <div class="form-group">
