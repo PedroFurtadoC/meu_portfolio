@@ -1,3 +1,5 @@
+/* contato.css */
+
 /* Responsividade */
 
 /* Dispositivos Ultra Largos (>2560px) */
@@ -9,7 +11,8 @@
     font-size: 1.6rem;
   }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 16px;
     font-size: 1.3rem;
   }
@@ -19,10 +22,13 @@
   .contact-info p {
     font-size: 1.4rem;
   }
+  .checkbox-group label {
+    font-size: 1.3rem;
+  }
 }
 
 /* 4K - 2560px */
-@media (min-width: 2560px) and (max-width: 3200px) {
+@media (min-width: 2560px) and (max-width: 2560px) {
   .contact-header h1 {
     font-size: 4rem;
   }
@@ -30,7 +36,8 @@
     font-size: 1.5rem;
   }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 14px;
     font-size: 1.2rem;
   }
@@ -39,6 +46,9 @@
   }
   .contact-info p {
     font-size: 1.3rem;
+  }
+  .checkbox-group label {
+    font-size: 1.2rem;
   }
 }
 
@@ -51,7 +61,8 @@
     font-size: 1.3rem;
   }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 13px;
     font-size: 1.1rem;
   }
@@ -60,6 +71,9 @@
   }
   .contact-info p {
     font-size: 1.2rem;
+  }
+  .checkbox-group label {
+    font-size: 1.1rem;
   }
 }
 
@@ -78,9 +92,14 @@
   .contact-info {
     flex-basis: 100%;
     text-align: center;
+    min-width: 100%;
+  }
+  .contact-info {
+    margin-top: 2rem;
   }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 12px;
     font-size: 1rem;
   }
@@ -89,6 +108,16 @@
   }
   .contact-info p {
     font-size: 1.1rem;
+  }
+  .social-links a {
+    margin-right: 0.5rem;
+  }
+  .checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .checkbox-group label {
+    font-size: 1rem;
   }
 }
 
@@ -101,7 +130,8 @@
     font-size: 1.1rem;
   }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 10px;
     font-size: 1rem;
   }
@@ -115,6 +145,9 @@
     display: block;
     margin: 0.5rem 0;
   }
+  .checkbox-group label {
+    font-size: 0.95rem;
+  }
 }
 
 /* Mobile L - 425px */
@@ -125,8 +158,12 @@
   .contact-header p {
     font-size: 1rem;
   }
+  .form-group label {
+    font-size: 0.9rem;
+  }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 8px;
     font-size: 0.9rem;
   }
@@ -134,6 +171,9 @@
     font-size: 1.4rem;
   }
   .contact-info p {
+    font-size: 0.9rem;
+  }
+  .checkbox-group label {
     font-size: 0.9rem;
   }
 }
@@ -146,8 +186,12 @@
   .contact-header p {
     font-size: 0.9rem;
   }
+  .form-group label {
+    font-size: 0.85rem;
+  }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 7px;
     font-size: 0.85rem;
   }
@@ -155,6 +199,9 @@
     font-size: 1.3rem;
   }
   .contact-info p {
+    font-size: 0.85rem;
+  }
+  .checkbox-group label {
     font-size: 0.85rem;
   }
 }
@@ -167,8 +214,12 @@
   .contact-header p {
     font-size: 0.8rem;
   }
+  .form-group label {
+    font-size: 0.8rem;
+  }
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     padding: 6px;
     font-size: 0.8rem;
   }
@@ -178,69 +229,84 @@
   .contact-info p {
     font-size: 0.8rem;
   }
+  .checkbox-group label {
+    font-size: 0.8rem;
+  }
 }
 
 /* Telas intermediárias para transições suaves */
 
 /* Entre Laptop e Tablet */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .contact-header h1 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
   .contact-header p {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .form-group input,
-  .form-group textarea {
-    padding: 12px;
+  .form-group textarea,
+  .form-group select {
+    padding: 11px;
     font-size: 1rem;
   }
   .contact-info h3 {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
   }
   .contact-info p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+  .checkbox-group label {
+    font-size: 1rem;
   }
 }
 
 /* Entre Tablet e Mobile L */
-@media (min-width: 426px) and (max-width: 767px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .contact-header h1 {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
   .contact-header p {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
   .form-group input,
-  .form-group textarea {
-    padding: 10px;
+  .form-group textarea,
+  .form-group select {
+    padding: 9px;
     font-size: 0.95rem;
   }
   .contact-info h3 {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
   .contact-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+  .checkbox-group label {
+    font-size: 0.95rem;
   }
 }
 
 /* Entre Mobile L e Mobile S */
-@media (min-width: 321px) and (max-width: 424px) {
+@media (min-width: 321px) and (max-width: 425px) {
   .contact-header h1 {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
   }
   .contact-header p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .form-group input,
-  .form-group textarea {
-    padding: 8px;
-    font-size: 0.9rem;
+  .form-group textarea,
+  .form-group select {
+    padding: 7px;
+    font-size: 0.85rem;
   }
   .contact-info h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .contact-info p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+  .checkbox-group label {
+    font-size: 0.85rem;
   }
 }
