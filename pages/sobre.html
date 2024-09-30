@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre - Meu Portfólio</title>
 
-    <!-- Favicon  -->
+    <!-- Favicon -->
     <link
       rel="icon"
       href="../assets/images/favicon-portfolio.svg"
@@ -38,27 +38,12 @@
 
     <!-- CSS Interno -->
     <style>
-      /* Reset básico */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Seção Sobre Mim e Sobre o Projeto */
+      /* Seção Unificada Sobre Mim e Projeto */
       .about-section {
         padding: 5rem 10%;
-        text-align: center;
         background-color: #2e2b40;
+        text-align: center;
         color: #e8e8e8;
-        margin-bottom: 3rem;
-      }
-
-      .about-box {
-        background-color: #3c3a50;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
       .about-container {
@@ -66,17 +51,32 @@
         margin: 0 auto;
       }
 
-      .about-box h1 {
+      .about-box {
+        background-color: #3c3a50;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      /* Especificidade aumentada para evitar uso de !important */
+      .about-section .about-box .section-title {
         font-size: 3rem;
         color: #f76c6c;
         margin-bottom: 1.5rem;
       }
 
-      .about-box p {
+      .about-section .about-box .section-text {
         font-size: 1.2rem;
         color: #ddd;
         line-height: 1.8;
         text-align: justify;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Garantindo espaçamento uniforme */
+      .about-box:last-child {
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -85,20 +85,19 @@
     <!-- Header fixo com menu hamburguer -->
     <header class="main-header">
       <nav class="navbar">
-        <!-- Ícone de menu para dispositivos móveis -->
-        <span class="menu-toggle" id="menuToggle">
+        <span class="menu-toggle">
           <img
             src="../assets/images/hamburguer.png"
             alt="Menu"
             style="width: 30px; height: 30px"
           />
         </span>
-        <ul id="navMenu">
+        <ul>
           <li><a href="home.html">Home</a></li>
+          <!-- Estilo inline ao clicar sobre o item -->
           <li>
             <a href="sobre.html" class="active" style="color: #f76c6c">Sobre</a>
           </li>
-          <!-- Estilo inline para página ativa -->
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="habilidades.html">Habilidades</a></li>
           <li><a href="experiencias.html">Experiências</a></li>
@@ -108,19 +107,19 @@
     </header>
 
     <main>
-      <!-- Seção unificada para Sobre Mim e Sobre o Projeto -->
+      <!-- Seção Unificada Sobre Mim e Sobre o Projeto -->
       <section class="about-section">
         <div class="about-container" data-aos="fade-right">
           <div class="about-box">
-            <h1 style="color: #f76c6c; font-size: 3rem">Sobre Mim</h1>
-            <p style="font-size: 1.2rem; color: #ddd">
+            <h1 class="section-title">Sobre Mim</h1>
+            <p class="section-text">
               Meu nome é Pedro Furtado Cunha, tenho 20 anos e sou estudante de
               Engenharia da Computação na Universidade de Ribeirão Preto
               (UNAERP). Sou apaixonado por tecnologia e inovação, sempre
               buscando aprimorar minhas habilidades e explorar novas fronteiras
               na área de TI.
             </p>
-            <p style="font-size: 1.2rem; color: #ddd">
+            <p class="section-text">
               Ao longo da minha jornada acadêmica e profissional, tenho me
               dedicado a desenvolver projetos que combinam tecnologia e
               criatividade para impactar positivamente o mundo ao meu redor.
@@ -129,22 +128,16 @@
               e a entrega de resultados de alta qualidade.
             </p>
           </div>
-        </div>
-      </section>
-
-      <!-- Seção de informações sobre o projeto -->
-      <section class="about-section">
-        <div class="about-container" data-aos="fade-up">
-          <div class="about-box">
-            <h1 style="color: #f76c6c; font-size: 3rem">Sobre o Projeto</h1>
-            <p style="font-size: 1.2rem; color: #ddd">
+          <div class="about-box" data-aos="fade-up">
+            <h1 class="section-title">Sobre o Projeto</h1>
+            <p class="section-text">
               Este site foi desenvolvido utilizando as melhores práticas de
               HTML5 e CSS3, com o objetivo de oferecer um design moderno,
               responsivo e funcional. Ele reflete minha evolução como
               desenvolvedor e serve como uma vitrine dos projetos que realizei
               ao longo da minha formação.
             </p>
-            <p style="font-size: 1.2rem; color: #ddd">
+            <p class="section-text">
               O objetivo deste portfólio é não apenas mostrar minha experiência
               técnica, mas também criar uma conexão com pessoas que compartilham
               da mesma paixão por tecnologia. Busquei criar uma experiência de
@@ -184,6 +177,7 @@
 
     <!-- Script para controlar o menu hamburguer -->
     <script src="../assets/js/navbar.js"></script>
+
     <!-- Efeito do cursor -->
     <div class="cursor-shadow"></div>
     <script src="../assets/js/cursor.js"></script>

@@ -1,78 +1,93 @@
 /* Responsividade */
 
-/* Dispositivos Ultra Largos (>2560px) */
-@media (min-width: 2561px) {
+/* Mobile S - 320px */
+@media (max-width: 320px) {
   .intro-content h1 {
-    font-size: 5.5rem;
+    font-size: 2rem;
+    text-align: center;
   }
   .intro-content p {
-    font-size: 1.7rem;
+    font-size: 0.9rem;
+  }
+  .intro-picture img {
+    width: 200px;
+    margin-top: 20px;
   }
   .timeline-section h2 {
-    font-size: 4.5rem;
-  }
-  .timeline-item h3 {
-    font-size: 2.8rem;
-  }
-  .timeline-item p {
     font-size: 1.6rem;
   }
-}
-
-/* 4K - 2560px */
-@media (min-width: 2560px) and (max-width: 3200px) {
-  .intro-content h1 {
-    font-size: 5rem;
-  }
-  .intro-content p {
-    font-size: 1.5rem;
-  }
-  .timeline-section h2 {
-    font-size: 4rem;
-  }
   .timeline-item h3 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
   .timeline-item p {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
   }
 }
 
-/* Laptop L - 1440px */
-@media (max-width: 1440px) {
+/* Mobile M - 375px */
+@media (max-width: 375px) {
   .intro-content h1 {
-    font-size: 3.5rem;
-  }
-  .intro-content p {
-    font-size: 1.3rem;
-  }
-  .timeline-section h2 {
-    font-size: 3.5rem;
-  }
-  .timeline-item h3 {
     font-size: 2.2rem;
-  }
-  .timeline-item p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Laptop - 1024px */
-@media (max-width: 1024px) {
-  .intro-content h1 {
-    font-size: 3rem;
+    text-align: center;
   }
   .intro-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  .intro-picture img {
+    width: 220px;
+    margin-top: 20px;
   }
   .timeline-section h2 {
-    font-size: 3rem;
-  }
-  .timeline-item h3 {
     font-size: 1.8rem;
   }
+  .timeline-item h3 {
+    font-size: 1.3rem;
+  }
   .timeline-item p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile L - 425px */
+@media (max-width: 425px) {
+  .intro-content h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .intro-content p {
+    font-size: 1rem;
+  }
+  .intro-picture img {
+    width: 250px;
+    margin-top: 20px;
+  }
+  .timeline-section h2 {
+    font-size: 2rem;
+  }
+  .timeline-item h3 {
+    font-size: 1.4rem;
+  }
+  .timeline-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 424px) {
+  .intro-content h1 {
+    font-size: 2.1rem;
+  }
+  .intro-content p {
+    font-size: 0.95rem;
+  }
+  .timeline-section h2 {
+    font-size: 1.9rem;
+  }
+  .timeline-item h3 {
+    font-size: 1.3rem;
+  }
+  .timeline-item p {
+    font-size: 0.85rem;
   }
 }
 
@@ -110,79 +125,43 @@
   }
 }
 
-/* Mobile L - 425px */
-@media (max-width: 425px) {
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 767px) {
   .intro-content h1 {
-    font-size: 2.4rem;
-    text-align: center;
+    font-size: 2.5rem;
   }
   .intro-content p {
-    font-size: 1rem;
-  }
-  .intro-picture img {
-    width: 250px;
-    margin-top: 20px;
+    font-size: 1.15rem;
   }
   .timeline-section h2 {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
   .timeline-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
   .timeline-item p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
-/* Mobile M - 375px */
-@media (max-width: 375px) {
+/* Laptop - 1024px */
+@media (max-width: 1024px) {
   .intro-content h1 {
-    font-size: 2.2rem;
-    text-align: center;
+    font-size: 3rem;
   }
   .intro-content p {
-    font-size: 1rem;
-  }
-  .intro-picture img {
-    width: 220px;
-    margin-top: 20px;
-  }
-  .timeline-section h2 {
-    font-size: 1.8rem;
-  }
-  .timeline-item h3 {
-    font-size: 1.3rem;
-  }
-  .timeline-item p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile S - 320px */
-@media (max-width: 320px) {
-  .intro-content h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  .intro-content p {
-    font-size: 0.9rem;
-  }
-  .intro-picture img {
-    width: 200px;
-    margin-top: 20px;
-  }
-  .timeline-section h2 {
-    font-size: 1.6rem;
-  }
-  .timeline-item h3 {
     font-size: 1.2rem;
   }
+  .timeline-section h2 {
+    font-size: 3rem;
+  }
+  .timeline-item h3 {
+    font-size: 1.8rem;
+  }
   .timeline-item p {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 }
-
-/* Telas intermediárias para transições suaves */
 
 /* Entre Laptop e Tablet */
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -203,40 +182,59 @@
   }
 }
 
-/* Entre Tablet e Mobile L */
-@media (min-width: 426px) and (max-width: 767px) {
+/* Laptop L - 1440px */
+@media (max-width: 1440px) {
   .intro-content h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   .intro-content p {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
   .timeline-section h2 {
-    font-size: 2.6rem;
+    font-size: 3.5rem;
   }
   .timeline-item h3 {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
   .timeline-item p {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 }
 
-/* Entre Mobile L e Mobile S */
-@media (min-width: 321px) and (max-width: 424px) {
+/* 4K - 2560px */
+@media (min-width: 2560px) and (max-width: 3200px) {
   .intro-content h1 {
-    font-size: 2.1rem;
+    font-size: 5rem;
   }
   .intro-content p {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
   }
   .timeline-section h2 {
-    font-size: 1.9rem;
+    font-size: 4rem;
   }
   .timeline-item h3 {
-    font-size: 1.3rem;
+    font-size: 2.5rem;
   }
   .timeline-item p {
-    font-size: 0.85rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
+  .intro-content h1 {
+    font-size: 5.5rem;
+  }
+  .intro-content p {
+    font-size: 1.7rem;
+  }
+  .timeline-section h2 {
+    font-size: 4.5rem;
+  }
+  .timeline-item h3 {
+    font-size: 2.8rem;
+  }
+  .timeline-item p {
+    font-size: 1.6rem;
   }
 }

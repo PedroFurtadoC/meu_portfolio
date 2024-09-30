@@ -1,4 +1,11 @@
-/* Estilo do body para todas as páginas */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo básico do body para todas as páginas */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #2e2b40;
@@ -9,15 +16,12 @@ body {
   flex-direction: column;
 }
 
-/* O main vai ocupar todo o espaço disponível, permitindo que o footer fique no final */
+/* Garantir que o main ocupe o espaço restante da tela */
 main {
   flex-grow: 1;
 }
 
-/* Definição de estilos globais para os títulos */
-h1,
-h2,
-h3,
-h4 {
+/* Fontes globais para títulos */
+h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif;
 }

@@ -1,79 +1,234 @@
-/* contato.css */
-
 /* Responsividade */
 
-/* Dispositivos Ultra Largos (>2560px) */
-@media (min-width: 2561px) {
+/* Mobile XS - até 320px */
+@media (max-width: 320px) {
   .contact-header h1 {
-    font-size: 4.5rem;
+    font-size: 1.6rem;
+    text-align: center;
   }
   .contact-header p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .form-group label {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%; /* Garante que os campos ocupem todo o espaço disponível */
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+  .contact-info h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .contact-info p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .checkbox-group label {
+    font-size: 0.8rem;
+  }
+  .social-links a {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
+
+/* Mobile S - 320px */
+@media (max-width: 320px) {
+  .contact-header h1 {
     font-size: 1.6rem;
   }
+  .contact-header p {
+    font-size: 0.8rem;
+  }
+  .form-group label {
+    font-size: 0.8rem;
+  }
   .form-group input,
   .form-group textarea,
   .form-group select {
-    padding: 16px;
-    font-size: 1.3rem;
+    padding: 6px;
+    font-size: 0.8rem;
   }
   .contact-info h3 {
-    font-size: 2.4rem;
+    font-size: 1.2rem;
   }
   .contact-info p {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
   }
   .checkbox-group label {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
 }
 
-/* 4K - 2560px */
-@media (min-width: 2560px) and (max-width: 2560px) {
+/* Mobile M - 375px */
+@media (max-width: 375px) {
   .contact-header h1 {
-    font-size: 4rem;
+    font-size: 1.8rem;
   }
   .contact-header p {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .form-group label {
+    font-size: 0.85rem;
   }
   .form-group input,
   .form-group textarea,
   .form-group select {
-    padding: 14px;
-    font-size: 1.2rem;
+    padding: 7px;
+    font-size: 0.85rem;
   }
   .contact-info h3 {
-    font-size: 2.2rem;
-  }
-  .contact-info p {
     font-size: 1.3rem;
   }
+  .contact-info p {
+    font-size: 0.85rem;
+  }
   .checkbox-group label {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
   }
 }
 
-/* Laptop L - 1440px */
-@media (max-width: 1440px) {
+/* Mobile L - 425px */
+@media (max-width: 425px) {
   .contact-header h1 {
-    font-size: 3.5rem;
-  }
-  .contact-header p {
-    font-size: 1.3rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 13px;
-    font-size: 1.1rem;
-  }
-  .contact-info h3 {
     font-size: 2rem;
   }
+  .contact-header p {
+    font-size: 1rem;
+  }
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .contact-info h3 {
+    font-size: 1.4rem;
+  }
   .contact-info p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   .checkbox-group label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Entre Mobile L e Mobile S */
+@media (min-width: 321px) and (max-width: 425px) {
+  .contact-header h1 {
+    font-size: 1.9rem;
+  }
+  .contact-header p {
+    font-size: 0.9rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 7px;
+    font-size: 0.85rem;
+  }
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+  .contact-info p {
+    font-size: 0.85rem;
+  }
+  .checkbox-group label {
+    font-size: 0.85rem;
+  }
+}
+
+/* Entre Tablet e Mobile L */
+@media (min-width: 426px) and (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2.3rem;
+  }
+  .contact-header p {
+    font-size: 1rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 9px;
+    font-size: 0.95rem;
+  }
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+  .checkbox-group label {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+  .contact-header p {
     font-size: 1.1rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .contact-info h3 {
+    font-size: 1.6rem;
+  }
+  .contact-info p {
+    font-size: 1rem;
+  }
+  .social-links a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .checkbox-group label {
+    font-size: 0.95rem;
+  }
+}
+
+/* Entre Laptop e Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-header h1 {
+    font-size: 2.8rem;
+  }
+  .contact-header p {
+    font-size: 1.2rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 11px;
+    font-size: 1rem;
+  }
+  .contact-info h3 {
+    font-size: 1.7rem;
+  }
+  .contact-info p {
+    font-size: 1.05rem;
+  }
+  .checkbox-group label {
+    font-size: 1rem;
   }
 }
 
@@ -121,192 +276,77 @@
   }
 }
 
-/* Tablet - 768px */
-@media (max-width: 768px) {
+/* Laptop L - 1440px */
+@media (max-width: 1440px) {
   .contact-header h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   .contact-header p {
+    font-size: 1.3rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 13px;
     font-size: 1.1rem;
   }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 10px;
-    font-size: 1rem;
-  }
   .contact-info h3 {
-    font-size: 1.6rem;
-  }
-  .contact-info p {
-    font-size: 1rem;
-  }
-  .social-links a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-  .checkbox-group label {
-    font-size: 0.95rem;
-  }
-}
-
-/* Mobile L - 425px */
-@media (max-width: 425px) {
-  .contact-header h1 {
     font-size: 2rem;
   }
-  .contact-header p {
-    font-size: 1rem;
-  }
-  .form-group label {
-    font-size: 0.9rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 8px;
-    font-size: 0.9rem;
-  }
-  .contact-info h3 {
-    font-size: 1.4rem;
-  }
   .contact-info p {
-    font-size: 0.9rem;
-  }
-  .checkbox-group label {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile M - 375px */
-@media (max-width: 375px) {
-  .contact-header h1 {
-    font-size: 1.8rem;
-  }
-  .contact-header p {
-    font-size: 0.9rem;
-  }
-  .form-group label {
-    font-size: 0.85rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 7px;
-    font-size: 0.85rem;
-  }
-  .contact-info h3 {
-    font-size: 1.3rem;
-  }
-  .contact-info p {
-    font-size: 0.85rem;
-  }
-  .checkbox-group label {
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile S - 320px */
-@media (max-width: 320px) {
-  .contact-header h1 {
-    font-size: 1.6rem;
-  }
-  .contact-header p {
-    font-size: 0.8rem;
-  }
-  .form-group label {
-    font-size: 0.8rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 6px;
-    font-size: 0.8rem;
-  }
-  .contact-info h3 {
     font-size: 1.2rem;
   }
-  .contact-info p {
-    font-size: 0.8rem;
-  }
   .checkbox-group label {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 }
 
-/* Telas intermediárias para transições suaves */
-
-/* Entre Laptop e Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* 4K - 2560px */
+@media (min-width: 2560px) and (max-width: 2560px) {
   .contact-header h1 {
-    font-size: 2.8rem;
+    font-size: 4rem;
   }
   .contact-header p {
-    font-size: 1.2rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 11px;
-    font-size: 1rem;
-  }
-  .contact-info h3 {
-    font-size: 1.7rem;
-  }
-  .contact-info p {
-    font-size: 1.05rem;
-  }
-  .checkbox-group label {
-    font-size: 1rem;
-  }
-}
-
-/* Entre Tablet e Mobile L */
-@media (min-width: 426px) and (max-width: 768px) {
-  .contact-header h1 {
-    font-size: 2.3rem;
-  }
-  .contact-header p {
-    font-size: 1rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 9px;
-    font-size: 0.95rem;
-  }
-  .contact-info h3 {
     font-size: 1.5rem;
   }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 14px;
+    font-size: 1.2rem;
+  }
+  .contact-info h3 {
+    font-size: 2.2rem;
+  }
   .contact-info p {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
   }
   .checkbox-group label {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 }
 
-/* Entre Mobile L e Mobile S */
-@media (min-width: 321px) and (max-width: 425px) {
+/* Dispositivos Ultra Largos (>2560px) */
+@media (min-width: 2561px) {
   .contact-header h1 {
-    font-size: 1.9rem;
+    font-size: 4.5rem;
   }
   .contact-header p {
-    font-size: 0.9rem;
+    font-size: 1.6rem;
   }
   .form-group input,
   .form-group textarea,
   .form-group select {
-    padding: 7px;
-    font-size: 0.85rem;
-  }
-  .contact-info h3 {
+    padding: 16px;
     font-size: 1.3rem;
   }
+  .contact-info h3 {
+    font-size: 2.4rem;
+  }
   .contact-info p {
-    font-size: 0.85rem;
+    font-size: 1.4rem;
   }
   .checkbox-group label {
-    font-size: 0.85rem;
+    font-size: 1.3rem;
   }
 }

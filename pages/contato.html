@@ -38,13 +38,6 @@
 
     <!-- CSS Interno -->
     <style>
-      /* Reset básico */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       /* Seção de Contato */
       .contact-section {
         padding: 5rem 10%;
@@ -54,6 +47,7 @@
       }
 
       .contact-header h1 {
+        font-family: "Montserrat", sans-serif;
         font-size: 3rem;
         color: #f76c6c;
         margin-bottom: 1rem;
@@ -198,6 +192,20 @@
         margin-right: 0.5rem;
         width: auto;
       }
+
+      /* Estilizando os placeholders para uniformizar */
+      ::placeholder {
+        font-family: "Poppins", sans-serif;
+        color: #ddd; 
+        font-size: 1rem; 
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        color: #ddd; 
+      }
     </style>
   </head>
 
@@ -218,6 +226,7 @@
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="habilidades.html">Habilidades</a></li>
           <li><a href="experiencias.html">Experiências</a></li>
+          <!-- Estilo inline ao clicar sobre o item -->
           <li>
             <a href="contato.html" class="active" style="color: #f76c6c"
               >Contato</a
@@ -234,8 +243,8 @@
           <h1>Entre em Contato</h1>
           <p>
             Gostaria de trabalhar comigo ou me conhecer? Preencha o formulário
-            abaixo ou me envie uma mensagem diretamente através dos links ao
-            lado.
+            abaixo ou me envie uma mensagem diretamente através das informações
+            de contato.
           </p>
         </div>
 
@@ -375,7 +384,6 @@
           <div class="contact-info" data-aos="fade-left">
             <h3>Informações de Contato</h3>
             <p><strong>Email:</strong> pedrocunha.furtado@gmail.com</p>
-            <p><strong>Telefone:</strong> (16) 99233-4629</p>
             <p><strong>Endereço:</strong> Sertãozinho, SP - Brasil</p>
 
             <!-- Links para Redes Sociais -->
@@ -421,7 +429,10 @@
         once: true,
       });
     </script>
+
+    <!-- Script para controlar o menu hamburguer -->
     <script src="../assets/js/navbar.js"></script>
+
     <!-- Efeito do cursor -->
     <div class="cursor-shadow"></div>
     <script src="../assets/js/cursor.js"></script>

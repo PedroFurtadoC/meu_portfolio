@@ -1,275 +1,251 @@
 /* Responsividade */
 
-/* Dispositivos Ultra Largos (>2560px) */
-@media (min-width: 2561px) {
+/* Mobile XS - abaixo de 320px */
+@media (max-width: 319px) {
   .services-header h1 {
-    font-size: 4.5rem;
-  }
-
-  .services-header p {
-    font-size: 1.6rem;
-  }
-
-  .service-card h2 {
-    font-size: 2.8rem;
-  }
-
-  .service-card p {
-    font-size: 1.5rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 80px;
-  }
-}
-
-/* 4K - 2560px */
-@media (min-width: 2560px) and (max-width: 3200px) {
-  .services-header h1 {
-    font-size: 4rem;
-  }
-
-  .services-header p {
-    font-size: 1.5rem;
-  }
-
-  .service-card h2 {
-    font-size: 2.5rem;
-  }
-
-  .service-card p {
     font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
-
-  .service-card img,
-  .icon-small {
-    width: 70px;
-  }
-}
-
-/* Laptop L - 1440px */
-@media (max-width: 1440px) {
-  .services-header h1 {
-    font-size: 3.5rem;
-  }
-
   .services-header p {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
+    text-align: center;
   }
-
-  .service-card h2 {
-    font-size: 2rem;
-  }
-
-  .service-card p {
-    font-size: 1.2rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 60px;
-  }
-}
-
-/* Laptop - 1024px */
-@media (max-width: 1024px) {
-  .services-header h1 {
-    font-size: 3rem;
-  }
-
-  .services-header p {
-    font-size: 1.2rem;
-  }
-
   .services-container {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
-  .service-card img,
-  .icon-small {
-    width: 50px;
+  .service-card {
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
-
   .service-card h2 {
-    font-size: 1.8rem;
-  }
-
-  .service-card p {
-    font-size: 1.1rem;
-  }
-}
-
-/* Tablet - 768px */
-@media (max-width: 768px) {
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-
-  .services-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .services-header p {
-    font-size: 1.1rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 45px;
-  }
-
-  .service-card h2 {
-    font-size: 1.6rem;
-  }
-
-  .service-card p {
     font-size: 1rem;
+    margin-bottom: 0.8rem;
   }
-}
-
-/* Mobile L - 425px */
-@media (max-width: 425px) {
-  .services-header h1 {
-    font-size: 2rem;
-  }
-
-  .services-header p {
-    font-size: 1rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 40px;
-  }
-
-  .service-card h2 {
-    font-size: 1.4rem;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile M - 375px */
-@media (max-width: 375px) {
-  .services-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .services-header p {
-    font-size: 0.95rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 35px;
-  }
-
-  .service-card h2 {
-    font-size: 1.3rem;
-  }
-
-  .service-card p {
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile S - 320px */
-@media (max-width: 320px) {
-  .services-header h1 {
-    font-size: 1.6rem;
-  }
-
-  .services-header p {
-    font-size: 0.9rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 30px;
-  }
-
-  .service-card h2 {
-    font-size: 1.2rem;
-  }
-
   .service-card p {
     font-size: 0.8rem;
   }
-}
-
-/* Telas intermediárias para transições suaves */
-
-/* Entre Laptop e Tablet */
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .services-header h1 {
-    font-size: 3.2rem;
-  }
-
-  .services-header p {
-    font-size: 1.25rem;
-  }
-
-  .service-card h2 {
-    font-size: 1.9rem;
-  }
-
-  .service-card p {
-    font-size: 1.15rem;
-  }
-
   .service-card img,
   .icon-small {
-    width: 55px;
+    width: 30px;
+    margin-bottom: 1rem;
   }
 }
 
-/* Entre Tablet e Mobile L */
-@media (min-width: 426px) and (max-width: 767px) {
-  .services-header h1 {
-    font-size: 2.3rem;
+/* Mobile S - 320px a 374px */
+@media (min-width: 320px) and (max-width: 374px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
-  .services-header p {
-    font-size: 1.05rem;
+  .service-card {
+    padding: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
-
   .service-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
   }
-
-  .service-card p {
-    font-size: 0.95rem;
-  }
-
-  .service-card img,
-  .icon-small {
-    width: 42px;
-  }
-}
-
-/* Entre Mobile L e Mobile S */
-@media (min-width: 321px) and (max-width: 424px) {
-  .services-header h1 {
-    font-size: 1.9rem;
-  }
-
-  .services-header p {
-    font-size: 0.92rem;
-  }
-
-  .service-card h2 {
-    font-size: 1.3rem;
-  }
-
   .service-card p {
     font-size: 0.85rem;
   }
-
   .service-card img,
   .icon-small {
-    width: 36px;
+    width: 35px;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Mobile M - 375px a 424px */
+@media (min-width: 375px) and (max-width: 424px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .service-card {
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .service-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .service-card p {
+    font-size: 0.85rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 40px;
+    margin-bottom: 1.3rem;
+  }
+}
+
+/* Mobile L - 425px a 599px */
+@media (min-width: 425px) and (max-width: 599px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-card {
+    padding: 1.8rem;
+  }
+  .service-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .service-card p {
+    font-size: 0.9rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 45px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablets - 600px a 1023px */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-card {
+    padding: 2rem;
+    text-align: center;
+  }
+  .service-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.3rem;
+  }
+  .service-card p {
+    font-size: 1rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 50px;
+    margin-bottom: 1.3rem;
+  }
+}
+
+/* Laptops Pequenos - 1024px a 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-card {
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .service-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+  }
+  .service-card p {
+    font-size: 1.1rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 60px;
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* Laptops Médios - 1280px a 1439px */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-card {
+    padding: 3rem;
+    text-align: center;
+  }
+  .service-card h2 {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+  .service-card p {
+    font-size: 1.15rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 65px;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Laptops Grandes - 1440px a 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-card {
+    padding: 3.5rem;
+    text-align: center;
+  }
+  .service-card h2 {
+    font-size: 2.3rem;
+    margin-bottom: 2.2rem;
+  }
+  .service-card p {
+    font-size: 1.2rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 70px;
+    margin-bottom: 2.2rem;
+  }
+}
+
+/* Monitores de Alta Resolução - 1920px a 2559px */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .services-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .service-card {
+    padding: 4rem;
+    text-align: center;
+  }
+  .service-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .service-card p {
+    font-size: 1.25rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 75px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Monitores Ultra Largos - 2560px e acima */
+@media (min-width: 2560px) {
+  .services-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .service-card {
+    padding: 4.5rem;
+    text-align: center;
+  }
+  .service-card h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+  .service-card p {
+    font-size: 1.4rem;
+  }
+  .service-card img,
+  .icon-small {
+    width: 80px;
+    margin-bottom: 3rem;
   }
 }

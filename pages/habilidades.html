@@ -36,15 +36,7 @@
       rel="stylesheet"
     />
 
-    <!-- CSS Interno -->
     <style>
-      /* Reset básico */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       /* Seção de Habilidades */
       .skills-section {
         padding: 5rem 10%;
@@ -58,6 +50,7 @@
       }
 
       .skills-header h1 {
+        font-family: "Montserrat", sans-serif;
         font-size: 3rem;
         color: #f76c6c;
       }
@@ -68,6 +61,7 @@
         max-width: 800px;
         margin: 0 auto;
         margin-bottom: 3rem;
+        line-height: 1.5;
       }
 
       /* Container de Habilidades */
@@ -85,6 +79,11 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens do card */
+        justify-content: space-between;
+        min-height: 350px; /* Garante que todos os cards tenham o mesmo tamanho mínimo */
       }
 
       .skill-card:hover {
@@ -92,9 +91,18 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
+      /* Ícones de Habilidades */
       .skill-icon {
         width: 60px;
         margin-bottom: 1.5rem;
+      }
+
+      .icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Espaçamento entre os ícones */
+        margin-bottom: 1.5rem; /* Margem para separar os ícones do título */
       }
 
       /* Barra de Progresso */
@@ -122,6 +130,21 @@
         font-size: 0.9rem;
         font-weight: bold;
       }
+
+      /* Títulos e Parágrafos de Habilidades */
+      .skill-card h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        color: #f76c6c;
+        margin-bottom: 1rem;
+      }
+
+      .skill-card p {
+        font-size: 1.1rem;
+        color: #ddd;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
     </style>
   </head>
 
@@ -135,18 +158,17 @@
             alt="Menu"
             style="width: 30px; height: 30px"
           />
-          <!-- Estilo inline -->
         </span>
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="servicos.html">Serviços</a></li>
+          <!-- Estilo inline ao clicar sobre o item -->
           <li>
             <a href="habilidades.html" class="active" style="color: #f76c6c"
               >Habilidades</a
             >
           </li>
-          <!-- Estilo inline -->
           <li><a href="experiencias.html">Experiências</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
@@ -167,13 +189,23 @@
       <div class="skills-container">
         <!-- Desenvolvimento Web -->
         <div class="skill-card" data-aos="fade-up">
-          <img
-            src="../assets/icons/html-5.png"
-            alt="HTML5"
-            class="skill-icon"
-          />
-          <img src="../assets/icons/css-3.png" alt="CSS3" class="skill-icon" />
-          <img src="../assets/icons/react.png" alt="React" class="skill-icon" />
+          <div class="icons-container">
+            <img
+              src="../assets/icons/html-5.png"
+              alt="HTML5"
+              class="skill-icon"
+            />
+            <img
+              src="../assets/icons/css-3.png"
+              alt="CSS3"
+              class="skill-icon"
+            />
+            <img
+              src="../assets/icons/react.png"
+              alt="React"
+              class="skill-icon"
+            />
+          </div>
           <h2>Desenvolvimento Web</h2>
           <p>
             Criação de sites e aplicações responsivas, usando tecnologias
@@ -181,7 +213,6 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 85%"></div>
-            <!-- Estilo inline -->
             <span class="progress-label">85%</span>
           </div>
         </div>
@@ -200,7 +231,6 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 85%"></div>
-            <!-- Estilo inline -->
             <span class="progress-label">85%</span>
           </div>
         </div>
@@ -214,12 +244,10 @@
           />
           <h2>Automação com Python</h2>
           <p>
-            Automação de tarefas e criação de scripts poderosos usando Python,
-            seja para dados ou soluções de IA.
+            Automação de tarefas e criação de scripts poderosos usando Python.
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 80%"></div>
-            <!-- Estilo inline -->
             <span class="progress-label">80%</span>
           </div>
         </div>
@@ -234,19 +262,24 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 75%"></div>
-            <!-- Estilo inline -->
             <span class="progress-label">75%</span>
           </div>
         </div>
 
         <!-- Hardware & Sistemas Operacionais -->
         <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-          <img
-            src="../assets/icons/hardware.png"
-            alt="Hardware"
-            class="skill-icon"
-          />
-          <img src="../assets/icons/linux.png" alt="Linux" class="skill-icon" />
+          <div class="icons-container">
+            <img
+              src="../assets/icons/hardware.png"
+              alt="Hardware"
+              class="skill-icon"
+            />
+            <img
+              src="../assets/icons/linux.png"
+              alt="Linux"
+              class="skill-icon"
+            />
+          </div>
           <h2>Manutenção de Sistemas & Hardware</h2>
           <p>
             Experiência na manutenção de sistemas operacionais (Linux, Windows)
@@ -254,22 +287,57 @@
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 70%"></div>
-            <!-- Estilo inline -->
             <span class="progress-label">70%</span>
           </div>
         </div>
 
-        <!-- Git & Controle de Versão -->
+        <!-- Pacote Office -->
         <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+          <img
+            src="../assets/icons/office.png"
+            alt="Pacote Office"
+            class="skill-icon"
+          />
+          <h2>Pacote Office</h2>
+          <p>
+            Soluções eficazes utilizando ferramentas do Pacote Office como Word,
+            Excel e PowerPoint para criar documentos e apresentações
+            profissionais.
+          </p>
+          <div class="skill-progress">
+            <div class="progress-bar" style="width: 90%"></div>
+            <span class="progress-label">90%</span>
+          </div>
+        </div>
+
+        <!-- Oratória -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+          <img
+            src="../assets/icons/bater-papo.png"
+            alt="Oratória"
+            class="skill-icon"
+          />
+          <h2>Oratória</h2>
+          <p>
+            Conhecimento em apresentações, com habilidade de
+            transmitir informações de forma clara e envolvente.
+          </p>
+          <div class="skill-progress">
+            <div class="progress-bar" style="width: 85%"></div>
+            <span class="progress-label">85%</span>
+          </div>
+        </div>
+
+        <!-- Git & Controle de Versão -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
           <img src="../assets/icons/git.png" alt="Git" class="skill-icon" />
           <h2>Git & Controle de Versão</h2>
           <p>
             Gerenciamento de repositórios de código e controle de versões
-            utilizando Git, GitHub e GitLab.
+            utilizando Git e GitHub.
           </p>
           <div class="skill-progress">
             <div class="progress-bar" style="width: 90%"></div>
-            <!-- Estilo inline -->
             <span class="progress-label">90%</span>
           </div>
         </div>
@@ -303,6 +371,7 @@
 
     <!-- Script para controlar o menu hamburguer -->
     <script src="../assets/js/navbar.js"></script>
+
     <!-- Efeito do cursor -->
     <div class="cursor-shadow"></div>
     <script src="../assets/js/cursor.js"></script>

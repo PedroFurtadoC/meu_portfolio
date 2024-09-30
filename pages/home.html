@@ -37,13 +37,6 @@
 
     <!-- CSS Interno -->
     <style>
-      /* Reset básico */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       /* Animação de Fade In */
       @keyframes fadeIn {
         from {
@@ -101,6 +94,7 @@
       }
 
       .intro-content h1 {
+        font-family: "Montserrat", sans-serif;
         font-size: 3.5rem;
         color: #f76c6c;
         animation: fadeIn 2s ease-in-out;
@@ -205,7 +199,7 @@
     </style>
   </head>
   <body>
-    <!-- Header fixo com menu -->
+    <!-- Header fixo com ícone do menu -->
     <header class="main-header">
       <nav class="navbar">
         <span class="menu-toggle">
@@ -216,6 +210,7 @@
           />
         </span>
         <ul>
+          <!-- Estilo inline ao clicar sobre o item -->
           <li>
             <a href="home.html" class="active" style="color: #f76c6c">Home</a>
           </li>
@@ -362,16 +357,17 @@
       </p>
     </footer>
 
-    <!-- Scripts AOS e Navbar -->
+    <!-- Script para AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({ duration: 1200 });
     </script>
+
+    <!-- Script para controlar o menu hamburguer -->
     <script src="../assets/js/navbar.js"></script>
+
     <!-- Efeito do cursor -->
     <div class="cursor-shadow"></div>
     <script src="../assets/js/cursor.js"></script>
-    <!-- Script de digitação -->
-    <script src="../assets/js/typing.js"></script>
   </body>
 </html>

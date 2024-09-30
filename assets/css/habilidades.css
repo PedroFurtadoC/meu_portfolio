@@ -1,231 +1,275 @@
 /* Responsividade */
 
-/* Dispositivos Ultra Largos (>2560px) */
-@media (min-width: 2561px) {
+/* Mobile XS - abaixo de 320px */
+@media (max-width: 319px) {
   .skills-header h1 {
-    font-size: 4.5rem;
-  }
-  .skills-header p {
-    font-size: 1.6rem;
-  }
-  .skill-card h2 {
-    font-size: 2.8rem;
-  }
-  .skill-icon {
-    width: 80px;
-  }
-  .skill-card p {
     font-size: 1.4rem;
-  }
-}
-
-/* 4K - 2560px */
-@media (min-width: 2560px) and (max-width: 3200px) {
-  .skills-header h1 {
-    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   .skills-header p {
-    font-size: 1.5rem;
-  }
-  .skill-card h2 {
-    font-size: 2.5rem;
-  }
-  .skill-icon {
-    width: 70px;
-  }
-  .skill-card p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Laptop L - 1440px */
-@media (max-width: 1440px) {
-  .skills-header h1 {
-    font-size: 3.5rem;
-  }
-  .skills-header p {
-    font-size: 1.3rem;
-  }
-  .skill-card h2 {
-    font-size: 2rem;
-  }
-  .skill-icon {
-    width: 60px;
-  }
-  .skill-card p {
-    font-size: 1.1rem;
-  }
-}
-
-/* Laptop - 1024px */
-@media (max-width: 1024px) {
-  .skills-header h1 {
-    font-size: 3rem;
-  }
-  .skills-header p {
-    font-size: 1.2rem;
-  }
-  .skills-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .skill-icon {
-    width: 50px;
-  }
-  .skill-card h2 {
-    font-size: 1.8rem;
-  }
-  .skill-card p {
-    font-size: 1rem;
-  }
-}
-
-/* Tablet - 768px */
-@media (max-width: 768px) {
-  .skills-container {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-  .skills-header h1 {
-    font-size: 2.5rem;
-  }
-  .skills-header p {
-    font-size: 1.1rem;
-  }
-  .skill-icon {
-    width: 45px;
-  }
-  .skill-card h2 {
-    font-size: 1.6rem;
-  }
-  .skill-card p {
-    font-size: 0.95rem;
-  }
-  .progress-label {
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile L - 425px */
-@media (max-width: 425px) {
-  .skills-header h1 {
-    font-size: 2rem;
-  }
-  .skills-header p {
-    font-size: 1rem;
-  }
-  .skill-icon {
-    width: 40px;
-  }
-  .skill-card h2 {
-    font-size: 1.4rem;
-  }
-  .skill-card p {
-    font-size: 0.9rem;
-  }
-  .progress-label {
     font-size: 0.8rem;
+    text-align: center;
   }
-}
-
-/* Mobile M - 375px */
-@media (max-width: 375px) {
-  .skills-header h1 {
-    font-size: 1.8rem;
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .skills-header p {
-    font-size: 0.95rem;
-  }
-  .skill-icon {
-    width: 35px;
+  .skill-card {
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   .skill-card h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
   }
   .skill-card p {
-    font-size: 0.85rem;
-  }
-  .progress-label {
-    font-size: 0.75rem;
-  }
-}
-
-/* Mobile S - 320px */
-@media (max-width: 320px) {
-  .skills-header h1 {
-    font-size: 1.6rem;
-  }
-  .skills-header p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .skill-icon {
     width: 30px;
-  }
-  .skill-card h2 {
-    font-size: 1.2rem;
-  }
-  .skill-card p {
-    font-size: 0.8rem;
+    margin-bottom: 1rem;
   }
   .progress-label {
     font-size: 0.7rem;
   }
 }
 
-/* Telas intermediárias para transições suaves */
-
-/* Entre Laptop e Tablet */
-@media (min-width: 1025px) and (max-width: 1280px) {
+/* Mobile S - 320px a 374px */
+@media (min-width: 320px) and (max-width: 374px) {
   .skills-header h1 {
-    font-size: 3.2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%; 
   }
+  
   .skills-header p {
-    font-size: 1.25rem;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%; 
   }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-card {
+    width: 90%;
+    padding: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin: 0 auto; 
+  }
+
   .skill-card h2 {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
   }
+
   .skill-card p {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
   }
+
   .skill-icon {
-    width: 55px;
+    width: 35px;
+    margin-bottom: 1.2rem;
+  }
+
+  .progress-label {
+    font-size: 0.75rem;
   }
 }
 
-/* Entre Tablet e Mobile L */
-@media (min-width: 426px) and (max-width: 767px) {
-  .skills-header h1 {
-    font-size: 2.3rem;
+/* Mobile M - 375px a 424px */
+@media (min-width: 375px) and (max-width: 424px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .skills-header p {
-    font-size: 1.05rem;
-  }
-  .skill-card h2 {
-    font-size: 1.5rem;
-  }
-  .skill-card p {
-    font-size: 0.95rem;
-  }
-  .skill-icon {
-    width: 42px;
-  }
-}
-
-/* Entre Mobile L e Mobile S */
-@media (min-width: 321px) and (max-width: 424px) {
-  .skills-header h1 {
-    font-size: 1.9rem;
-  }
-  .skills-header p {
-    font-size: 0.92rem;
+  .skill-card {
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   .skill-card h2 {
     font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
   .skill-card p {
     font-size: 0.85rem;
   }
   .skill-icon {
-    width: 36px;
+    width: 40px;
+    margin-bottom: 1.3rem;
+  }
+  .progress-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile L - 425px a 599px */
+@media (min-width: 425px) and (max-width: 599px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-card {
+    padding: 1.8rem;
+  }
+  .skill-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .skill-card p {
+    font-size: 0.9rem;
+  }
+  .skill-icon {
+    width: 45px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablets - 600px a 1023px */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-card {
+    padding: 2rem;
+    text-align: center;
+  }
+  .skill-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.3rem;
+  }
+  .skill-card p {
+    font-size: 1rem;
+  }
+  .skill-icon {
+    width: 50px;
+    margin-bottom: 1.3rem;
+  }
+}
+
+/* Laptops Pequenos - 1024px a 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-card {
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .skill-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+  }
+  .skill-card p {
+    font-size: 1.1rem;
+  }
+  .skill-icon {
+    width: 60px;
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* Laptops Médios - 1280px a 1439px */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skill-card {
+    padding: 3rem;
+    text-align: center;
+  }
+  .skill-card h2 {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+  .skill-card p {
+    font-size: 1.15rem;
+  }
+  .skill-icon {
+    width: 65px;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Laptops Grandes - 1440px a 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skill-card {
+    padding: 3.5rem;
+    text-align: center;
+  }
+  .skill-card h2 {
+    font-size: 2.3rem;
+    margin-bottom: 2.2rem;
+  }
+  .skill-card p {
+    font-size: 1.2rem;
+  }
+  .skill-icon {
+    width: 70px;
+    margin-bottom: 2.2rem;
+  }
+}
+
+/* Monitores de Alta Resolução - 1920px a 2559px */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .skill-card {
+    padding: 4rem;
+    text-align: center;
+  }
+  .skill-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .skill-card p {
+    font-size: 1.25rem;
+  }
+  .skill-icon {
+    width: 75px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Monitores Ultra Largos - 2560px e acima */
+@media (min-width: 2560px) {
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .skill-card {
+    padding: 4.5rem;
+    text-align: center;
+  }
+  .skill-card h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+  .skill-card p {
+    font-size: 1.4rem;
+  }
+  .skill-icon {
+    width: 80px;
+    margin-bottom: 3rem;
+  }
+  .progress-label {
+    font-size: 1.3rem;
   }
 }
