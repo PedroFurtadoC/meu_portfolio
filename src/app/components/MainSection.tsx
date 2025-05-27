@@ -4,18 +4,18 @@ import ResponsiveIconScroll from "./shared/ResponsiveIconScroll";
 import Image from "next/image";
 import useMousePosition from "../hooks/UseMousePosition";
 import { useWindow } from "../hooks/UseWindow";
-import BackgroundShape from "./shared/BackgroundShape";
-import { isMobile } from "react-device-detect";
 import openNewTab from "../functions/NewTab";
-import download from "../functions/Download";
+import Blobs from "./shared/Blobs";
+import openEmail from "../functions/OpenEmail";
 
 export default function MainSection() {
 	let mouseDistanceX = 0;
 	let mouseDistanceY = 0;
 
-	if (!isMobile) {
-		const { x, y } = useMousePosition("home");
-		const windowRef = useWindow();
+	const { x, y } = useMousePosition("home");
+	const windowRef = useWindow();
+
+	if (windowRef) {
 		mouseDistanceX = x / (windowRef?.innerWidth || 1);
 		mouseDistanceY = y / (windowRef?.innerHeight || 1);
 	}
@@ -35,7 +35,7 @@ export default function MainSection() {
 					<div className="flex flex-row gap-3 mt-6 items-center font-[family-name:var(--font-geist-mono)]">
 						<p
 							style={{ lineHeight: 1 }}
-							className="text-[1.5rem] md:text-[2.75rem]"
+							className="text-[1.3rem] md:text-[2.75rem]"
 						>
 							Tecnologias
 						</p>
@@ -66,7 +66,7 @@ export default function MainSection() {
 						<button
 							onClick={() =>
 								openNewTab(
-									"https://www.linkedin.com/in/gabriel-reverso-pereira"
+									"https://www.linkedin.com/in/pedro-furtado-33159023b/"
 								)
 							}
 							className="h-16 w-full md:w-44 rounded-xl text-xl font-bold bg-[#0e76a8] shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
@@ -79,30 +79,15 @@ export default function MainSection() {
 						</button>
 						<button
 							onClick={() =>
-								openNewTab("https://github.com/GabrielReverso")
+								openEmail("pedrocunha.furtado@gmail.com")
 							}
-							className="h-16 w-full md:w-44 rounded-xl text-xl font-bold bg-[#24292e] mx-0 my-5 md:mx-4 md:my-0 shadow-md shadow-[#0005] hover:bg-[#191d22] transition-all"
+							className="h-16 w-full md:w-44 rounded-xl text-xl font-bold bg-[#a33939] mx-0 my-5 md:mx-4 md:my-0 shadow-md shadow-[#0005] hover:bg-[#802626] transition-all"
 						>
 							<FontelloIcon
-								name={"icon-github-circled"}
+								name={"icon-mail-alt"}
 								classStyling="mr-1 text-2xl"
 							/>{" "}
-							GitHub
-						</button>
-						<button
-							onClick={() => {
-								console.log("Starting download...");
-								download(
-									"https://gabrielreverso.github.io/portfolio/Gabriel_Reverso_Pereira_-_Desenvolvimento_de_Software_e_Web.pdf"
-								);
-							}}
-							className="h-16 w-full md:w-44 rounded-xl text-xl font-bold bg-[#a33939] shadow-md shadow-[#0005] hover:bg-[#802626] transition-all"
-						>
-							<FontelloIcon
-								name={"icon-download"}
-								classStyling="mr-1"
-							/>{" "}
-							Currículo
+							E-mail
 						</button>
 					</section>
 					<div className="flex flex-row mt-10 items-center">
@@ -111,92 +96,23 @@ export default function MainSection() {
 					</div>
 				</aside>
 				<picture className="ml-0 mt-10 md:ml-1 lg:mt-0 relative text-[0.6rem] md:text-xs lg:text-base">
-					<BackgroundShape
-						height="xl"
-						width="lg"
-						rounded
-						color="#053eb0"
-						left={"65%"}
-						top={"40%"}
+					<Blobs
+						className="main-blob"
+						color="#3791ad"
+						bottom={"10%"}
+						left={"38%"}
+						type={6}
 						zIndex={1}
 						translate={{
-							x: mouseDistanceX * -50,
-							y: mouseDistanceY * -50,
-						}}
-					/>
-					<BackgroundShape
-						height="md"
-						width="md"
-						rounded
-						color="#016bd6"
-						left={"10%"}
-						top={"70%"}
-						zIndex={1}
-						translate={{
-							x: mouseDistanceX * -30,
-							y: mouseDistanceY * -30,
-						}}
-					/>
-					<BackgroundShape
-						height="md"
-						width="sm"
-						rounded
-						color="#9a01d6"
-						left={"70%"}
-						top={"10%"}
-						zIndex={1}
-						translate={{
-							x: mouseDistanceX * -25,
-							y: mouseDistanceY * -25,
-						}}
-					/>
-					<BackgroundShape
-						height="sm"
-						width="sm"
-						rounded
-						color="#5f0b81"
-						left={"-10%"}
-						top={"8%"}
-						zIndex={1}
-						translate={{
-							x: mouseDistanceX * -40,
-							y: mouseDistanceY * -40,
-						}}
-					/>
-					<BackgroundShape
-						height="xl"
-						width="xl"
-						rounded
-						color="#6037ad"
-						left={"10%"}
-						top={"2%"}
-						zIndex={1}
-						translate={{
-							x: mouseDistanceX * -25,
-							y: mouseDistanceY * -25,
-						}}
-					/>
-					<BackgroundShape
-						height="xl"
-						width="xl"
-						rounded
-						color="white"
-						left={"18%"}
-						top={"10%"}
-						zIndex={1}
-						solid={false}
-						translate={{
-							x: mouseDistanceX * -20,
-							y: mouseDistanceY * -20,
+							x: mouseDistanceX * -0.8,
+							y: mouseDistanceY * -0.8,
 						}}
 					/>
 					<Image
-						/* className='w-40 h-56' */
-						className="min-w-[400px] min-h-[400px] md:min-w-[928px] md:min-h-[928px] relative z-10"
+						className="min-w-[350px] min-h-[350px] mb-[-3rem] md:mb-0 md:min-w-[600px] md:min-h-[600px] relative z-10 ml-auto mr-auto"
 						aria-hidden
-						src={require("../assets/gabriel.webp")}
-						alt="Imagem de Gabriel"
-						/* loading='lazy' */
+						src={require("../assets/Pedro.webp")}
+						alt="Imagem do Pedro"
 						unoptimized
 						priority
 						style={{
@@ -205,15 +121,6 @@ export default function MainSection() {
 							}px)`,
 						}}
 					/>
-					{/*                     <img
-                        className='aspect-square h-[40rem]'
-                        src={require("../assets/gabriel.webp")}
-                        alt=""
-                        
-                        style={{
-                            transform: `translate(${mouseDistanceX * -30}px, ${mouseDistanceY * -30}px)`
-                        }}
-                    /> */}
 				</picture>
 			</div>
 		</main>

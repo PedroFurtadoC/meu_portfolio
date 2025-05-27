@@ -30,7 +30,7 @@ export default function Footer() {
 							role="button"
 							onClick={() =>
 								openNewTab(
-									"https://github.com/GabrielReverso/portfolio"
+									"https://github.com/PedroFurtadoC/meu_portfolio"
 								)
 							}
 							className="text-violet-300 hover:cursor-pointer"

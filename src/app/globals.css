@@ -71,6 +71,16 @@ body {
 	overflow-x: hidden;
 }
 
+.main-blob {
+	scale: 5;
+}
+
+@media (max-width: 600px) {
+	.main-blob {
+		scale: 3;
+	}
+}
+
 @property --angle {
 	syntax: "<angle>";
 	initial-value: 0deg;
@@ -159,7 +169,7 @@ body {
 .Typewriter__wrapper,
 .Typewriter__cursor {
 	line-height: 1;
-	@apply text-[1.5rem] md:text-[2.75rem];
+	@apply text-[1.3rem] md:text-[2.75rem];
 }
 
 .Typewriter__mobile {
@@ -175,7 +185,7 @@ body {
 }
 
 #main-section {
-	min-width: 620px;
+	min-width: 700px;
 }
 
 @media screen and (max-width: 1430px) {
@@ -354,4 +364,8 @@ body {
 
 .modal span:is(.project) {
 	@apply text-rose-400 font-bold cursor-default;
+}
+
+.blob {
+	filter: drop-shadow(0px 0px 1px #00000050);
 }

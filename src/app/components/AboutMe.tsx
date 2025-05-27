@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { InlineWidget, PopupWidget } from "react-calendly";
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
 import BackgroundShape from "./shared/BackgroundShape";
@@ -7,11 +5,6 @@ import FontelloIcon from "./shared/FontelloIcon";
 import { url } from "inspector";
 
 export default function AboutMe() {
-	/* const [root, setRoot] = useState<HTMLElement | null>(null);
-
-	useEffect(() => {
-		setRoot(document.getElementById("root"));
-	}, []); */
 	return (
 		<div className="bg-background">
 			<section
@@ -91,84 +84,34 @@ export default function AboutMe() {
 						Ribeirão Preto, SP
 					</p>
 					<p className="text-lg md:text-xl my-1.5">
-						Sou estudante de{" "}
-						<span className="not-link text-cyan-600 font-bold">
-							Engenharia da Computação
-						</span>{" "}
-						na{" "}
-						<span
-							onClick={() => openNewTab("https://www.unaerp.br")}
-							className="text-purple-500 font-bold"
-						>
-							UNAERP
-						</span>{" "}
-						e formado em{" "}
-						<span className="not-link text-cyan-600 font-bold">
-							Técnico de Automação Industrial
-						</span>
-						. Tenho experiência em projetos que reforçaram minha
-						paixão pelo desenvolvimento de software.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Fusce quis faucibus mi, vel dapibus ex. Donec turpis
+						purus, maximus id arcu at, condimentum tincidunt nibh.
+						Morbi convallis diam eget orci rhoncus, ac tincidunt
+						elit gravida. Aenean eget eros quis nibh semper
+						efficitur at at turpis. In hac habitasse platea
 					</p>
 					<p className="text-lg md:text-xl my-1.5">
-						Adoro desafios e resolver problemas de forma criativa.
-						Trabalho com desenvolvimento web e mobile, utilizando
-						tecnologias como{" "}
-						<span
-							onClick={() => openNewTab("https://react.dev")}
-							className="text-purple-500 font-bold"
-						>
-							React
-						</span>
-						,{" "}
-						<span
-							onClick={() =>
-								openNewTab("https://reactnative.dev")
-							}
-							className="text-purple-500 font-bold"
-						>
-							React Native
-						</span>{" "}
-						e{" "}
-						<span
-							onClick={() => openNewTab("https://nextjs.org")}
-							className="text-purple-500 font-bold"
-						>
-							Next.js
-						</span>
-						, além de gostar de explorar outros frameworks para
-						adiquirir novos conhecimentos.
+						Aliquam mattis neque felis, at tincidunt mi ultrices
+						lobortis. Proin convallis libero nec massa mattis
+						congue. Vivamus quis luctus nunc. Vestibulum auctor
+						lacus ac egestas pulvinar. Mauris mattis tempus dui in
+						molestie. Donec ut ex viverra, fringilla enim sit amet,
 					</p>
 					<p className="text-lg md:text-xl my-1.5">
-						Nos momentos de lazer, me dedico a jogos e cultivo minha
-						paixão por plantas carnívoras. Se quiser saber mais ou
-						colaborar comigo, entre em contato pelo{" "}
-						<span
-							onClick={() =>
-								openNewTab(
-									"https://www.linkedin.com/in/gabriel-reverso-pereira"
-								)
-							}
-							className="text-purple-500 font-bold"
-						>
-							LinkedIn
-						</span>{" "}
-						ou{" "}
-						<span
-							onClick={() =>
-								openEmail("reversogabrielpereira@gmail.com")
-							}
-							className="text-purple-500 font-bold"
-						>
-							e-mail
-						</span>
-						!
+						Integer vel felis id magna porttitor ultricies. Aliquam
+						ac est ut odio mattis congue. Orci varius natoque
+						penatibus et magnis dis parturient montes, nascetur
+						ridiculus mus. Pellentesque porta pretium imperdiet.
+						Cras felis nisi, sagittis quis condimentum vel,
+						venenatis quis tellus. Ut condimentum nisl mollis
 					</p>
 
 					<div className="flex flex-row mt-10">
 						<button
 							onClick={() =>
 								openNewTab(
-									"https://www.linkedin.com/in/gabriel-reverso-pereira"
+									"https://www.linkedin.com/in/pedro-furtado-33159023b/"
 								)
 							}
 							className="h-16 w-full rounded-xl text-xl font-bold bg-[#0e76a8] shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
@@ -181,7 +124,7 @@ export default function AboutMe() {
 						</button>
 						<button
 							onClick={() =>
-								openEmail("reversogabrielpereira@gmail.com")
+								openEmail("pedrocunha.furtado@gmail.com")
 							}
 							className="h-16 w-full rounded-xl text-xl font-bold bg-[#a33939] ml-4 shadow-md shadow-[#0005] hover:bg-[#802626] transition-all"
 						>
@@ -252,13 +195,6 @@ export default function AboutMe() {
 					/>
 				</div>
 			</section>
-			{/* {root && (
-				<PopupWidget
-					url={"https://calendly.com/pedrocunha-furtado"}
-					rootElement={root}
-					text="Click"
-				/>
-			)} */}
 		</div>
 	);
 }

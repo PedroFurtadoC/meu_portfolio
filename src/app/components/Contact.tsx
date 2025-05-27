@@ -70,7 +70,7 @@ export default function Contact() {
 						<button
 							onClick={() =>
 								openNewTab(
-									"https://www.linkedin.com/in/gabriel-reverso-pereira"
+									"https://www.linkedin.com/in/pedro-furtado-33159023b/"
 								)
 							}
 							className="h-16 w-full rounded-xl text-xl font-bold bg-[#0e76a8] shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
@@ -83,7 +83,7 @@ export default function Contact() {
 						</button>
 						<button
 							onClick={() =>
-								openEmail("reversogabrielpereira@gmail.com")
+								openEmail("pedrocunha.furtado@gmail.com")
 							}
 							className="h-16 w-full rounded-xl text-xl font-bold bg-[#a33939] ml-4 shadow-md shadow-[#0005] hover:bg-[#802626] transition-all"
 						>
