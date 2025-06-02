@@ -159,7 +159,7 @@ body {
 .svg-background {
 	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
 	background-image: url("./endless-constellation.svg");
-	box-shadow: inset -8px 0px 50px 25px #020617;
+	box-shadow: inset 0px 0px 38px 30px var(--background);
 }
 
 .wrapper {
@@ -296,13 +296,32 @@ body {
 	}
 }
 
-.logo-container > div:not(:last-child) {
-	margin-right: 2.5rem;
+.solution-card {
+	@apply flex-col;
 }
 
-.logo-container > div {
-	filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.111));
-	margin-block: 1rem;
+.solution-card:nth-child(even) {
+	@apply md:flex-row-reverse;
+}
+
+/* .solution-card:nth-child(even) > div > p {
+	@apply text-right;
+} */
+
+.solution-card:nth-child(even) > div > p:first-child {
+	@apply text-extra-green;
+}
+
+.solution-card:nth-child(odd) {
+	@apply md:flex-row;
+}
+
+.solution-card:nth-child(odd) > div > p:first-child {
+	@apply text-extra-lilac;
+}
+
+.solution-card:not(:first-child) {
+	@apply mt-16;
 }
 
 .card-background-gradient {

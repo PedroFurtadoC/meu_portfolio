@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import MainSection from "./components/MainSection";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
-import Technologies from "./components/Technologies";
+import Solutions from "./components/Solutions";
 import Projects from "./components/Projects";
 import Curriculum from "./components/Curriculum";
 import Contact from "./components/Contact";
@@ -36,7 +36,7 @@ export default function Home() {
 			<Header />
 			<MainSection />
 			<AboutMe />
-			<Technologies />
+			<Solutions />
 			<Projects />
 			<Curriculum />
 			<Contact />

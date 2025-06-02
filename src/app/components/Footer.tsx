@@ -22,7 +22,7 @@ export default function Footer() {
 				</div>
 				<div>
 					<p className="lg:text-right text-base mb-2">
-						Portfólio desenvolvido usando Next.js e Tailwind
+						Portfólio desenvolvido em parceria com Gabriel Reverso
 					</p>
 					<p className="lg:text-right text-base">
 						Confira o repositório no{" "}

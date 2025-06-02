@@ -12,7 +12,7 @@ export default function Header() {
 				<div className="flex flex-row items-center justify-between wrapper">
 					<div className="flex flex-row items-center">
 						<Image
-							className="w-[60px] mr-4"
+							className="w-[60px] mr-2 md:mr-4"
 							aria-hidden
 							src={require("../assets/logo.png")}
 							alt="Imagem do Pedro"
