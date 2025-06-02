@@ -43,7 +43,7 @@ export default function Home() {
 			<Footer />
 			{root !== null && !isMobile ? (
 				<PopupWidget
-					url={"https://calendly.com/pedrocunha-furtado"}
+					url={"https://calendly.com/pedrocunha-furtado/30min"}
 					rootElement={root}
 					text="Agendar reunião"
 				/>

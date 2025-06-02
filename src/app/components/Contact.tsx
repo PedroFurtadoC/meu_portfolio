@@ -1,11 +1,18 @@
+import { useState } from "react";
 import navigate from "../functions/Navigate";
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
-import BackgroundShape from "./shared/BackgroundShape";
+import Blobs from "./shared/Blobs";
 import FontelloIcon from "./shared/FontelloIcon";
 import GoToStartShape from "./shared/GoToStartShape";
+import useRoot from "../hooks/UseRoot";
+import { PopupModal, PopupWidget } from "react-calendly";
 
 export default function Contact() {
+	const [calendlyOpen, setCalendlyOpen] = useState(false);
+
+	const root = useRoot();
+
 	return (
 		<div id="contact" className="bg-background">
 			<section
@@ -14,42 +21,37 @@ export default function Contact() {
 				className="relative w-screen pt-3 md:pt-32 pb-32"
 			>
 				<div className="text-base w-1/3">
-					<BackgroundShape
-						height="sm"
-						width="md"
-						rounded
-						color="#016bd6"
-						left={"10%"}
-						top={"5%"}
+					<Blobs
+						scale={2}
+						type={1}
+						color="#01b6d6"
+						left={"15%"}
+						top={"50%"}
 						zIndex={1}
 					/>
-					<BackgroundShape
-						height="sm"
-						width="sm"
-						rounded
-						color="#fff"
-						left={"6%"}
-						top={"15%"}
-						zIndex={2}
-						solid={false}
+					<Blobs
+						scale={1.8}
+						type={2}
+						color="#015dd6"
+						left={"5%"}
+						top={"0%"}
+						zIndex={1}
 					/>
-					<BackgroundShape
-						height="md"
-						width="md"
-						rounded
-						color="#8101d6"
-						left={"17%"}
-						top={"40%"}
-						zIndex={3}
+					<Blobs
+						scale={2.5}
+						type={4}
+						color="#ff6b6b"
+						left={"-5%"}
+						top={"30%"}
+						zIndex={1}
 					/>
-					<BackgroundShape
-						height="lg"
-						width="lg"
-						rounded
-						color="#4f01d6"
-						left={"-2%"}
-						top={"45%"}
-						zIndex={4}
+					<Blobs
+						scale={0.7}
+						type={3}
+						color="#00b88a"
+						left={"3%"}
+						top={"68%"}
+						zIndex={1}
 					/>
 				</div>
 				<div
@@ -61,10 +63,9 @@ export default function Contact() {
 							Contato
 						</h1>
 						<p className="text-center text-2xl md:text-3xl">
-							O que está esperando? Entre já em contato e torne
-							seu projeto realidade!
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit.
 						</p>
-						{/* <p className="text-center text-3xl">Imagine seu projeto digital virarando realidade. Próximo passo? Entre já em contato!</p> */}
 					</div>
 					<div className="flex flex-row mt-12 w-1/2">
 						<button
@@ -94,52 +95,58 @@ export default function Contact() {
 							E-mail
 						</button>
 					</div>
+					<div className="flex flex-row mt-8 w-2/6">
+						<button
+							onClick={() => setCalendlyOpen(true)}
+							className="h-16 w-full rounded-xl text-xl font-bold bg-[#4977a0] ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
+						>
+							<FontelloIcon
+								name={"icon-calendar"}
+								classStyling="mr-1 text-2xl"
+							/>{" "}
+							Agende uma reunião
+						</button>
+					</div>
 				</div>
 				<div className="text-base w-1/3">
-					<BackgroundShape
-						height="lg"
-						width="md"
-						rounded
-						color="#0193d6"
-						left={"85%"}
+					<Blobs
+						scale={1}
+						type={5}
+						color="#ff6b6b"
+						left={"67%"}
+						top={"0%"}
+						zIndex={1}
+					/>
+					<Blobs
+						scale={1.3}
+						type={6}
+						color="#016bd6"
+						left={"75%"}
+						top={"30%"}
+						zIndex={1}
+					/>
+					<Blobs
+						scale={2}
+						type={10}
+						color="#01bdd6"
+						left={"90%"}
 						top={"10%"}
 						zIndex={1}
 					/>
-					<BackgroundShape
-						height="lg"
-						width="lg"
-						rounded
-						color="#fff"
-						left={"90%"}
-						top={"40%"}
-						zIndex={2}
-						solid={false}
-					/>
-					<BackgroundShape
-						height="sm"
-						width="sm"
-						rounded
-						color="#af01d6"
-						left={"75%"}
-						top={"-5%"}
-						zIndex={3}
-					/>
-					<BackgroundShape
-						height="sm"
-						width="md"
-						rounded
-						color="#fff"
-						left={"73%"}
-						top={"50%"}
-						zIndex={4}
-						solid={false}
+					<Blobs
+						scale={1.6}
+						type={8}
+						color="#00b88a"
+						left={"93%"}
+						top={"57%"}
+						zIndex={1}
 					/>
 				</div>
 				<div className="to-start">
 					<GoToStartShape
 						height="md"
 						width="sm"
-						color="#8101d6"
+						color="#3791ad"
 						left={"80%"}
 						top={"80%"}
 						zIndex={5}
@@ -147,6 +154,14 @@ export default function Contact() {
 					/>
 				</div>
 			</section>
+			{root && (
+				<PopupModal
+					open={calendlyOpen}
+					onModalClose={() => setCalendlyOpen(false)}
+					url={"https://calendly.com/pedrocunha-furtado/30min"}
+					rootElement={root}
+				/>
+			)}
 		</div>
 	);
 }

@@ -1,8 +1,7 @@
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
-import BackgroundShape from "./shared/BackgroundShape";
+import Blobs from "./shared/Blobs";
 import FontelloIcon from "./shared/FontelloIcon";
-import { url } from "inspector";
 
 export default function AboutMe() {
 	return (
@@ -13,60 +12,36 @@ export default function AboutMe() {
 				className="relative flex flex-row items-center justify-center w-screen"
 			>
 				<div className="text-xs lg:text-base w-1/3">
-					<BackgroundShape
-						height="md"
-						width="md"
-						rounded
-						color="#016bd6"
-						left={"10%"}
-						top={"70%"}
+					<Blobs
+						scale={2}
+						type={1}
+						color="#01b6d6"
+						left={"15%"}
+						top={"60%"}
 						zIndex={1}
 					/>
-					<BackgroundShape
-						height="lg"
-						width="lg"
-						rounded
-						solid={false}
-						color="white"
+					<Blobs
+						scale={2.5}
+						type={2}
+						color="#015dd6"
 						left={"12%"}
-						top={"10%"}
+						top={"20%"}
 						zIndex={1}
 					/>
-					<BackgroundShape
-						height="xl"
-						width="xl"
-						rounded
-						color="#5f0b81"
-						left={"3%"}
-						top={"15%"}
-						zIndex={1}
-					/>
-					<BackgroundShape
-						height="sm"
-						width="sm"
-						rounded
-						color="#053eb0"
-						left={"22%"}
-						top={"53%"}
-						zIndex={1}
-					/>
-					<BackgroundShape
-						height="sm"
-						width="sm"
-						rounded
-						color="#9a01d6"
-						left={"5%"}
-						top={"65%"}
-						zIndex={1}
-					/>
-					<BackgroundShape
-						height="md"
-						width="md"
-						rounded
-						solid={false}
-						color="white"
-						left={"-2%"}
+					<Blobs
+						scale={3}
+						type={4}
+						color="#ff6b6b"
+						left={"-5%"}
 						top={"40%"}
+						zIndex={1}
+					/>
+					<Blobs
+						scale={2}
+						type={5}
+						color="#00b88a"
+						left={"-3%"}
+						top={"90%"}
 						zIndex={1}
 					/>
 				</div>
@@ -137,60 +112,36 @@ export default function AboutMe() {
 					</div>
 				</div>
 				<div className="text-base w-1/3">
-					<BackgroundShape
-						height="lg"
-						width="md"
-						rounded
+					<Blobs
+						scale={1.8}
+						type={9}
 						color="#016bd6"
 						left={"85%"}
 						top={"10%"}
 						zIndex={1}
 					/>
-					<BackgroundShape
-						height="md"
-						width="md"
-						rounded
-						color="#9a01d6"
+					<Blobs
+						scale={3}
+						type={5}
+						color="#01bdd6"
 						left={"78%"}
-						top={"65%"}
-						zIndex={1}
-					/>
-					<BackgroundShape
-						height="lg"
-						width="lg"
-						rounded
-						solid={false}
-						color="white"
-						left={"70%"}
-						top={"70%"}
-						zIndex={1}
-					/>
-					<BackgroundShape
-						height="md"
-						width="lg"
-						rounded
-						color="#5f0b81"
-						left={"78%"}
-						top={"30%"}
-						zIndex={1}
-					/>
-					<BackgroundShape
-						height="lg"
-						width="lg"
-						rounded
-						color="#053eb0"
-						left={"90%"}
 						top={"50%"}
 						zIndex={1}
 					/>
-					<BackgroundShape
-						height="md"
-						width="md"
-						rounded
-						solid={false}
-						color="white"
-						left={"75%"}
-						top={"20%"}
+					<Blobs
+						scale={2}
+						type={8}
+						color="#00b88a"
+						left={"90%"}
+						top={"70%"}
+						zIndex={1}
+					/>
+					<Blobs
+						scale={1.4}
+						type={2}
+						color="#ff6b6b"
+						left={"70%"}
+						top={"85%"}
 						zIndex={1}
 					/>
 				</div>
