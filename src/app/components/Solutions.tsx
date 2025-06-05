@@ -1,5 +1,7 @@
 import { solutionsContent } from "../content/solutions-content";
+import CurvedTimeline from "./shared/CurvedTimeline";
 import SolutionsCard from "./shared/SolutionsCard";
+import Timeline from "./shared/Timeline";
 
 export default function Solutions() {
 	return (
@@ -26,6 +28,7 @@ export default function Solutions() {
 						/>
 					))}
 				</div>
+				<CurvedTimeline />
 			</section>
 		</div>
 	);
