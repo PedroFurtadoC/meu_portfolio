@@ -35,10 +35,10 @@ export default function Header() {
 							Sobre mim
 						</p>
 						<p
-							onClick={() => navigate("#technologies")}
+							onClick={() => navigate("#solutions")}
 							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
 						>
-							Tecnologias
+							Soluções
 						</p>
 						<p
 							onClick={() => navigate("#projects")}
