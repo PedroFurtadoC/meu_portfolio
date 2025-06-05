@@ -1,3 +1,4 @@
+import Carousel from "./carousel/Carousel";
 import CurvedTimeline from "./shared/CurvedTimeline";
 
 export default function Curriculum() {
@@ -15,6 +16,14 @@ export default function Curriculum() {
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit
 					</p>
 					<CurvedTimeline />
+				</div>
+			</section>
+			<section data-aos="fade-up" className="w-screen h-fit pb-20">
+				<div className="wrapper flex flex-col">
+					<h1 className="text-5xl lg:text-6xl mb-16 font-bold text-accent text-center">
+						Certificações
+					</h1>
+					<Carousel />
 				</div>
 			</section>
 		</div>
