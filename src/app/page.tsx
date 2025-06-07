@@ -13,9 +13,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { PopupModal } from "react-calendly";
 import useRoot from "./hooks/UseRoot";
-import { isMobile } from "react-device-detect";
 import useCalendlyStore from "./stores/calendlyStore";
 import FontelloIcon from "./components/shared/FontelloIcon";
+import useMobile from "./hooks/UseMobile";
 
 export default function Home() {
 	useEffect(() => {
@@ -28,6 +28,8 @@ export default function Home() {
 	}, []);
 
 	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
+
+	const isMobile = useMobile();
 
 	const root = useRoot();
 
@@ -67,6 +69,7 @@ export default function Home() {
 					</button>
 				</div>
 			)}
+			<div id="portal-root" />
 		</div>
 	);
 }

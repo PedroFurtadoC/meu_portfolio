@@ -1,20 +1,11 @@
-import { useState } from "react";
+import { projectContent } from "../content/projects-content";
 import openNewTab from "../functions/NewTab";
-import ExpandableCard from "./shared/ExpandableCard";
+import ProjectCard from "./projectComponents/ProjectCard";
 import FontelloIcon from "./shared/FontelloIcon";
-import ProjectModal from "./shared/ProjectModal";
 
 export default function Projects() {
-	const [isVisible, setVisible] = useState(false);
-	const [modalType, setModalType] = useState("codap");
-
 	return (
 		<>
-			<ProjectModal
-				isVisible={isVisible}
-				onClose={() => setVisible(false)}
-				type={modalType}
-			/>
 			<div className="bg-background svg-background">
 				<section data-aos="fade" className="w-screen h-fit py-20">
 					<div
@@ -41,51 +32,17 @@ export default function Projects() {
 							GitHub - Conheça Todos!
 						</button>
 						<div className="w-full flex flex-wrap justify-center my-10">
-							<ExpandableCard
-								setModalVisible={(type) => {
-									setVisible(true);
-									setModalType(type);
-								}}
-								aosDelay="100"
-								title="Codap"
-								description="Aplicativo Android interativo para aprender desenvolvimento web"
-							/>
-							<ExpandableCard
-								setModalVisible={(type) => {
-									setVisible(true);
-									setModalType(type);
-								}}
-								aosDelay="200"
-								title="Power Beast"
-								description="Aplicativo desktop para monitoramento de bateria e recursos do sistema"
-							/>
-							<ExpandableCard
-								setModalVisible={(type) => {
-									setVisible(true);
-									setModalType(type);
-								}}
-								aosDelay="300"
-								title="J.I.R.A"
-								description="Braço robótico controlado remotamente por aplicativo mobile"
-							/>
-							<ExpandableCard
-								setModalVisible={(type) => {
-									setVisible(true);
-									setModalType(type);
-								}}
-								aosDelay="400"
-								title="Cardapium"
-								description="Site demonstrativo de um cardápio virtual"
-							/>
-							<ExpandableCard
-								setModalVisible={(type) => {
-									setVisible(true);
-									setModalType(type);
-								}}
-								aosDelay="500"
-								title="Enciclopet"
-								description="Guia de raças de cães e gatos para Android e iOS"
-							/>
+							{projectContent.map((project, index) => (
+								<ProjectCard
+									key={"project" + index + project.title}
+									title={project.title}
+									shortDescription={project.shortDescription}
+									bgColor={project.bgColor}
+									picture={project.picture}
+									modalContent={project.modalContent}
+									aosDelay={`${(index + 1) * 100}`}
+								/>
+							))}
 						</div>
 					</div>
 				</section>

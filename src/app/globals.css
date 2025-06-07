@@ -333,46 +333,6 @@ body {
 	);
 }
 
-.image-codap {
-	background-image: url("./assets/Cody.webp");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #141f29;
-}
-
-.image-powerbeast {
-	background-image: url("./assets/Dragon.webp");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #0b1018;
-}
-
-.image-enciclopet {
-	background-image: url("./assets/Enciclopet.webp");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #e3dcd6;
-}
-
-.image-cardapium {
-	background-image: url("./assets/Cardapium.webp");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #141f29;
-}
-
-.image-jira {
-	background-image: url("./assets/Jira.webp");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #000;
-}
-
 .modal span:not(.project) {
 	@apply text-purple-400 font-bold cursor-pointer;
 }
