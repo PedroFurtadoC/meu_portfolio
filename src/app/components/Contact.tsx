@@ -1,4 +1,3 @@
-import { useState } from "react";
 import navigate from "../functions/Navigate";
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
@@ -6,10 +5,11 @@ import Blobs from "./shared/Blobs";
 import FontelloIcon from "./shared/FontelloIcon";
 import GoToStartShape from "./shared/GoToStartShape";
 import useRoot from "../hooks/UseRoot";
-import { PopupModal, PopupWidget } from "react-calendly";
+import { PopupModal } from "react-calendly";
+import useCalendlyStore from "../stores/calendlyStore";
 
 export default function Contact() {
-	const [calendlyOpen, setCalendlyOpen] = useState(false);
+	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
 
 	const root = useRoot();
 
@@ -97,7 +97,7 @@ export default function Contact() {
 					</div>
 					<div className="flex flex-row mt-8 w-2/6">
 						<button
-							onClick={() => setCalendlyOpen(true)}
+							onClick={toggleCalendly}
 							className="h-16 w-full rounded-xl text-xl font-bold bg-[#4977a0] ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
 						>
 							<FontelloIcon
@@ -156,8 +156,8 @@ export default function Contact() {
 			</section>
 			{root && (
 				<PopupModal
-					open={calendlyOpen}
-					onModalClose={() => setCalendlyOpen(false)}
+					open={isCalendlyOpen}
+					onModalClose={toggleCalendly}
 					url={"https://calendly.com/pedrocunha-furtado/30min"}
 					rootElement={root}
 				/>

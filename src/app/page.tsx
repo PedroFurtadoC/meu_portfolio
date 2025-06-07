@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainSection from "./components/MainSection";
@@ -11,9 +11,11 @@ import Projects from "./components/Projects";
 import Curriculum from "./components/Curriculum";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { PopupWidget } from "react-calendly";
+import { PopupModal } from "react-calendly";
 import useRoot from "./hooks/UseRoot";
 import { isMobile } from "react-device-detect";
+import useCalendlyStore from "./stores/calendlyStore";
+import FontelloIcon from "./components/shared/FontelloIcon";
 
 export default function Home() {
 	useEffect(() => {
@@ -24,6 +26,8 @@ export default function Home() {
 			mirror: true,
 		});
 	}, []);
+
+	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
 
 	const root = useRoot();
 
@@ -41,13 +45,28 @@ export default function Home() {
 			<Curriculum />
 			<Contact />
 			<Footer />
-			{root !== null && !isMobile ? (
-				<PopupWidget
+			{root !== null ? (
+				<PopupModal
+					open={isCalendlyOpen}
+					onModalClose={toggleCalendly}
 					url={"https://calendly.com/pedrocunha-furtado/30min"}
 					rootElement={root}
-					text="Agendar reunião"
 				/>
 			) : null}
+			{isMobile ? null : (
+				<div className="fixed flex mt-8 w-fit h-fit z-[99] right-4 bottom-4">
+					<button
+						onClick={toggleCalendly}
+						className="flex flex-row items-center p-3 h-full w-full rounded-xl text-lg bg-[#4977a0] ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
+					>
+						<FontelloIcon
+							name={"icon-calendar"}
+							classStyling="mr-1 text-xl"
+						/>{" "}
+						Agendar Conversa
+					</button>
+				</div>
+			)}
 		</div>
 	);
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FontelloIcon from "./shared/FontelloIcon";
 import navigate from "../functions/Navigate";
-import Image from "next/image";
 
 export default function Header() {
 	const [isMenuVisible, setMenuVisible] = useState(false);
@@ -10,17 +9,7 @@ export default function Header() {
 		<>
 			<header className="select-none fixed h-20 w-screen top-0 bg-primary shadow-lg shadow-[#0003] z-30">
 				<div className="flex flex-row items-center justify-between wrapper">
-					<div className="flex flex-row items-center">
-						<Image
-							className="w-[60px] mr-2 md:mr-4"
-							aria-hidden
-							src={require("../assets/logo.png")}
-							alt="Imagem do Pedro"
-							unoptimized
-							priority
-						/>
-						<p className="text-xl font-bold">Pedro Furtado Cunha</p>
-					</div>
+					<p className="text-xl font-bold">Pedro Furtado Cunha</p>
 					<nav id="nav-header" className="flex-row gap-6">
 						<p
 							onClick={() => navigate("#home")}
