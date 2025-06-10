@@ -59,13 +59,13 @@ export default function Contact() {
 					className="wrapper flex flex-col items-center"
 				>
 					<div className="w-1/2">
-						<h1 className="text-center text-5xl md:text-6xl text-cyan-500 font-bold mb-10">
+						<h1 className="text-center text-4xl md:text-5xl text-cyan-500 font-bold mb-10">
 							Contato
 						</h1>
-						<p className="text-center text-2xl md:text-3xl">
+						<h2 className="text-center text-2xl md:text-3xl">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit.
-						</p>
+						</h2>
 					</div>
 					<div className="flex flex-row mt-12 w-1/2">
 						<button

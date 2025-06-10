@@ -10,7 +10,7 @@ const SolutionsCard = ({
 	optionalText,
 }: Solution) => {
 	return (
-		<div className="flex gap-10 solution-card">
+		<div className="flex gap-10 solution-card" data-aos="fade-up">
 			<Image
 				className="aspect-square w-[80%] self-center md:w-[26rem] rounded-lg hover:scale-105 transition-all"
 				unoptimized
@@ -19,10 +19,10 @@ const SolutionsCard = ({
 				alt={imageAlt}
 			/>
 			<div>
-				<p className="text-3xl md:text-4xl font-bold">{title}</p>
-				<p className="text-2xl md:text-3xl mt-5 text-muted">{text}</p>
+				<h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
+				<p className="text-xl md:text-2xl mt-5 text-muted">{text}</p>
 				{optionalText && (
-					<p className="text-2xl md:text-3xl mt-5 text-muted">
+					<p className="text-xl md:text-2xl mt-5 text-muted">
 						{optionalText}
 					</p>
 				)}

@@ -52,13 +52,13 @@ export default function AboutMe() {
 					<p className="text-2xl md:text-3xl mb-2 font-bold">
 						Sobre mim
 					</p>
-					<p className="text-4xl md:text-5xl mb-3 text-cyan-400 font-bold">
+					<h1 className="text-4xl md:text-5xl mb-3 text-cyan-400 font-bold">
 						Pedro Furtado Cunha
-					</p>
-					<p className="text-2xl md:text-3xl mb-5 text-rose-300 font-bold">
+					</h1>
+					<h2 className="text-2xl md:text-3xl mb-5 text-rose-300 font-bold">
 						Ribeirão Preto, SP
-					</p>
-					<p className="text-lg md:text-xl my-1.5">
+					</h2>
+					<p className="text-xl md:text-2xl my-1.5">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Fusce quis faucibus mi, vel dapibus ex. Donec turpis
 						purus, maximus id arcu at, condimentum tincidunt nibh.
@@ -66,14 +66,14 @@ export default function AboutMe() {
 						elit gravida. Aenean eget eros quis nibh semper
 						efficitur at at turpis. In hac habitasse platea
 					</p>
-					<p className="text-lg md:text-xl my-1.5">
+					<p className="text-xl md:text-2xl my-1.5">
 						Aliquam mattis neque felis, at tincidunt mi ultrices
 						lobortis. Proin convallis libero nec massa mattis
 						congue. Vivamus quis luctus nunc. Vestibulum auctor
 						lacus ac egestas pulvinar. Mauris mattis tempus dui in
 						molestie. Donec ut ex viverra, fringilla enim sit amet,
 					</p>
-					<p className="text-lg md:text-xl my-1.5">
+					<p className="text-xl md:text-2xl my-1.5">
 						Integer vel felis id magna porttitor ultricies. Aliquam
 						ac est ut odio mattis congue. Orci varius natoque
 						penatibus et magnis dis parturient montes, nascetur

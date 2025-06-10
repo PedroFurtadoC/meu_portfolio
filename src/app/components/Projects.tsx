@@ -12,10 +12,10 @@ export default function Projects() {
 						id="projects"
 						className="wrapper flex flex-col items-center pt-10"
 					>
-						<h1 className="text-6xl text-cyan-500 font-bold mb-10">
+						<h1 className="text-4xl md:text-5xl text-cyan-500 font-bold mb-10">
 							Projetos
 						</h1>
-						<p className="text-center text-3xl">
+						<p className="text-center text-xl md:text-2xl">
 							Veja alguns dos projetos mais importantes que
 							participei
 						</p>

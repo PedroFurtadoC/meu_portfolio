@@ -19,6 +19,7 @@ export interface PContent {
 	image: string;
 	optionalImage: string;
 	optionalImage2: string;
+	ytVideoId?: string;
 }
 
 export interface PLink {
@@ -35,10 +36,10 @@ export const projectContent: Project[] = [
 		bgColor: "#ececec",
 		modalContent: {
 			layout: 1,
-			title: "Placeholder",
-			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
+			title: "Layout 1",
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
 			optionalText:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
 			optionalText2:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
 			image: require("../assets/image.png"),
@@ -46,7 +47,29 @@ export const projectContent: Project[] = [
 			optionalImage2: require("../assets/image.png"),
 			link: {
 				url: "https:www.google.com.br",
-				description: "Google",
+				description: "Teste de link",
+			},
+		},
+	},
+	{
+		title: "Placeholder 2",
+		shortDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
+		picture: "image.png",
+		bgColor: "#ececec",
+		modalContent: {
+			layout: 2,
+			title: "Layout 2",
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
+			optionalText:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis faucibus mi, vel dapibus ex.",
+
+			image: require("../assets/image.png"),
+			optionalImage: require("../assets/image.png"),
+			optionalImage2: require("../assets/image.png"),
+			link: {
+				url: "https:www.google.com.br",
+				description: "Teste de link",
 			},
 		},
 	},

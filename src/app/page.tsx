@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Solutions from "./components/Solutions";
 import Projects from "./components/Projects";
-import Curriculum from "./components/Curriculum";
+import Journey from "./components/Journey";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { PopupModal } from "react-calendly";
@@ -44,7 +44,7 @@ export default function Home() {
 			<AboutMe />
 			<Solutions />
 			<Projects />
-			<Curriculum />
+			<Journey />
 			<Contact />
 			<Footer />
 			{root !== null ? (

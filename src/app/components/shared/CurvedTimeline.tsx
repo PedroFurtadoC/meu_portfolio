@@ -134,20 +134,20 @@ export default function CurvedTimeline() {
 						}}
 						className={`min-h-[200px] border-[6px] border-muted bg-background rounded-xl m-[-10px] p-8 flex flex-col text-white font-bold`}
 					>
-						<h1
+						<h2
 							className={`${
 								index % 2 === 0
 									? "text-extra-lilac"
 									: "text-extra-green"
-							} text-4xl mb-4`}
+							} text-2xl md:text-3xl mb-4`}
 						>
 							{item.title}
-						</h1>
-						<p className="text-foreground text-xl mb-4">
+						</h2>
+						<p className="text-foreground font-normal text-xl md:text-2xl mb-4">
 							{item.text}
 						</p>
 						{item.optionalText && (
-							<p className="text-foreground text-xl">
+							<p className="text-foreground font-normal text-xl md:text-2xl">
 								{item.optionalText}
 							</p>
 						)}

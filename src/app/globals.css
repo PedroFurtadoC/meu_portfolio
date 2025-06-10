@@ -308,7 +308,7 @@ body {
 	@apply text-right;
 } */
 
-.solution-card:nth-child(even) > div > p:first-child {
+.solution-card:nth-child(even) > div > h2 {
 	@apply text-extra-green;
 }
 
@@ -316,12 +316,12 @@ body {
 	@apply md:flex-row;
 }
 
-.solution-card:nth-child(odd) > div > p:first-child {
+.solution-card:nth-child(odd) > div > h2 {
 	@apply text-extra-lilac;
 }
 
 .solution-card:not(:first-child) {
-	@apply mt-16;
+	@apply mt-20;
 }
 
 .card-background-gradient {
@@ -331,18 +331,6 @@ body {
 		rgba(0, 0, 0, 0.9) 0%,
 		rgba(0, 0, 0, 0) 100%
 	);
-}
-
-.modal span:not(.project) {
-	@apply text-purple-400 font-bold cursor-pointer;
-}
-
-.modal span:is(.project):not(.no-link) {
-	@apply text-rose-400 font-bold cursor-pointer;
-}
-
-.modal span:is(.project) {
-	@apply text-rose-400 font-bold cursor-default;
 }
 
 .blob {
