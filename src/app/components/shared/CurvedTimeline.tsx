@@ -71,6 +71,7 @@ export default function CurvedTimeline() {
 			return (
 				<svg
 					style={index % 2 !== 0 ? { transform: "scale(-1,1)" } : {}}
+					className="mt-[3px] z-0"
 					xmlns="http://www.w3.org/2000/svg"
 					version="1.1"
 					xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -132,7 +133,7 @@ export default function CurvedTimeline() {
 							width: `${width}px`,
 							maxWidth: "800px",
 						}}
-						className={`min-h-[200px] border-[6px] border-muted bg-background rounded-xl m-[-10px] p-8 flex flex-col text-white font-bold`}
+						className={`min-h-[200px] bg-nav rounded-xl m-[-10px] p-8 flex flex-col text-white font-bold card z-10`}
 					>
 						<h2
 							className={`${

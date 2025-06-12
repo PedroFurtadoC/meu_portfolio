@@ -39,8 +39,9 @@ const Blobs = ({
 			scale: scale,
 			position: relative ? "relative" : "absolute",
 			transform: `translate(${translate.x}px, ${translate.y}px)`,
-			height: "200px",
-			width: "200px",
+			height: "30em",
+			width: "30em",
+			opacity: 1,
 		};
 	} else {
 		baseStyles = {

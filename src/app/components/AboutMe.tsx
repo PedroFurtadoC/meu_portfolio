@@ -11,43 +11,9 @@ export default function AboutMe() {
 				id="about-me"
 				className="relative flex flex-row items-center justify-center w-screen"
 			>
-				<div className="text-xs lg:text-base w-1/3">
-					<Blobs
-						scale={2}
-						type={1}
-						color="#01b6d6"
-						left={"15%"}
-						top={"60%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={2.5}
-						type={2}
-						color="#015dd6"
-						left={"12%"}
-						top={"20%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={3}
-						type={4}
-						color="#ff6b6b"
-						left={"-5%"}
-						top={"40%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={2}
-						type={5}
-						color="#00b88a"
-						left={"-3%"}
-						top={"90%"}
-						zIndex={1}
-					/>
-				</div>
 				<div
 					id="about-me-div"
-					className="flex flex-col py-20 md:py-40 mx-10"
+					className="flex flex-col my-20 p-20 wrapper rounded-[2rem] bg-nav card"
 				>
 					<p className="text-2xl md:text-3xl mb-2 font-bold">
 						Sobre mim
@@ -110,40 +76,6 @@ export default function AboutMe() {
 							E-mail
 						</button>
 					</div>
-				</div>
-				<div className="text-base w-1/3">
-					<Blobs
-						scale={1.8}
-						type={9}
-						color="#016bd6"
-						left={"85%"}
-						top={"10%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={3}
-						type={5}
-						color="#01bdd6"
-						left={"78%"}
-						top={"50%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={2}
-						type={8}
-						color="#00b88a"
-						left={"90%"}
-						top={"70%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={1.4}
-						type={2}
-						color="#ff6b6b"
-						left={"70%"}
-						top={"85%"}
-						zIndex={1}
-					/>
 				</div>
 			</section>
 		</div>

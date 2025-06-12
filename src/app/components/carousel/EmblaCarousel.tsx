@@ -44,6 +44,50 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 		onNextButtonClick,
 	} = usePrevNextButtons(emblaApi, onNavButtonClick);
 
+	/* const selectionScale = (index: number) => {
+		if (index === selectedIndex) {
+			return 1;
+		} else if (index + 1 === selectedIndex || index - 1 === selectedIndex) {
+			return 0.8;
+		} else if (index + 2 === selectedIndex || index - 2 === selectedIndex) {
+			return 0.6;
+		} else if (index + 3 === selectedIndex || index - 3 === selectedIndex) {
+			return 0.4;
+		} else if (index + 2 === selectedIndex || index - 2 === selectedIndex) {
+			return 0.2;
+		} else {
+			return 0;
+		}
+	}; */
+
+	const selectionScale = (index: number, length: number) => {
+		if (selectedIndex < 4) {
+			if (index < 4) {
+				return 1;
+			} else if (index === 4) {
+				return 0.8;
+			} else {
+				return 0;
+			}
+		} else if (selectedIndex > length - 4) {
+			if (index > length - 4) {
+				return 1;
+			} else if (index === length - 4) {
+				return 0.8;
+			} else {
+				return 0;
+			}
+		} else {
+			if (index < selectedIndex - 2 || index > selectedIndex + 2) {
+				return 0;
+			} else if (index < selectedIndex - 1 || index > selectedIndex + 1) {
+				return 0.8;
+			} else {
+				return 1;
+			}
+		}
+	};
+
 	return (
 		<section className="embla">
 			<div className="embla__viewport" ref={emblaRef}>
@@ -82,16 +126,25 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 				</div>
 
 				<div className="embla__dots">
-					{scrollSnaps.map((_, index) => (
+					{scrollSnaps.map((_, index, arr) => (
 						<DotButton
+							style={{
+								scale: selectionScale(index, arr.length),
+								display:
+									selectionScale(index, arr.length) === 0
+										? "none"
+										: "block",
+							}}
 							aria-label={"Ir para slide " + (index + 1)}
 							key={index}
 							onClick={() => onDotButtonClick(index)}
-							className={"embla__dot".concat(
-								index === selectedIndex
-									? " embla__dot--selected"
-									: ""
-							)}
+							className={
+								"embla__dot".concat(
+									index === selectedIndex
+										? " embla__dot--selected"
+										: ""
+								) + " transition-all"
+							}
 						/>
 					))}
 				</div>

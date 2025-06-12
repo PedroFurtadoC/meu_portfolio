@@ -20,40 +20,6 @@ export default function Contact() {
 				data-aos="fade"
 				className="relative w-screen pt-3 md:pt-32 pb-32"
 			>
-				<div className="text-base w-1/3">
-					<Blobs
-						scale={2}
-						type={1}
-						color="#01b6d6"
-						left={"15%"}
-						top={"50%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={1.8}
-						type={2}
-						color="#015dd6"
-						left={"5%"}
-						top={"0%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={2.5}
-						type={4}
-						color="#ff6b6b"
-						left={"-5%"}
-						top={"30%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={0.7}
-						type={3}
-						color="#00b88a"
-						left={"3%"}
-						top={"68%"}
-						zIndex={1}
-					/>
-				</div>
 				<div
 					id="contact-div"
 					className="wrapper flex flex-col items-center"
@@ -108,40 +74,7 @@ export default function Contact() {
 						</button>
 					</div>
 				</div>
-				<div className="text-base w-1/3">
-					<Blobs
-						scale={1}
-						type={5}
-						color="#ff6b6b"
-						left={"67%"}
-						top={"0%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={1.3}
-						type={6}
-						color="#016bd6"
-						left={"75%"}
-						top={"30%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={2}
-						type={10}
-						color="#01bdd6"
-						left={"90%"}
-						top={"10%"}
-						zIndex={1}
-					/>
-					<Blobs
-						scale={1.6}
-						type={8}
-						color="#00b88a"
-						left={"93%"}
-						top={"57%"}
-						zIndex={1}
-					/>
-				</div>
+
 				<div className="to-start">
 					<GoToStartShape
 						height="md"
