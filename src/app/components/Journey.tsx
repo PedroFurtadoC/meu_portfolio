@@ -1,5 +1,4 @@
 import Carousel from "./carousel/Carousel";
-import CurvedTimeline from "./shared/CurvedTimeline";
 import Timeline from "./shared/Timeline";
 
 export default function Journey() {
@@ -16,7 +15,6 @@ export default function Journey() {
 					<h2 className="text-2xl md:text-3xl my-1.5">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit
 					</h2>
-					{/* <CurvedTimeline /> */}
 					<Timeline />
 				</div>
 			</section>

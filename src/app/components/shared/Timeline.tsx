@@ -28,9 +28,8 @@ interface TimelineCardProps {
 }
 
 const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
-	const divRef = useRef(null);
-
-	const { elementHeight } = useSize(divRef);
+	const cardRef = useRef(null);
+	const { elementHeight: cardHeight } = useSize(cardRef);
 
 	const { width: windowWidth } = useWindowResize();
 	const width = windowWidth * 0.9;
@@ -46,17 +45,17 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 			return (
 				<div
 					style={{
-						height: `${elementHeight}px`,
+						height: `${cardHeight}px`,
 						flexDirection: index % 2 === 0 ? "row" : "row-reverse",
 					}}
 					className="relative flex items-center flex-grow"
 				>
-					<hr className="w-1/2 h-[1px] border-0 border-b-[5px] border-b-accent border-dashed" />
+					<hr className="w-[40%] h-[1px] border-0 border-b-[5px] border-b-accent border-dashed" />
 					<hr
 						className="w-[1px] border-0 border-l-[5px] border-l-accent border-dashed"
 						style={{
-							height: `${elementHeight}px`,
-							transform: `translateY(${elementHeight / 2 - 2}px)`,
+							height: `${cardHeight}px`,
+							transform: `translateY(${cardHeight / 2 - 2}px)`,
 						}}
 					/>
 				</div>
@@ -74,7 +73,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 					windowWidth > 1000
 						? index === length - 1
 							? "0px"
-							: `${elementHeight / 2}px`
+							: `${cardHeight / 2}px`
 						: "0px",
 				flexDirection:
 					windowWidth > 1000
@@ -85,7 +84,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 			}}
 		>
 			<div
-				ref={divRef}
+				ref={cardRef}
 				style={{
 					width: `${width}px`,
 					maxWidth: maxWidth,
