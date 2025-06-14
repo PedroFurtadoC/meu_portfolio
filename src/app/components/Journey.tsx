@@ -1,11 +1,12 @@
 import Carousel from "./carousel/Carousel";
 import CurvedTimeline from "./shared/CurvedTimeline";
+import Timeline from "./shared/Timeline";
 
 export default function Journey() {
 	return (
 		<div id="curriculum" className="bg-background">
 			<section data-aos="fade-up" className="w-screen h-fit py-20">
-				<div className="wrapper flex flex-col pt-10">
+				<div className="relative wrapper flex flex-col pt-10">
 					<p className="text-2xl lg:text-3xl mb-2 font-bold">
 						Saiba mais
 					</p>
@@ -15,7 +16,8 @@ export default function Journey() {
 					<h2 className="text-2xl md:text-3xl my-1.5">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit
 					</h2>
-					<CurvedTimeline />
+					{/* <CurvedTimeline /> */}
+					<Timeline />
 				</div>
 			</section>
 			<section data-aos="fade-up" className="w-screen h-fit pb-20">
