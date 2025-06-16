@@ -1,12 +1,12 @@
 import navigate from "../functions/Navigate";
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
-import Blobs from "./shared/Blobs";
 import FontelloIcon from "./shared/FontelloIcon";
 import GoToStartShape from "./shared/GoToStartShape";
 import useRoot from "../hooks/UseRoot";
 import { PopupModal } from "react-calendly";
 import useCalendlyStore from "../stores/calendlyStore";
+import Image from "next/image";
 
 export default function Contact() {
 	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
@@ -22,57 +22,78 @@ export default function Contact() {
 			>
 				<div
 					id="contact-div"
-					className="wrapper flex flex-col items-center"
+					className="wrapper flex flex-col lg:flex-row-reverse gap-10 lg:gap-0 items-center justify-between card bg-primary py-10 lg:py-20 rounded-3xl"
 				>
-					<div className="w-1/2">
-						<h1 className="text-center text-4xl md:text-5xl text-cyan-500 font-bold mb-10">
-							Contato
-						</h1>
-						<h2 className="text-center text-2xl md:text-3xl">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
-						</h2>
+					<div className="flex flex-col justify-center items-center w-[90%] lg:w-2/3">
+						<div className="w-3/4">
+							<h1 className="text-center text-4xl md:text-5xl text-cyan-500 font-bold mb-10">
+								Contato
+							</h1>
+							<h2 className="text-center text-2xl md:text-3xl">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit.
+							</h2>
+						</div>
+						<div className="flex flex-col lg:flex-row gap-4 mt-12 w-[90%] lg:w-3/4">
+							<button
+								onClick={() =>
+									openNewTab(
+										"https://www.linkedin.com/in/pedro-furtado-33159023b/"
+									)
+								}
+								className="h-16 w-full rounded-xl text-xl font-bold bg-[#0e76a8] shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
+							>
+								<FontelloIcon
+									name={"icon-linkedin"}
+									classStyling="mr-1 text-2xl"
+								/>{" "}
+								Linkedin
+							</button>
+							<button
+								onClick={() =>
+									openEmail("pedrocunha.furtado@gmail.com")
+								}
+								className="h-16 w-full rounded-xl text-xl font-bold bg-[#a33939] shadow-md shadow-[#0005] hover:bg-[#802626] transition-all"
+							>
+								<FontelloIcon
+									name={"icon-mail-alt"}
+									classStyling="mr-1 text-2xl"
+								/>{" "}
+								E-mail
+							</button>
+						</div>
+						<div className="flex flex-row mt-4 w-[90%] lg:w-1/2">
+							<button
+								onClick={toggleCalendly}
+								className="h-16 w-full rounded-xl text-xl font-bold bg-[#4977a0] shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
+							>
+								<FontelloIcon
+									name={"icon-calendar"}
+									classStyling="mr-1 text-2xl"
+								/>{" "}
+								Agende uma reunião
+							</button>
+						</div>
 					</div>
-					<div className="flex flex-row mt-12 w-1/2">
-						<button
-							onClick={() =>
-								openNewTab(
-									"https://www.linkedin.com/in/pedro-furtado-33159023b/"
-								)
-							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-[#0e76a8] shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
-						>
-							<FontelloIcon
-								name={"icon-linkedin"}
-								classStyling="mr-1 text-2xl"
-							/>{" "}
-							Linkedin
-						</button>
-						<button
-							onClick={() =>
-								openEmail("pedrocunha.furtado@gmail.com")
-							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-[#a33939] ml-4 shadow-md shadow-[#0005] hover:bg-[#802626] transition-all"
-						>
-							<FontelloIcon
-								name={"icon-mail-alt"}
-								classStyling="mr-1 text-2xl"
-							/>{" "}
-							E-mail
-						</button>
-					</div>
-					<div className="flex flex-row mt-8 w-2/6">
-						<button
-							onClick={toggleCalendly}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-[#4977a0] ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
-						>
-							<FontelloIcon
-								name={"icon-calendar"}
-								classStyling="mr-1 text-2xl"
-							/>{" "}
-							Agende uma reunião
-						</button>
-					</div>
+					<figure className="relative flex flex-grow justify-center h-[400px] ml-0 lg:ml-20">
+						<Image
+							/* ref={imageRef} */
+							aria-hidden
+							unoptimized
+							src={require("../assets/TesteContato2.png")}
+							alt="Pedro"
+							objectFit="cover"
+							className="h-full w-auto rounded-lg"
+						/>
+						{/* <div
+							className="absolute inset-0 rounded-lg mx-auto"
+							style={{
+								boxShadow: "inset 0px 0px 15px 15px #1b3a4b",
+								zIndex: 20,
+								width: elementWidth,
+							}}
+						/> */}
+					</figure>
 				</div>
 
 				<div className="to-start">
@@ -81,7 +102,7 @@ export default function Contact() {
 						width="sm"
 						color="#3791ad"
 						left={"80%"}
-						top={"80%"}
+						top={"93%"}
 						zIndex={5}
 						onClick={() => navigate("#home")}
 					/>

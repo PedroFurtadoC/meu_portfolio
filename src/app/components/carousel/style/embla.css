@@ -1,5 +1,5 @@
 .embla {
-	width: clamp(20rem, 50rem, 70rem);
+	width: clamp(200px, 80vw, 800px);
 	margin: auto;
 	--slide-height: 30rem;
 	--slide-spacing: 1rem;
@@ -11,6 +11,7 @@
 	--detail-medium-contrast: #ff6b6b;
 	--detail-medium-contrast-rgb-value: 25, 25, 25;
 }
+
 .embla__viewport {
 	overflow: hidden;
 }
@@ -44,6 +45,7 @@
 	gap: 1.2rem;
 	margin-top: 0.8rem;
 }
+
 .embla__buttons {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -72,6 +74,7 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .embla__button:disabled {
 	color: var(--detail-high-contrast);
 }
@@ -97,7 +100,6 @@
 	cursor: pointer;
 	border: 0;
 	padding: 0;
-	margin: 0;
 	width: 2.6rem;
 	height: 2.6rem;
 	display: flex;
@@ -105,6 +107,7 @@
 	justify-content: center;
 	border-radius: 50%;
 }
+
 .embla__dot:after {
 	box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
 	width: 1.4rem;
@@ -113,7 +116,42 @@
 	display: flex;
 	align-items: center;
 	content: "";
+	margin-inline: auto;
 }
 .embla__dot--selected:after {
 	box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+
+@media screen and (max-width: 620px) {
+	.embla {
+		--slide-height: 20rem;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.embla {
+		--slide-height: 17rem;
+	}
+	.embla__controls {
+		display: flex;
+		flex-direction: column;
+	}
+	.embla__buttons {
+		margin-inline: auto;
+		margin-block: 1rem;
+		display: flex;
+		justify-items: center;
+	}
+	.embla__button {
+		width: 50px;
+		height: 50px;
+	}
+	.embla__dots {
+		margin-inline: auto;
+		justify-items: center;
+	}
+	.embla__dot {
+		width: 36px;
+		height: 36px;
+	}
 }

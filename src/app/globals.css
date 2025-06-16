@@ -163,7 +163,7 @@ body {
 }
 
 .wrapper {
-	@apply h-full max-w-[90%] md:max-w-[70%] mx-auto;
+	@apply h-full max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[1310px] mx-auto;
 }
 
 .Typewriter__wrapper,
@@ -259,17 +259,8 @@ body {
 
 @media screen and (max-width: 1300px) {
 	#about-me > div:nth-child(3),
-	#contact-section > div:nth-child(3),
-	#contact-section > div:nth-child(1) {
-		display: none;
-	}
-
 	#about-me-div {
 		width: 50%;
-	}
-
-	#contact-div > div {
-		width: 90%;
 	}
 
 	.to-start {
