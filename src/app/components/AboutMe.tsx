@@ -4,15 +4,14 @@ import FontelloIcon from "./shared/FontelloIcon";
 
 export default function AboutMe() {
 	return (
-		<div className="bg-background">
-			<section
+		<section id="about-me" className="bg-background">
+			<div
 				data-aos="fade-up"
-				id="about-me"
 				className="relative flex flex-row items-center justify-center w-screen"
 			>
 				<div
 					id="about-me-div"
-					className="flex flex-col my-20 p-20 wrapper rounded-[2rem] bg-nav card"
+					className="flex flex-col my-20 px-5 py-8 md:p-20 wrapper rounded-[2rem] bg-nav card"
 				>
 					<p className="text-2xl md:text-3xl mb-2 font-bold">
 						Sobre mim
@@ -76,7 +75,7 @@ export default function AboutMe() {
 						</button>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 	);
 }

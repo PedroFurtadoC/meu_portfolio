@@ -243,26 +243,11 @@ body {
 	cursor: pointer;
 }
 
-#about-me > div:nth-child(odd) {
-	display: block;
-}
-
-@media screen and (max-width: 1300px) {
-	#about-me > div:nth-child(3) {
-		display: none;
-	}
-}
-
 .to-start {
 	font-size: 1rem;
 }
 
 @media screen and (max-width: 1300px) {
-	#about-me > div:nth-child(3),
-	#about-me-div {
-		width: 50%;
-	}
-
 	.to-start {
 		transform: translateY(5rem);
 		font-size: 0.7rem;
@@ -270,18 +255,6 @@ body {
 }
 
 @media screen and (max-width: 780px) {
-	#about-me > div:nth-child(1) {
-		display: none;
-	}
-
-	#about-me {
-		flex-direction: column;
-	}
-
-	#about-me-div {
-		width: 85%;
-	}
-
 	.to-start {
 		transform: translateY(6rem);
 		font-size: 0.4rem;
