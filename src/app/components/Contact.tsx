@@ -24,9 +24,9 @@ export default function Contact() {
 					id="contact-div"
 					className="wrapper flex flex-col lg:flex-row-reverse gap-10 lg:gap-0 items-center justify-between card bg-primary py-10 lg:py-20 rounded-3xl"
 				>
-					<div className="flex flex-col justify-center items-center w-[90%] lg:w-2/3">
-						<div className="w-3/4">
-							<h1 className="text-center text-4xl md:text-5xl text-cyan-500 font-bold mb-10">
+					<div className="flex flex-col justify-center items-center w-[90%] lg:w-[60%]">
+						<div className="w-[80%]">
+							<h1 className="text-center text-4xl md:text-5xl text-accent font-bold mb-10">
 								Contato
 							</h1>
 							<h2 className="text-center text-2xl md:text-3xl">
@@ -75,24 +75,15 @@ export default function Contact() {
 							</button>
 						</div>
 					</div>
-					<figure className="relative flex flex-grow justify-center h-[400px] ml-0 lg:ml-20">
+					<figure className="relative flex flex-grow justify-center h-[400px] ">
 						<Image
-							/* ref={imageRef} */
 							aria-hidden
 							unoptimized
-							src={require("../assets/TesteContato2.png")}
+							src={require("../assets/PedroContato.webp")}
 							alt="Pedro"
 							objectFit="cover"
 							className="h-full w-auto rounded-lg"
 						/>
-						{/* <div
-							className="absolute inset-0 rounded-lg mx-auto"
-							style={{
-								boxShadow: "inset 0px 0px 15px 15px #1b3a4b",
-								zIndex: 20,
-								width: elementWidth,
-							}}
-						/> */}
 					</figure>
 				</div>
 
@@ -103,7 +94,7 @@ export default function Contact() {
 						color="#3791ad"
 						left={"80%"}
 						top={"93%"}
-						zIndex={5}
+						zIndex={99}
 						onClick={() => navigate("#home")}
 					/>
 				</div>

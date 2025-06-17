@@ -4,7 +4,7 @@ import FontelloIcon from "./shared/FontelloIcon";
 export default function Footer() {
 	return (
 		<footer
-			className="bg-primary"
+			className="bg-primary pointer-events-none"
 			style={{ boxShadow: "inset 0 10px 10px 0 #00000060" }}
 		>
 			<div
@@ -24,7 +24,7 @@ export default function Footer() {
 					<p className="lg:text-right text-base mb-2">
 						Portfólio desenvolvido em parceria com Gabriel Reverso
 					</p>
-					<p className="lg:text-right text-base">
+					<p className="lg:text-right text-base pointer-events-auto">
 						Confira o repositório no{" "}
 						<span
 							role="button"

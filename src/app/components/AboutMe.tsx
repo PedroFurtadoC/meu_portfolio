@@ -1,6 +1,5 @@
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
-import Blobs from "./shared/Blobs";
 import FontelloIcon from "./shared/FontelloIcon";
 
 export default function AboutMe() {
@@ -18,10 +17,10 @@ export default function AboutMe() {
 					<p className="text-2xl md:text-3xl mb-2 font-bold">
 						Sobre mim
 					</p>
-					<h1 className="text-4xl md:text-5xl mb-3 text-cyan-400 font-bold">
+					<h1 className="text-4xl md:text-5xl mb-3 text-accent font-bold">
 						Pedro Furtado Cunha
 					</h1>
-					<h2 className="text-2xl md:text-3xl mb-5 text-rose-300 font-bold">
+					<h2 className="text-2xl md:text-3xl mb-5 text-cyan-300 font-bold">
 						Ribeirão Preto, SP
 					</h2>
 					<p className="text-xl md:text-2xl my-1.5">
