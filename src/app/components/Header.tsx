@@ -1,9 +1,12 @@
 import { useState } from "react";
 import FontelloIcon from "./shared/FontelloIcon";
 import navigate from "../functions/Navigate";
+import useHeaderAnchorStore from "../stores/headerAnchorStore";
 
 export default function Header() {
 	const [isMenuVisible, setMenuVisible] = useState(false);
+
+	const activeAnchor = useHeaderAnchorStore((s) => s.activeAnchor);
 
 	return (
 		<>
@@ -13,37 +16,49 @@ export default function Header() {
 					<nav id="nav-header" className="flex-row gap-6">
 						<p
 							onClick={() => navigate("#home")}
-							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer`}
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "home" && "active-link"
+							}`}
 						>
 							Home
 						</p>
 						<p
 							onClick={() => navigate("#about-me")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "about-me" && "active-link"
+							}`}
 						>
 							Sobre mim
 						</p>
 						<p
 							onClick={() => navigate("#solutions")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "solutions" && "active-link"
+							}`}
 						>
 							Soluções
 						</p>
 						<p
 							onClick={() => navigate("#projects")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "projects" && "active-link"
+							}`}
 						>
 							Projetos
 						</p>
 						<p
 							onClick={() => navigate("#curriculum")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "curriculum" && "active-link"
+							}`}
 						>
 							Currículo
 						</p>
 						<p
 							onClick={() => navigate("#contact")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "contact" && "active-link"
+							}`}
 						>
 							Contato
 						</p>
@@ -86,37 +101,49 @@ export default function Header() {
 					<div className="flex flex-col gap-6 px-5 pt-5">
 						<p
 							onClick={() => navigate("#home")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "home" && "active-link"
+							}`}
 						>
 							Home
 						</p>
 						<p
 							onClick={() => navigate("#about-me")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "about-me" && "active-link"
+							}`}
 						>
 							Sobre mim
 						</p>
 						<p
 							onClick={() => navigate("#solutions")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "solutions" && "active-link"
+							}`}
 						>
 							Soluções
 						</p>
 						<p
 							onClick={() => navigate("#projects")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "projects" && "active-link"
+							}`}
 						>
 							Projetos
 						</p>
 						<p
 							onClick={() => navigate("#curriculum")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "curriculum" && "active-link"
+							}`}
 						>
 							Currículo
 						</p>
 						<p
 							onClick={() => navigate("#contact")}
-							className="hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer"
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "contact" && "active-link"
+							}`}
 						>
 							Contato
 						</p>

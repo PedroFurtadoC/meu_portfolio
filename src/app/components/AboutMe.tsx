@@ -1,11 +1,24 @@
+import { useEffect } from "react";
 import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
+import useIsVisible from "../hooks/UseIsVisible";
+import useHeaderAnchorStore from "../stores/headerAnchorStore";
 import FontelloIcon from "./shared/FontelloIcon";
 
 export default function AboutMe() {
+	const [aboutRef, isVisible] = useIsVisible({ threshold: 0.1 });
+	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
+
+	useEffect(() => {
+		if (isVisible) {
+			setAnchor("about-me");
+		}
+	}, [isVisible]);
+
 	return (
 		<section id="about-me" className="bg-background">
 			<div
+				ref={aboutRef}
 				data-aos="fade-up"
 				className="relative flex flex-row items-center justify-center w-screen"
 			>

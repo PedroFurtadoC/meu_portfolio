@@ -1,9 +1,20 @@
+import { useEffect } from "react";
 import { solutionsContent } from "../content/solutions-content";
+import useIsVisible from "../hooks/UseIsVisible";
+import useHeaderAnchorStore from "../stores/headerAnchorStore";
 import SolutionsCard from "./shared/SolutionsCard";
 
 export default function Solutions() {
+	const [solutionRef, isVisible] = useIsVisible({ threshold: 0.01 });
+	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
+
+	useEffect(() => {
+		if (isVisible) {
+			setAnchor("solutions");
+		}
+	}, [isVisible]);
 	return (
-		<div id="solutions" className="bg-background">
+		<div id="solutions" className="bg-background" ref={solutionRef}>
 			<section data-aos="fade-up" className="w-screen py-20">
 				<div className="flex flex-col items-center justify-center wrapper w-screen h-fit px-5">
 					<h1 className="text-center text-4xl md:text-5xl mb-10 font-bold text-accent">

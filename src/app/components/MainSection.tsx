@@ -7,8 +7,20 @@ import { useWindow } from "../hooks/UseWindow";
 import openNewTab from "../functions/NewTab";
 import Blobs from "./shared/Blobs";
 import openEmail from "../functions/OpenEmail";
+import useIsVisible from "../hooks/UseIsVisible";
+import useHeaderAnchorStore from "../stores/headerAnchorStore";
+import { useEffect } from "react";
 
 export default function MainSection() {
+	const [homeRef, isVisible] = useIsVisible({ threshold: 0.1 });
+	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
+
+	useEffect(() => {
+		if (isVisible) {
+			setAnchor("home");
+		}
+	}, [isVisible]);
+
 	let mouseDistanceX = 0;
 	let mouseDistanceY = 0;
 
@@ -27,7 +39,11 @@ export default function MainSection() {
 			style={{ overflowX: "hidden" }}
 		>
 			<div className="flex flex-row wrapper">
-				<aside id="main-section" className="pt-10 md:pt-40">
+				<aside
+					id="main-section"
+					className="pt-10 md:pt-40"
+					ref={homeRef}
+				>
 					<p className="text-2xl md:text-3xl">Olá, eu sou o </p>
 					<p className="font-bold text-6xl md:text-7xl mt-4 text-cyan-400">
 						Pedro

@@ -1,12 +1,23 @@
+import { useEffect } from "react";
 import { projectContent } from "../content/projects-content";
 import openNewTab from "../functions/NewTab";
+import useIsVisible from "../hooks/UseIsVisible";
+import useHeaderAnchorStore from "../stores/headerAnchorStore";
 import ProjectCard from "./projectComponents/ProjectCard";
 import FontelloIcon from "./shared/FontelloIcon";
 
 export default function Projects() {
+	const [projectRef, isVisible] = useIsVisible({ threshold: 0.1 });
+	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
+
+	useEffect(() => {
+		if (isVisible) {
+			setAnchor("projects");
+		}
+	}, [isVisible]);
 	return (
 		<>
-			<div className="bg-background svg-background">
+			<div className="bg-background svg-background" ref={projectRef}>
 				<section data-aos="fade" className="w-screen h-fit py-20">
 					<div
 						id="projects"
