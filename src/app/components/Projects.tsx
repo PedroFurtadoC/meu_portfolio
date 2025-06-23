@@ -5,6 +5,7 @@ import useIsVisible from "../hooks/UseIsVisible";
 import useHeaderAnchorStore from "../stores/headerAnchorStore";
 import ProjectCard from "./projectComponents/ProjectCard";
 import FontelloIcon from "./shared/FontelloIcon";
+import PCard from "./projects/PCard";
 
 export default function Projects() {
 	const [projectRef, isVisible] = useIsVisible({ threshold: 0.1 });
@@ -44,7 +45,7 @@ export default function Projects() {
 						</button>
 						<div className="w-full flex flex-wrap justify-center my-10">
 							{projectContent.map((project, index) => (
-								<ProjectCard
+								<PCard
 									key={"project" + index + project.title}
 									title={project.title}
 									shortDescription={project.shortDescription}
