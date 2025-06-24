@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainSection from "./components/MainSection";
@@ -16,6 +16,7 @@ import useRoot from "./hooks/UseRoot";
 import useCalendlyStore from "./stores/calendlyStore";
 import FontelloIcon from "./components/shared/FontelloIcon";
 import useMobile from "./hooks/UseMobile";
+import usePageLoaded from "./hooks/UsePageLoaded";
 
 export default function Home() {
 	useEffect(() => {
@@ -33,12 +34,17 @@ export default function Home() {
 
 	const root = useRoot();
 
+	const isPageLoading = usePageLoaded();
+
 	return (
 		<div
 			id="root"
-			className="flex flex-col w-screen font-[family-name:var(--font-geist-sans)]"
+			className="flex flex-col w-screen font-[family-name:var(--font-inter)] text-foreground"
 			style={{ overflowX: "hidden" }}
 		>
+			{isPageLoading && (
+				<div className="h-screen w-screen absolute top-0 left-0 bg-black z-[999]"></div>
+			)}
 			<Header />
 			<MainSection />
 			<AboutMe />
@@ -59,7 +65,7 @@ export default function Home() {
 				<div className="fixed flex mt-8 w-fit h-fit z-[99] right-4 bottom-4">
 					<button
 						onClick={toggleCalendly}
-						className="flex flex-row items-center p-3 h-full w-full rounded-xl text-lg bg-[#38648a] ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
+						className="flex flex-row items-center p-3 h-full w-full rounded-xl text-lg bg-accent ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
 					>
 						<FontelloIcon
 							name={"icon-calendar"}

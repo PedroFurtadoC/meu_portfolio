@@ -30,14 +30,14 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #0f1c2e;
+		--background: #00171f;
 		--foreground: #f5f7fa;
-		--accent: #ff6b6b;
+		--accent: #ff6d00;
 		--muted: #a0aec0;
 		--hover: #3e5c76;
 		--extra-lilac: #c8b6ff;
 		--extra-green: #00b894;
-		--primary: #1b3a4b;
+		--primary: #003459;
 		--secondary: #b8e0d2;
 		--nav: #2b4f63;
 		--gradient-shadow: linear-gradient(
@@ -96,25 +96,35 @@ body {
 }
 
 .active-link {
-	color: #ff6b6b;
+	color: var(--accent);
 	transform: scale(1.05);
 }
 
 /*******************************************MAIN SECTION********************************************/
-.gradient-background {
-	background: var(--background);
-	background: -webkit-linear-gradient(
-		to top,
-		var(--primary),
-		var(--nav),
-		var(--background)
-	);
-	background: linear-gradient(
-		to top,
-		var(--primary),
-		var(--nav),
-		var(--background)
-	);
+#home::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	opacity: 0.1;
+	background-color: var(--primary);
+}
+
+#home::after {
+	top: 0;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* background-image: url("/fabric-background.webp"); */
+	background-image: url("/background.svg");
+	background-repeat: no-repeat;
+	/* background-size: 140% 140%; */
+	background-size: cover;
+	/* background-position: center; */
+	z-index: 1;
+	opacity: 0.85;
 }
 
 .main-blob {
@@ -134,15 +144,15 @@ body {
 }
 
 .Typewriter__mobile {
-	@apply text-violet-300;
+	@apply text-accent;
 }
 
 .Typewriter__desktop {
-	@apply text-rose-300;
+	@apply text-accent;
 }
 
 .Typewriter__web {
-	@apply text-pink-300;
+	@apply text-accent;
 }
 
 #main-section {

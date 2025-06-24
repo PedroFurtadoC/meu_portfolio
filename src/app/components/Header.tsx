@@ -10,18 +10,18 @@ export default function Header() {
 
 	return (
 		<>
-			<header className="select-none fixed h-20 w-screen top-0 bg-primary shadow-lg shadow-[#0003] z-30">
+			<header className="select-none fixed h-20 w-screen top-0 bg-background shadow-lg shadow-[#0003] z-30">
 				<div className="flex flex-row items-center justify-between wrapper">
 					<p className="text-xl font-bold">Pedro Furtado Cunha</p>
 					<nav id="nav-header" className="flex-row gap-6">
-						<p
+						{/* <p
 							onClick={() => navigate("#home")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
 								activeAnchor === "home" && "active-link"
 							}`}
 						>
 							Home
-						</p>
+						</p> */}
 						<p
 							onClick={() => navigate("#about-me")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
@@ -99,14 +99,14 @@ export default function Header() {
 						/>
 					</div>
 					<div className="flex flex-col gap-6 px-5 pt-5">
-						<p
+						{/* <p
 							onClick={() => navigate("#home")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
 								activeAnchor === "home" && "active-link"
 							}`}
 						>
 							Home
-						</p>
+						</p> */}
 						<p
 							onClick={() => navigate("#about-me")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
