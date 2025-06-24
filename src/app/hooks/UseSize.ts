@@ -32,7 +32,7 @@ const useSize = (elementRef: RefObject<HTMLElement | null>) => {
 		observer.observe(elementRef.current);
 
 		return () => observer.disconnect();
-	}, []);
+	}, [elementRef]);
 
 	return dimensions;
 };
