@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import MainSection from "./components/MainSection";
-import Header from "./components/Header";
-import AboutMe from "./components/AboutMe";
-import Solutions from "./components/Solutions";
-import Projects from "./components/Projects";
-import Journey from "./components/Journey";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import MainSection from "./components/sections/MainSection";
+import Header from "./components/sections/Header";
+import AboutMe from "./components/sections/AboutMe";
+import Solutions from "./components/sections/Solutions";
+import Projects from "./components/sections/Projects";
+import Journey from "./components/sections/Journey";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 import { PopupModal } from "react-calendly";
 import useRoot from "./hooks/UseRoot";
 import useCalendlyStore from "./stores/calendlyStore";
@@ -39,12 +39,12 @@ export default function Home() {
 	return (
 		<div
 			id="root"
-			className="flex flex-col w-screen font-[family-name:var(--font-inter)] text-foreground"
+			className="flex flex-col w-screen font-inter text-foreground"
 			style={{ overflowX: "hidden" }}
 		>
-			{isPageLoading && (
+			{/* {isPageLoading && (
 				<div className="h-screen w-screen absolute top-0 left-0 bg-black z-[999]"></div>
-			)}
+			)} */}
 			<Header />
 			<MainSection />
 			<AboutMe />

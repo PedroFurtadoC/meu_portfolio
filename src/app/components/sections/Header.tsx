@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FontelloIcon from "./shared/FontelloIcon";
-import navigate from "../functions/Navigate";
-import useHeaderAnchorStore from "../stores/headerAnchorStore";
+import FontelloIcon from "../shared/FontelloIcon";
+import navigate from "../../functions/Navigate";
+import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 
 export default function Header() {
 	const [isMenuVisible, setMenuVisible] = useState(false);

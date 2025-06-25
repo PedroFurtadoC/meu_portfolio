@@ -13,11 +13,9 @@ html {
 	--foreground: #f5f7fa;
 	--accent: #ff6b6b;
 	--muted: #a0aec0;
-	--hover: #3e5c76;
-	--extra-lilac: #c8b6ff;
-	--extra-green: #00b894;
 	--primary: #1b3a4b;
 	--secondary: #b8e0d2;
+	--extra-blue: #007ea7;
 	--nav: #2b4f63;
 	--gradient-shadow: linear-gradient(
 		45deg,
@@ -34,11 +32,9 @@ html {
 		--foreground: #f5f7fa;
 		--accent: #ff6d00;
 		--muted: #a0aec0;
-		--hover: #3e5c76;
-		--extra-lilac: #c8b6ff;
-		--extra-green: #00b894;
 		--primary: #003459;
-		--secondary: #b8e0d2;
+		--secondary: #00a8e8;
+		--extra-blue: #007ea7;
 		--nav: #2b4f63;
 		--gradient-shadow: linear-gradient(
 			45deg,
@@ -101,7 +97,7 @@ body {
 }
 
 /*******************************************MAIN SECTION********************************************/
-#home::before {
+/* #home::before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -109,22 +105,34 @@ body {
 	z-index: 0;
 	opacity: 0.1;
 	background-color: var(--primary);
-}
+} */
 
-#home::after {
+/* background-image: url("/fabric-background.webp"); */
+/* background-size: 140% 140%; */
+/* background-position: center; */
+/* #home::after {
 	top: 0;
 	content: "";
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	/* background-image: url("/fabric-background.webp"); */
 	background-image: url("/background.svg");
 	background-repeat: no-repeat;
-	/* background-size: 140% 140%; */
 	background-size: cover;
-	/* background-position: center; */
 	z-index: 1;
 	opacity: 0.85;
+} */
+
+#home::before {
+	content: "";
+	position: absolute;
+	background-image: url("/soft-fabric-background.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background-color: var(--primary);
 }
 
 .main-blob {
@@ -258,20 +266,12 @@ body {
 	@apply md:flex-row-reverse;
 }
 
-.solution-card:nth-child(even) > div > h2 {
-	@apply text-extra-green;
-}
-
 .solution-card:nth-child(odd) {
 	@apply md:flex-row;
 }
 
-.solution-card:nth-child(odd) > div > h2 {
-	@apply text-extra-lilac;
-}
-
 .solution-card:not(:first-child) {
-	@apply mt-20;
+	@apply mt-28;
 }
 
 /**********************************FOOTER***********************************/

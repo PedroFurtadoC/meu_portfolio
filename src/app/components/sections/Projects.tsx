@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { projectContent } from "../content/projects-content";
-import openNewTab from "../functions/NewTab";
-import useIsVisible from "../hooks/UseIsVisible";
-import useHeaderAnchorStore from "../stores/headerAnchorStore";
-import ProjectCard from "./projectComponents/ProjectCard";
-import FontelloIcon from "./shared/FontelloIcon";
-import PCard from "./projects/PCard";
+import { projectContent } from "../../content/projects-content";
+import openNewTab from "../../functions/NewTab";
+import useIsVisible from "../../hooks/UseIsVisible";
+import useHeaderAnchorStore from "../../stores/headerAnchorStore";
+import ProjectCard from "../projectComponents/ProjectCard";
+import FontelloIcon from "../shared/FontelloIcon";
+import PCard from "../projects/PCard";
 
 export default function Projects() {
 	const [projectRef, isVisible] = useIsVisible({ threshold: 0.1 });

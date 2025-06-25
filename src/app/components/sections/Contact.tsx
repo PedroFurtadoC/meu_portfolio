@@ -1,15 +1,15 @@
-import navigate from "../functions/Navigate";
-import openNewTab from "../functions/NewTab";
-import openEmail from "../functions/OpenEmail";
-import FontelloIcon from "./shared/FontelloIcon";
-import GoToStartShape from "./shared/GoToStartShape";
-import useRoot from "../hooks/UseRoot";
+import navigate from "../../functions/Navigate";
+import openNewTab from "../../functions/NewTab";
+import openEmail from "../../functions/OpenEmail";
+import FontelloIcon from "../shared/FontelloIcon";
+import GoToStartShape from "../shared/GoToStartShape";
+import useRoot from "../../hooks/UseRoot";
 import { PopupModal } from "react-calendly";
-import useCalendlyStore from "../stores/calendlyStore";
+import useCalendlyStore from "../../stores/calendlyStore";
 import Image from "next/image";
-import useIsVisible from "../hooks/UseIsVisible";
+import useIsVisible from "../../hooks/UseIsVisible";
 import { useEffect } from "react";
-import useHeaderAnchorStore from "../stores/headerAnchorStore";
+import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 
 export default function Contact() {
 	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
@@ -92,7 +92,7 @@ export default function Contact() {
 						<Image
 							aria-hidden
 							unoptimized
-							src={require("../assets/PedroContato.webp")}
+							src={require("../../assets/PedroContato.webp")}
 							alt="Pedro"
 							objectFit="cover"
 							className="h-full w-auto rounded-lg"

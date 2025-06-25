@@ -51,6 +51,11 @@ export default function RootLayout({
 		<html lang="pt-BR">
 			<head>
 				<link rel="icon" href="/favicon.ico" sizes="any" />
+				<link
+					rel="preload"
+					href="/soft-fabric-background.webp"
+					as="image"
+				/>
 			</head>
 			<body
 				className={`${inter.variable} antialiased select-none text-foreground`}

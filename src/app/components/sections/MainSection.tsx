@@ -1,14 +1,14 @@
 import Typewriter from "typewriter-effect";
-import FontelloIcon from "./shared/FontelloIcon";
-import ResponsiveIconScroll from "./shared/ResponsiveIconScroll";
+import FontelloIcon from "../shared/FontelloIcon";
+import ResponsiveIconScroll from "../shared/ResponsiveIconScroll";
 import Image from "next/image";
-import useMousePosition from "../hooks/UseMousePosition";
-import { useWindow } from "../hooks/UseWindow";
-import openNewTab from "../functions/NewTab";
-import Blobs from "./shared/Blobs";
-import openEmail from "../functions/OpenEmail";
-import useIsVisible from "../hooks/UseIsVisible";
-import useHeaderAnchorStore from "../stores/headerAnchorStore";
+import useMousePosition from "../../hooks/UseMousePosition";
+import { useWindow } from "../../hooks/UseWindow";
+import openNewTab from "../../functions/NewTab";
+import Blobs from "../shared/Blobs";
+import openEmail from "../../functions/OpenEmail";
+import useIsVisible from "../../hooks/UseIsVisible";
+import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 import { useEffect } from "react";
 
 export default function MainSection() {
@@ -35,7 +35,7 @@ export default function MainSection() {
 	return (
 		<main
 			id="home"
-			className="w-full min-h-[800px] h-[calc(100vh-5rem)] bg-background mt-20 overflow-y-hidden relative"
+			className="w-full min-h-[800px] h-[calc(100vh-5rem)] max-h-[1080] bg-background mt-20 overflow-y-hidden relative"
 			style={{
 				overflowX: "hidden",
 			}}
@@ -47,7 +47,7 @@ export default function MainSection() {
 					ref={homeRef}
 				>
 					<p className="text-2xl md:text-3xl">Olá, eu sou o </p>
-					<p className="font-black text-6xl md:text-7xl mt-4 text-cyan-400">
+					<p className="font-black text-6xl md:text-7xl mt-4 text-secondary">
 						Pedro Furtado
 					</p>
 					<div className="flex flex-row gap-3 mt-6 items-center font-[family-name:var(--font-geist-mono)]">
@@ -99,7 +99,7 @@ export default function MainSection() {
 							onClick={() =>
 								openEmail("pedrocunha.furtado@gmail.com")
 							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-primary mx-0 my-5 md:mx-4 md:my-0 shadow-md shadow-[#0005] hover:bg-[#a33939] transition-all"
+							className="h-16 w-full rounded-xl text-xl font-bold bg-primary mx-0 my-5 md:mx-4 md:my-0 shadow-md shadow-[#0005] hover:bg-[#b35b18] transition-all"
 						>
 							<FontelloIcon
 								name={"icon-mail-alt"}
@@ -129,7 +129,7 @@ export default function MainSection() {
 					<Image
 						className="min-w-[350px] min-h-[350px] mb-[-3rem] md:mb-0 md:min-w-[600px] md:min-h-[600px] relative z-10 ml-auto mr-auto"
 						aria-hidden
-						src={require("../assets/Pedro.webp")}
+						src={require("../../assets/Pedro.webp")}
 						alt="Imagem do Pedro"
 						unoptimized
 						priority
