@@ -196,13 +196,26 @@ body {
 
 /***********************************PROJECTS*****************************************/
 .svg-background {
-	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
-	background-image: url("./endless-constellation.svg");
-	box-shadow: inset 0px 0px 38px 30px var(--background);
+	position: relative;
+	isolation: isolate;
 }
 
+.svg-background::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
+	background-image: url("/endless-constellation.svg");
+	box-shadow: inset 0px 0px 38px 40px var(--background);
+	opacity: 0.5;
+	z-index: -1;
+}
 .project {
-	@apply animated-shadow relative h-auto w-[50rem] bg-black rounded-2xl transition-all ease-in-out duration-200 m-10 select-none;
+	@apply relative h-auto w-full xl:w-[48%] bg-black rounded-2xl transition-all ease-in-out duration-200 my-10 select-none;
+}
+
+.project:last-child:nth-of-type(odd) {
+	@apply mx-auto;
 }
 
 /********************************RAINBOW SHADOW*************************************/
@@ -292,12 +305,3 @@ body {
 		font-size: 0.4rem;
 	}
 }
-
-/* .card-background-gradient {
-	background: rgb(0, 0, 0);
-	background: linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 0.9) 0%,
-		rgba(0, 0, 0, 0) 100%
-	);
-} */

@@ -48,9 +48,9 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 						height: `${cardHeight}px`,
 						flexDirection: index % 2 === 0 ? "row" : "row-reverse",
 					}}
-					className="relative flex items-center w-[10%] xl:w-1/5"
+					className="relative flex items-center w-[10%]"
 				>
-					<hr className="w-1/3 h-[1px] border-0 border-b-[5px] border-b-secondary border-dashed" />
+					<hr className="w-full h-[1px] border-0 border-b-[5px] border-b-secondary border-dashed" />
 					<hr
 						className="w-[1px] border-0 border-l-[5px] border-l-secondary border-dashed"
 						style={{
@@ -61,13 +61,13 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 				</div>
 			);
 		} else {
-			return <div className="w-[10%] xl:w-1/5" />;
+			return <div className="w-[10%]" />;
 		}
 	};
 
 	const renderEndDivision = (index: number) => {
 		if (index === 0) {
-			return <div className="w-[10%] xl:w-1/5" />;
+			return <div className="w-[10%]" />;
 		} else {
 			return (
 				<div
@@ -75,9 +75,9 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 						height: `${cardHeight}px`,
 						flexDirection: index % 2 !== 0 ? "row" : "row-reverse",
 					}}
-					className="relative flex items-center w-[10%] xl:w-1/5"
+					className="relative flex items-center w-[10%]"
 				>
-					<hr className="w-1/3 h-[1px] border-0 border-b-[5px] border-b-secondary border-dashed" />
+					<hr className="w-full h-[1px] border-0 border-b-[5px] border-b-secondary border-dashed" />
 					<hr
 						className="w-[1px] border-0 border-l-[5px] border-l-secondary border-dashed"
 						style={{
@@ -101,7 +101,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 			{renderEndDivision(index)}
 			<div
 				ref={cardRef}
-				className={`min-h-[200px] w-[80%] xl:w-3/5 bg-primary rounded-xl py-8 px-10 md:px-20 flex flex-col text-white font-bold z-10`}
+				className={`min-h-[200px] w-[80%] bg-primary rounded-xl py-8 px-10 md:px-20 flex flex-col text-white font-bold z-10`}
 			>
 				<div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6 gap-5">
 					<h2 className="text-accent text-3xl md:text-4xl max-w-[100%] lg:max-w-[50%]">

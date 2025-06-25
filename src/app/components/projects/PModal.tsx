@@ -7,6 +7,7 @@ import Portal from "../shared/Portal";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import useWindowResize from "@/app/hooks/useWindowResize";
 import useSize from "@/app/hooks/UseSize";
+import openNewTab from "@/app/functions/NewTab";
 
 interface Props {
 	isVisible: boolean;
@@ -21,10 +22,6 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 
 	const { width: windowWidth } = useWindowResize();
 
-	const cardRef = useRef(null);
-
-	const { elementWidth } = useSize(cardRef);
-
 	let width = 600;
 
 	if (windowWidth >= 1500) {
@@ -34,7 +31,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 	} else if (windowWidth >= 1000) {
 		width = 400;
 	} else {
-		width = elementWidth * 0.9;
+		width = windowWidth * 0.75;
 	}
 
 	if (!isVisible) return null;
@@ -54,10 +51,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 							/>
 						</button>
 					</div>
-					<div
-						ref={cardRef}
-						className="flex flex-col gap-10 w-full h-full"
-					>
+					<div className="flex flex-col gap-10 w-full h-full">
 						<h1 className="self-center font-bold text-3xl md:text-5xl text-accent">
 							{content.title}
 						</h1>
@@ -70,9 +64,22 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 							{windowWidth > 1000 && (
 								<aside className="h-fit">
 									<YouTubeEmbed
-										videoid={"jNQXAC9IVRw"}
+										style="border-radius: 0.7rem"
+										videoid={content.ytVideoId}
 										width={width}
 									/>
+									{content.link && (
+										<p
+											className="my-10 text-lg md:text-2xl font-light text-secondary cursor-pointer"
+											role="button"
+											onClick={() =>
+												openNewTab(content.link?.url!)
+											}
+										>
+											{content.link.description ??
+												content.link.url}
+										</p>
+									)}
 								</aside>
 							)}
 							<SimpleBar className="overflow-y-auto overflow-x-hidden w-full h-full pr-10">
@@ -92,11 +99,26 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 									)}
 								</div>
 								{windowWidth < 1000 && (
-									<div className="h-fit mt-16">
+									<div className="h-fit mt-8">
 										<YouTubeEmbed
-											videoid={"jNQXAC9IVRw"}
+											style="border-radius: 0.7rem; margin-right: 2.5rem"
+											videoid={content.ytVideoId}
 											width={width}
 										/>
+										{content.link && (
+											<p
+												className="my-10 text-lg md:text-2xl font-light text-secondary cursor-pointer"
+												role="button"
+												onClick={() =>
+													openNewTab(
+														content.link?.url!
+													)
+												}
+											>
+												{content.link.description ??
+													content.link.url}
+											</p>
+										)}
 									</div>
 								)}
 							</SimpleBar>

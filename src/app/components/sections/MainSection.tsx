@@ -113,7 +113,7 @@ export default function MainSection() {
 						<ResponsiveIconScroll />
 					</div>
 				</aside>
-				<picture className="ml-0 mt-10 md:ml-1 lg:mt-0 relative text-[0.6rem] md:text-xs lg:text-base">
+				<picture className="ml-0 mt-10 md:ml-1 lg:mt-0 relative text-[0.6rem] md:text-xs lg:text-base pointer-events-none">
 					<Blob
 						className="main-blob"
 						bottom={"10%"}

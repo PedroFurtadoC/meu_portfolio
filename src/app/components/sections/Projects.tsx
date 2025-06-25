@@ -1,11 +1,9 @@
 import { useEffect } from "react";
 import { projectContent } from "../../content/projects-content";
-import openNewTab from "../../functions/NewTab";
 import useIsVisible from "../../hooks/UseIsVisible";
 import useHeaderAnchorStore from "../../stores/headerAnchorStore";
-import ProjectCard from "../projectComponents/ProjectCard";
-import FontelloIcon from "../shared/FontelloIcon";
 import PCard from "../projects/PCard";
+import Heading from "../shared/Heading";
 
 export default function Projects() {
 	const [projectRef, isVisible] = useIsVisible({ threshold: 0.1 });
@@ -18,35 +16,31 @@ export default function Projects() {
 	}, [isVisible]);
 	return (
 		<>
-			<div className="bg-background svg-background" ref={projectRef}>
-				<section data-aos="fade" className="w-screen h-fit py-20">
+			<section
+				data-aos="fade"
+				className="w-screen h-fit py-20 bg-background"
+			>
+				<Heading subtitle="Veja meus principais projetos!">
+					PROJETOS
+				</Heading>
+				<div className="svg-background mt-10" ref={projectRef}>
 					<div
 						id="projects"
-						className="wrapper flex flex-col items-center pt-10"
+						className="wrapper flex flex-col items-center py-10"
 					>
-						<h1 className="text-4xl md:text-5xl text-accent font-bold mb-10">
-							Projetos
-						</h1>
-						<p className="text-center text-xl md:text-2xl">
-							Veja alguns dos projetos mais importantes que
-							participei
-						</p>
-						<div className="w-full flex flex-wrap justify-center my-10">
+						<div className="w-full flex flex-wrap justify-between my-10">
 							{projectContent.map((project, index) => (
 								<PCard
 									key={"project" + index + project.title}
 									title={project.title}
-									shortDescription={project.shortDescription}
-									bgColor={project.bgColor}
-									picture={project.picture}
 									modalContent={project.modalContent}
-									aosDelay={`${(index + 1) * 100}`}
+									aosDelay="100"
 								/>
 							))}
 						</div>
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 		</>
 	);
 }
