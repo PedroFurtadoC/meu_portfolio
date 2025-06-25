@@ -65,7 +65,7 @@ export default function Home() {
 				<div className="fixed flex mt-8 w-fit h-fit z-[99] right-4 bottom-4">
 					<button
 						onClick={toggleCalendly}
-						className="flex flex-row items-center p-3 h-full w-full rounded-xl text-lg bg-accent ml-4 shadow-md shadow-[#0005] hover:bg-[#3e5c76] transition-all"
+						className="flex flex-row items-center p-3 h-full w-full rounded-xl text-lg bg-accent ml-4 shadow-md shadow-[#0005] hover:bg-[#b35b18] transition-all"
 					>
 						<FontelloIcon
 							name={"icon-calendar"}

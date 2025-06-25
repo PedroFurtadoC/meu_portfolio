@@ -5,11 +5,11 @@ import Image from "next/image";
 import useMousePosition from "../../hooks/UseMousePosition";
 import { useWindow } from "../../hooks/UseWindow";
 import openNewTab from "../../functions/NewTab";
-import Blobs from "../shared/Blobs";
 import openEmail from "../../functions/OpenEmail";
 import useIsVisible from "../../hooks/UseIsVisible";
 import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 import { useEffect } from "react";
+import Blob from "../shared/Blob";
 
 export default function MainSection() {
 	const [homeRef, isVisible] = useIsVisible({ threshold: 0.1 });
@@ -114,12 +114,10 @@ export default function MainSection() {
 					</div>
 				</aside>
 				<picture className="ml-0 mt-10 md:ml-1 lg:mt-0 relative text-[0.6rem] md:text-xs lg:text-base">
-					<Blobs
+					<Blob
 						className="main-blob"
-						color="#00A8E8"
 						bottom={"10%"}
 						left={"38%"}
-						type={6}
 						zIndex={1}
 						translate={{
 							x: mouseDistanceX * -0.8,

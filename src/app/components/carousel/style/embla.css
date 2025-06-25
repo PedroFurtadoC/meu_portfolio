@@ -8,7 +8,7 @@
 	--text-body-rgb-value: 222, 222, 222;
 	--detail-high-contrast: rgb(101, 101, 101);
 	--detail-high-contrast-rgb-value: 101, 101, 101;
-	--detail-medium-contrast: #ff6b6b;
+	--detail-medium-contrast: var(--accent);
 	--detail-medium-contrast-rgb-value: 25, 25, 25;
 }
 

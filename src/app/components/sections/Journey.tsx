@@ -26,9 +26,9 @@ export default function Journey() {
 			</section>
 			<section data-aos="fade-up" className="w-screen h-fit pb-20">
 				<div className="wrapper flex flex-col">
-					<h1 className="text-4xl md:text-5xl mb-16 font-bold text-accent text-center">
-						Certificações
-					</h1>
+					<Heading style={{ marginBottom: "75px" }}>
+						CERTIFICADOS
+					</Heading>
 					<Carousel />
 				</div>
 			</section>

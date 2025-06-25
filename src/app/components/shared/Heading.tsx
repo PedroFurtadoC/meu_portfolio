@@ -1,13 +1,17 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 
 interface Props {
 	children: string;
 	subtitle?: string;
+	style?: CSSProperties;
 }
 
-const Heading = ({ children, subtitle }: Props) => {
+const Heading = ({ children, subtitle, style }: Props) => {
 	return (
-		<div className="w-full h-fit flex items-center justify-center">
+		<div
+			className="w-full h-fit flex items-center justify-center"
+			style={style}
+		>
 			<div className="w-max">
 				<h1 className="text-center font-extralight text-secondary text-4xl md:text-6xl px-10 mb-4">
 					{children}
