@@ -16,13 +16,12 @@ export default function Projects() {
 	}, [isVisible]);
 	return (
 		<>
-			<section
-				data-aos="fade"
-				className="w-screen h-fit py-20 bg-background"
-			>
-				<Heading subtitle="Veja meus principais projetos!">
-					PROJETOS
-				</Heading>
+			<section className="w-screen h-fit py-20 bg-background">
+				<div data-aos="fade">
+					<Heading subtitle="Veja meus principais projetos!">
+						PROJETOS
+					</Heading>
+				</div>
 				<div className="svg-background mt-10" ref={projectRef}>
 					<div
 						id="projects"

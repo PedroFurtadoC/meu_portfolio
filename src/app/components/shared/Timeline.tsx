@@ -54,7 +54,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 					<hr
 						className="w-[1px] border-0 border-l-[5px] border-l-secondary border-dashed"
 						style={{
-							height: `${cardHeight * 0.49 + 80}px`,
+							height: `${cardHeight * 0.5 + 80}px`,
 							transform: `translateY(49.5%)`,
 						}}
 					/>
@@ -81,7 +81,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 					<hr
 						className="w-[1px] border-0 border-l-[5px] border-l-secondary border-dashed"
 						style={{
-							height: `${cardHeight * 0.5 + 80}px`,
+							height: `${cardHeight * 0.5}px`,
 							transform: `translateY(-49.5%)`,
 						}}
 					/>

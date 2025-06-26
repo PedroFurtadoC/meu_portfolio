@@ -35,16 +35,17 @@ export default function Contact() {
 			>
 				<div
 					id="contact-div"
-					className="wrapper flex flex-col lg:flex-row-reverse gap-10 lg:gap-0 items-center justify-between bg-primary py-6 px-16 rounded-3xl"
+					className="wrapper flex flex-col lg:flex-row-reverse gap-10 lg:gap-0 items-center justify-between bg-primary py-10 md:py-6 px-3 xl:px-16 lg:pr-16 rounded-3xl"
 				>
 					<div className="flex flex-col justify-center items-center w-[90%] lg:w-[60%]">
 						<div className="w-full">
-							<h1 className="text-5xl md:text-6xl text-secondary font-light tracking-[0.33em] mb-10">
+							<h1 className="text-4xl md:text-6xl text-secondary font-light tracking-[0.33em] mb-10">
 								CONTATO
 							</h1>
 							<h2 className="text-2xl md:text-3xl">
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit.
+								Tecnologia não precisa ser um peso. Se quiser
+								leveza, resultado e solução de verdade, estou
+								aqui.
 							</h2>
 						</div>
 						<div className="flex flex-col lg:flex-row gap-4 mt-12 w-full">
@@ -88,14 +89,14 @@ export default function Contact() {
 							</button>
 						</div>
 					</div>
-					<figure className="relative flex flex-grow justify-center h-[500px] ">
+					<figure className="relative flex flex-grow justify-center h-full xl:h-[500px] aspect-square">
 						<Image
 							aria-hidden
 							unoptimized
 							src={require("../../assets/PedroContato.webp")}
 							alt="Pedro"
 							objectFit="cover"
-							className="h-full w-auto rounded-lg"
+							className="h-full w-auto rounded-lg aspect-square"
 						/>
 					</figure>
 				</div>
