@@ -41,7 +41,7 @@ export default function Home() {
 
 	useEffect(() => {
 		initTheme();
-	}, []);
+	}, [initTheme]);
 
 	return (
 		<div

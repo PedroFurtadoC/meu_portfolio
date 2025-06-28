@@ -3,21 +3,15 @@ import { useThemeStore } from "@/app/stores/themeStore";
 import "./style/ThemeSwitch.css";
 import FontelloIcon from "../shared/FontelloIcon";
 
-/* function getSystemTheme() {
-	if (typeof window === "undefined") return "light";
-	return window.matchMedia("(prefers-color-scheme: dark)").matches
-		? "dark"
-		: "light";
-} */
-
 export default function ThemeSwitch() {
 	const rawTheme = useThemeStore((s) => s.theme);
+	const getCurrentTheme = useThemeStore((s) => s.getCurrentTheme);
 	const toggleTheme = useThemeStore((s) => s.toggleTheme);
 
 	const [mounted, setMounted] = useState(false);
 	const [activeTheme, setActiveTheme] = useState<
 		"dark" | "light" | undefined
-	>("light");
+	>(undefined);
 
 	useEffect(() => {
 		setMounted(true);
@@ -25,38 +19,16 @@ export default function ThemeSwitch() {
 
 	useEffect(() => {
 		if (mounted) {
-			setActiveTheme(rawTheme);
+			setActiveTheme(getCurrentTheme()); // pega o tema real, inclusive se estiver como undefined (usa sistema)
 		}
-	}, [rawTheme, mounted]);
+	}, [mounted, rawTheme]);
 
-	/* 	useEffect(() => {
-		if (!mounted) return;
-
-		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-		const handler = (event: MediaQueryListEvent) => {
-			if (rawTheme === undefined) {
-				setActiveTheme(event.matches ? "dark" : "light");
-			}
-		};
-
-		mediaQuery.addEventListener("change", handler);
-		return () => mediaQuery.removeEventListener("change", handler);
-	}, [rawTheme, mounted]); */
-
-	if (!mounted) {
-		return (
-			<button
-				className="theme-switch light"
-				aria-label="Switch theme"
-				disabled
-			>
-				<div className="switch-handle">
-					<FontelloIcon name="icon-sun" />
-				</div>
-				<span className="switch-label">Light</span>
-			</button>
-		);
-	}
+	/* if (!mounted || activeTheme === undefined) {
+		<div className="theme-switch skeleton" aria-hidden="true">
+			<div className="switch-handle-skeleton" />
+			<div className="switch-label-skeleton" />
+		</div>;
+	} */
 
 	const isDark = activeTheme === "dark";
 
