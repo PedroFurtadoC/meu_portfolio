@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainSection from "./components/sections/MainSection";
@@ -17,6 +17,7 @@ import useCalendlyStore from "./stores/calendlyStore";
 import FontelloIcon from "./components/shared/FontelloIcon";
 import useMobile from "./hooks/UseMobile";
 import usePageLoaded from "./hooks/UsePageLoaded";
+import { useThemeStore } from "./stores/themeStore";
 
 export default function Home() {
 	useEffect(() => {
@@ -35,6 +36,12 @@ export default function Home() {
 	const root = useRoot();
 
 	const isPageLoading = usePageLoaded();
+
+	const initTheme = useThemeStore((s) => s.initTheme);
+
+	useEffect(() => {
+		initTheme();
+	}, []);
 
 	return (
 		<div

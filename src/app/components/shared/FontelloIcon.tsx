@@ -5,19 +5,12 @@ interface StyleProps {
 interface Props {
 	name:
 		| "icon-mail-alt"
-		| "icon-phone"
 		| "icon-github-circled"
-		| "icon-doc-inv"
 		| "icon-linkedin"
-		| "icon-cancel-circled-outline"
-		| "icon-briefcase"
-		| "icon-graduation-cap"
-		| "icon-download"
-		| "icon-up-open"
-		| "icon-minus"
 		| "icon-cancel"
-		| "icon-globe"
-		| "icon-calendar";
+		| "icon-calendar"
+		| "icon-sun"
+		| "icon-moon";
 	classStyling?: string | undefined;
 	style?: StyleProps | undefined;
 }

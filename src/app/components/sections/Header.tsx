@@ -2,6 +2,7 @@ import { useState } from "react";
 import FontelloIcon from "../shared/FontelloIcon";
 import navigate from "../../functions/Navigate";
 import useHeaderAnchorStore from "../../stores/headerAnchorStore";
+import ThemeSwitch from "../customSwitch/ThemeSwitch";
 
 export default function Header() {
 	const [isMenuVisible, setMenuVisible] = useState(false);
@@ -13,7 +14,10 @@ export default function Header() {
 			<header className="select-none fixed h-20 w-screen top-0 bg-background shadow-lg shadow-[#0003] z-30">
 				<div className="flex flex-row items-center justify-between wrapper">
 					<p className="text-xl font-bold">Pedro Furtado Cunha</p>
-					<nav id="nav-header" className="flex-row gap-6">
+					<nav
+						id="nav-header"
+						className="flex-row gap-6 items-center"
+					>
 						{/* <p
 							onClick={() => navigate("#home")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
@@ -62,6 +66,8 @@ export default function Header() {
 						>
 							Contato
 						</p>
+						<br />
+						<ThemeSwitch />
 					</nav>
 					<div
 						onClick={() => setMenuVisible(true)}

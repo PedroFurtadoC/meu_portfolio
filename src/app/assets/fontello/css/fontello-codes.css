@@ -1,14 +1,8 @@
 
 .icon-calendar:before { content: '\e800'; } /* '' */
-.icon-phone:before { content: '\e801'; } /* '' */
-.icon-cancel-circled-outline:before { content: '\e802'; } /* '' */
-.icon-download:before { content: '\e803'; } /* '' */
-.icon-up-open:before { content: '\e804'; } /* '' */
-.icon-globe:before { content: '\e805'; } /* '' */
-.icon-minus:before { content: '\e806'; } /* '' */
 .icon-cancel:before { content: '\e807'; } /* '' */
+.icon-sun:before { content: '\e808'; } /* '' */
+.icon-moon:before { content: '\e809'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-doc-inv:before { content: '\f15b'; } /* '' */
-.icon-graduation-cap:before { content: '\f19d'; } /* '' */
