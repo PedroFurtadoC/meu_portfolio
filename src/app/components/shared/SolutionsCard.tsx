@@ -12,14 +12,14 @@ const SolutionsCard = ({
 	return (
 		<div className="flex gap-12 solution-card" data-aos="fade-up">
 			<Image
-				className="aspect-square w-[80%] self-center md:w-[26rem] rounded-lg hover:scale-105 transition-all"
+				className="aspect-square self-center w-[80%] md:w-[20rem] lg:w-[26rem] rounded-lg hover:scale-105 transition-all"
 				unoptimized
 				loading="lazy"
 				src={image}
 				alt={imageAlt}
 			/>
 			<div>
-				<h2 className="text-2xl md:text-3xl font-bold w-1/2">
+				<h2 className="text-2xl md:text-3xl font-bold lg:w-1/2">
 					{title}
 				</h2>
 				<p className="text-xl md:text-2xl mt-[55px] text-muted">

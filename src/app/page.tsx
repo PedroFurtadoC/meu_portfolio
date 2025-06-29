@@ -18,6 +18,7 @@ import FontelloIcon from "./components/shared/FontelloIcon";
 import useMobile from "./hooks/UseMobile";
 import usePageLoaded from "./hooks/UsePageLoaded";
 import { useThemeStore } from "./stores/themeStore";
+import Depoiments from "./components/sections/Depoiments";
 
 export default function Home() {
 	useEffect(() => {
@@ -56,6 +57,7 @@ export default function Home() {
 			<MainSection />
 			<AboutMe />
 			<Solutions />
+			<Depoiments />
 			<Projects />
 			<Journey />
 			<Contact />
