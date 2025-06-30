@@ -2,7 +2,7 @@ import { useState } from "react";
 import FontelloIcon from "../shared/FontelloIcon";
 import navigate from "../../functions/Navigate";
 import useHeaderAnchorStore from "../../stores/headerAnchorStore";
-import ThemeSwitch from "../customSwitch/ThemeSwitch";
+import ThemeSwitch from "../themeSwitch/ThemeSwitch";
 
 export default function Header() {
 	const [isMenuVisible, setMenuVisible] = useState(false);
@@ -18,14 +18,6 @@ export default function Header() {
 						id="nav-header"
 						className="flex-row gap-6 items-center"
 					>
-						{/* <p
-							onClick={() => navigate("#home")}
-							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
-								activeAnchor === "home" && "active-link"
-							}`}
-						>
-							Home
-						</p> */}
 						<p
 							onClick={() => navigate("#about-me")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
@@ -67,12 +59,12 @@ export default function Header() {
 							Projetos
 						</p>
 						<p
-							onClick={() => navigate("#curriculum")}
+							onClick={() => navigate("#journey")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
-								activeAnchor === "curriculum" && "active-link"
+								activeAnchor === "journey" && "active-link"
 							}`}
 						>
-							Currículo
+							Jornada
 						</p>
 						<p
 							onClick={() => navigate("#contact")}
@@ -121,14 +113,6 @@ export default function Header() {
 						/>
 					</div>
 					<div className="flex flex-col gap-6 px-5 pt-5">
-						{/* <p
-							onClick={() => navigate("#home")}
-							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
-								activeAnchor === "home" && "active-link"
-							}`}
-						>
-							Home
-						</p> */}
 						<p
 							onClick={() => navigate("#about-me")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
@@ -170,12 +154,12 @@ export default function Header() {
 							Projetos
 						</p>
 						<p
-							onClick={() => navigate("#curriculum")}
+							onClick={() => navigate("#journey")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
-								activeAnchor === "curriculum" && "active-link"
+								activeAnchor === "journey" && "active-link"
 							}`}
 						>
-							Currículo
+							Jornada
 						</p>
 						<p
 							onClick={() => navigate("#contact")}

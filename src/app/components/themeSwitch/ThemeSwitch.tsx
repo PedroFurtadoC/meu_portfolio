@@ -19,16 +19,9 @@ export default function ThemeSwitch() {
 
 	useEffect(() => {
 		if (mounted) {
-			setActiveTheme(getCurrentTheme()); // pega o tema real, inclusive se estiver como undefined (usa sistema)
+			setActiveTheme(getCurrentTheme()); // pega o tema real. Se estiver como undefined usa sistema
 		}
 	}, [mounted, rawTheme]);
-
-	/* if (!mounted || activeTheme === undefined) {
-		<div className="theme-switch skeleton" aria-hidden="true">
-			<div className="switch-handle-skeleton" />
-			<div className="switch-label-skeleton" />
-		</div>;
-	} */
 
 	const isDark = activeTheme === "dark";
 

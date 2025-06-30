@@ -17,10 +17,10 @@ export default function AboutMe() {
 					id="about-me-div"
 					className="flex flex-col my-20 px-5 py-8 md:p-20 wrapper rounded-[2rem] bg-primary"
 				>
-					<p className="text-2xl md:text-3xl mb-2 font-light tracking-[0.75em]">
+					<p className="text-2xl md:text-3xl mb-2 font-light tracking-[0.5em] md:tracking-[0.75em]">
 						SOBRE MIM
 					</p>
-					<h1 className="text-4xl md:text-[80px] leading-[84px] mb-3 text-secondary font-extrabold">
+					<h1 className="text-4xl md:text-[80px] md:leading-[84px] mb-3 text-secondary font-extrabold">
 						Pedro Furtado Cunha
 					</h1>
 					<h2 className="text-2xl md:text-3xl text-extra-blue font-bold">

@@ -11,6 +11,7 @@
 	--secondary: #b8e0d2;
 	--extra-blue: #007ea7;
 	--nav: #2b4f63;
+	--shadow-gradient: #00acf0, #007ea7, #004f88, #004f88, #007ea7, #00acf0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -190,6 +191,23 @@ html.light #home::before {
 	cursor: pointer;
 }
 
+/***********************************SOLUTIONS*****************************************/
+.solution-card {
+	@apply flex-col;
+}
+
+.solution-card:nth-child(even) {
+	@apply md:flex-row-reverse;
+}
+
+.solution-card:nth-child(odd) {
+	@apply md:flex-row;
+}
+
+.solution-card:not(:first-child) {
+	@apply mt-16 md:mt-28;
+}
+
 /***********************************PROJECTS*****************************************/
 .svg-background {
 	position: relative;
@@ -206,12 +224,21 @@ html.light #home::before {
 	opacity: 0.5;
 	z-index: -1;
 }
+
 .project {
-	@apply relative h-auto w-full xl:w-[48%] bg-black rounded-2xl transition-all ease-in-out duration-200 my-10 select-none;
+	@apply relative h-auto w-full xl:w-[48%] bg-black rounded-2xl my-10 select-none;
 }
 
 .project:last-child:nth-of-type(odd) {
 	@apply mx-auto;
+}
+
+.project:not(.mobile):hover {
+	@apply minimalistic animated-shadow;
+}
+
+.project.mobile {
+	@apply minimalistic animated-shadow;
 }
 
 /********************************RAINBOW SHADOW*************************************/
@@ -228,14 +255,7 @@ html.light #home::before {
 	border-radius: 1rem;
 	top: -2px;
 	left: -2px;
-	background-image: conic-gradient(
-		from var(--angle),
-		#99f6ff,
-		#3d34ad,
-		#6634ad,
-		#9b34ad,
-		#99f6ff
-	);
+	background-image: conic-gradient(from var(--angle), var(--shadow-gradient));
 	width: calc(100% + 4px);
 	height: calc(100% + 4px);
 	z-index: -1;
@@ -264,23 +284,6 @@ html.light #home::before {
 	to {
 		--angle: 360deg;
 	}
-}
-
-/***********************************SOLUTIONS*****************************************/
-.solution-card {
-	@apply flex-col;
-}
-
-.solution-card:nth-child(even) {
-	@apply md:flex-row-reverse;
-}
-
-.solution-card:nth-child(odd) {
-	@apply md:flex-row;
-}
-
-.solution-card:not(:first-child) {
-	@apply mt-28;
 }
 
 /**********************************FOOTER***********************************/

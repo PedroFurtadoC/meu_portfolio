@@ -42,7 +42,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 				className={`fixed flex z-[100] h-screen w-screen bg-[#000b] justify-center items-center backdrop-blur-sm`}
 				style={{ right: 0, bottom: 0 }}
 			>
-				<div className="relative minimalistic animated-shadow w-[90%] h-[90%] md:w-[80%] md:h-[80%] max-w-[1800px] max-h-[850px] rounded-2xl pt-16 pb-6 bg-primary">
+				<div className="relative w-[90%] h-[90%] md:w-[80%] md:h-[80%] max-w-[1800px] max-h-[850px] rounded-2xl pt-16 pb-6 bg-primary">
 					<div className="absolute top-4 right-4">
 						<button onClick={onClose}>
 							<FontelloIcon

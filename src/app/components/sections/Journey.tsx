@@ -4,10 +4,10 @@ import Heading from "../shared/Heading";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Journey() {
-	const curriculumRef = useHeaderAnchor("curriculum");
+	const journeyRef = useHeaderAnchor("journey");
 
 	return (
-		<div id="curriculum" className="bg-background" ref={curriculumRef}>
+		<div id="journey" className="bg-background" ref={journeyRef}>
 			<section data-aos="fade-up" className="w-screen h-fit py-20">
 				<div className="relative wrapper flex flex-col pt-10">
 					<Heading subtitle="Conheça cada passo dado por mim!">

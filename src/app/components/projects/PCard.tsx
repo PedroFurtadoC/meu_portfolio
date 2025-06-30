@@ -3,6 +3,7 @@ import useSize from "@/app/hooks/UseSize";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { useRef, useState } from "react";
 import PModal from "./PModal";
+import useMobile from "@/app/hooks/UseMobile";
 
 interface Props extends Project {
 	aosDelay: string;
@@ -15,6 +16,8 @@ export default function PCard({ aosDelay, ...rest }: Props) {
 
 	const { elementWidth } = useSize(cardRef);
 
+	const isMobile = useMobile();
+
 	return (
 		<>
 			<PModal
@@ -26,7 +29,7 @@ export default function PCard({ aosDelay, ...rest }: Props) {
 				ref={cardRef}
 				data-aos="fade"
 				data-aos-delay={aosDelay}
-				className={`project`}
+				className={`project ${isMobile && "mobile"}`}
 			>
 				<div className="flex flex-col bg-primary w-full h-full rounded-2xl items-center p-8">
 					<YouTubeEmbed
