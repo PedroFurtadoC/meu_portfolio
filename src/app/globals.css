@@ -105,32 +105,6 @@ body {
 }
 
 /*******************************************MAIN SECTION********************************************/
-/* #home::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	opacity: 0.1;
-	background-color: var(--primary);
-} */
-
-/* background-image: url("/fabric-background.webp"); */
-/* background-size: 140% 140%; */
-/* background-position: center; */
-/* #home::after {
-	top: 0;
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-image: url("/background.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	z-index: 1;
-	opacity: 0.85;
-} */
-
 #home::before {
 	content: "";
 	position: absolute;
@@ -141,6 +115,20 @@ body {
 	height: 100%;
 	z-index: 0;
 	background-color: var(--primary);
+}
+
+html.dark #home::before {
+	background-image: url("/soft-fabric-background.webp");
+}
+
+html.light #home::before {
+	background-image: url("/soft-fabric-background-light.webp");
+}
+
+@media screen and (max-width: 1280px) {
+	#home::before {
+		background-position: center;
+	}
 }
 
 .main-blob {

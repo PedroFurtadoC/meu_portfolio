@@ -1,19 +1,10 @@
-import { useEffect } from "react";
 import openNewTab from "../../functions/NewTab";
 import openEmail from "../../functions/OpenEmail";
-import useIsVisible from "../../hooks/UseIsVisible";
-import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 import FontelloIcon from "../shared/FontelloIcon";
+import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function AboutMe() {
-	const [aboutRef, isVisible] = useIsVisible({ threshold: 0.1 });
-	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
-
-	useEffect(() => {
-		if (isVisible) {
-			setAnchor("about-me");
-		}
-	}, [isVisible]);
+	const aboutRef = useHeaderAnchor("about-me");
 
 	return (
 		<section id="about-me" className="bg-background">

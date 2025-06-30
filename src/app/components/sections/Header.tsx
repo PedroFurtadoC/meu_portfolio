@@ -43,6 +43,22 @@ export default function Header() {
 							Soluções
 						</p>
 						<p
+							onClick={() => navigate("#depoiments")}
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "depoiments" && "active-link"
+							}`}
+						>
+							Depoimentos
+						</p>
+						<p
+							onClick={() => navigate("#FAQ")}
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "FAQ" && "active-link"
+							}`}
+						>
+							FAQ
+						</p>
+						<p
 							onClick={() => navigate("#projects")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
 								activeAnchor === "projects" && "active-link"
@@ -72,7 +88,7 @@ export default function Header() {
 					<div
 						onClick={() => setMenuVisible(true)}
 						id="header-menu-button"
-						className="flex-col justify-center items-center aspect-square h-[60%] rounded-lg bg-nav shadow-sm shadow-black hover:bg-[#191442] transition-all"
+						className="flex-col justify-center items-center aspect-square h-[60%] rounded-lg bg-nav shadow-sm shadow-black hover:bg-extra-blue transition-all"
 					>
 						<span className="w-1/2 h-1 rounded-full bg-[#f0f0f0]"></span>
 						<span className="w-1/2 h-1 rounded-full bg-[#f0f0f0] my-1.5"></span>
@@ -130,6 +146,22 @@ export default function Header() {
 							Soluções
 						</p>
 						<p
+							onClick={() => navigate("#depoiments")}
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "depoiments" && "active-link"
+							}`}
+						>
+							Depoimentos
+						</p>
+						<p
+							onClick={() => navigate("#FAQ")}
+							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
+								activeAnchor === "FAQ" && "active-link"
+							}`}
+						>
+							FAQ
+						</p>
+						<p
 							onClick={() => navigate("#projects")}
 							className={`hover:scale-105 transition-all text-lg font-bold hover:cursor-pointer ${
 								activeAnchor === "projects" && "active-link"
@@ -153,6 +185,7 @@ export default function Header() {
 						>
 							Contato
 						</p>
+						<ThemeSwitch />
 					</div>
 				</nav>
 			</div>

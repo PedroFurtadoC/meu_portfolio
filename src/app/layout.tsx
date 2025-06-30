@@ -56,6 +56,11 @@ export default function RootLayout({
 					href="/soft-fabric-background.webp"
 					as="image"
 				/>
+				<link
+					rel="preload"
+					href="/soft-fabric-background-light.webp"
+					as="image"
+				/>
 			</head>
 			<body
 				className={`${inter.variable} antialiased select-none text-foreground`}

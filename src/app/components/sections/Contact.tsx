@@ -7,23 +7,14 @@ import useRoot from "../../hooks/UseRoot";
 import { PopupModal } from "react-calendly";
 import useCalendlyStore from "../../stores/calendlyStore";
 import Image from "next/image";
-import useIsVisible from "../../hooks/UseIsVisible";
-import { useEffect } from "react";
-import useHeaderAnchorStore from "../../stores/headerAnchorStore";
+import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Contact() {
 	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
 
 	const root = useRoot();
 
-	const [contactRef, isVisible] = useIsVisible({ threshold: 0.1 });
-	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
-
-	useEffect(() => {
-		if (isVisible) {
-			setAnchor("contact");
-		}
-	}, [isVisible]);
+	const contactRef = useHeaderAnchor("contact");
 
 	return (
 		<div id="contact" className="bg-background">

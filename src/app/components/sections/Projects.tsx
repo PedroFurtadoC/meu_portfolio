@@ -1,19 +1,10 @@
-import { useEffect } from "react";
 import { projectContent } from "../../content/projects-content";
-import useIsVisible from "../../hooks/UseIsVisible";
-import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 import PCard from "../projects/PCard";
 import Heading from "../shared/Heading";
+import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Projects() {
-	const [projectRef, isVisible] = useIsVisible({ threshold: 0.1 });
-	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
-
-	useEffect(() => {
-		if (isVisible) {
-			setAnchor("projects");
-		}
-	}, [isVisible]);
+	const projectRef = useHeaderAnchor("projects");
 	return (
 		<>
 			<section className="w-screen h-fit py-20 bg-background">

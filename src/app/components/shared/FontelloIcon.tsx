@@ -10,7 +10,9 @@ interface Props {
 		| "icon-cancel"
 		| "icon-calendar"
 		| "icon-sun"
-		| "icon-moon";
+		| "icon-moon"
+		| "icon-up-open"
+		| "icon-down-open";
 	classStyling?: string | undefined;
 	style?: StyleProps | undefined;
 }

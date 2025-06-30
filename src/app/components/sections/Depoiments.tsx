@@ -1,11 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import Heading from "../shared/Heading";
 import { depoiments } from "@/app/content/depoiments-content";
+import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 const Depoiments = () => {
+	const depoimentsRef = useHeaderAnchor("depoiments");
+
 	return (
 		<div id="depoiments" className="bg-background">
-			<section className="w-screen" data-aos="fade-up">
+			<section
+				className="w-screen"
+				data-aos="fade-up"
+				ref={depoimentsRef}
+			>
 				<Heading subtitle="Palavras de quem ja confiou em mim">
 					DEPOIMENTOS
 				</Heading>

@@ -6,20 +6,11 @@ import useMousePosition from "../../hooks/UseMousePosition";
 import { useWindow } from "../../hooks/UseWindow";
 import openNewTab from "../../functions/NewTab";
 import openEmail from "../../functions/OpenEmail";
-import useIsVisible from "../../hooks/UseIsVisible";
-import useHeaderAnchorStore from "../../stores/headerAnchorStore";
-import { useEffect } from "react";
 import Blob from "../shared/Blob";
+import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function MainSection() {
-	const [homeRef, isVisible] = useIsVisible({ threshold: 0.1 });
-	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
-
-	useEffect(() => {
-		if (isVisible) {
-			setAnchor("home");
-		}
-	}, [isVisible]);
+	const homeRef = useHeaderAnchor("home");
 
 	let mouseDistanceX = 0;
 	let mouseDistanceY = 0;
@@ -35,7 +26,7 @@ export default function MainSection() {
 	return (
 		<main
 			id="home"
-			className="w-full min-h-[800px] h-[calc(100vh-5rem)] max-h-[1080] bg-background mt-20 overflow-y-hidden relative"
+			className="w-full min-h-[800px] h-[calc(100vh-5rem)] max-h-[1800px] xl:max-h-[1080px] bg-background mt-20 overflow-y-hidden relative"
 			style={{
 				overflowX: "hidden",
 			}}

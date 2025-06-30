@@ -1,19 +1,11 @@
-import { useEffect } from "react";
 import { solutionsContent } from "../../content/solutions-content";
-import useIsVisible from "../../hooks/UseIsVisible";
-import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 import SolutionsCard from "../shared/SolutionsCard";
 import Heading from "../shared/Heading";
+import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Solutions() {
-	const [solutionRef, isVisible] = useIsVisible({ threshold: 0.01 });
-	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);
+	const solutionRef = useHeaderAnchor("solutions");
 
-	useEffect(() => {
-		if (isVisible) {
-			setAnchor("solutions");
-		}
-	}, [isVisible]);
 	return (
 		<div id="solutions" className="bg-background" ref={solutionRef}>
 			<section data-aos="fade-up" className="w-screen py-20">
