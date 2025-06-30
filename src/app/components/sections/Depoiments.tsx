@@ -7,7 +7,7 @@ const Depoiments = () => {
 	const depoimentsRef = useHeaderAnchor("depoiments");
 
 	return (
-		<div id="depoiments" className="bg-background">
+		<div id="depoiments" className="bg-background py-20">
 			<section
 				className="w-screen"
 				data-aos="fade-up"

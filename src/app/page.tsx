@@ -19,6 +19,7 @@ import useMobile from "./hooks/UseMobile";
 import usePageLoaded from "./hooks/UsePageLoaded";
 import { useThemeStore } from "./stores/themeStore";
 import Depoiments from "./components/sections/Depoiments";
+import FAQSection from "./components/sections/FAQ";
 
 export default function Home() {
 	useEffect(() => {
@@ -58,6 +59,7 @@ export default function Home() {
 			<AboutMe />
 			<Solutions />
 			<Depoiments />
+			<FAQSection />
 			<Projects />
 			<Journey />
 			<Contact />

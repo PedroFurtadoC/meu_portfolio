@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 import FontelloIcon from "../shared/FontelloIcon";
-import ResponsiveIconScroll from "../shared/ResponsiveIconScroll";
+import ResponsiveIconScroll from "../scrollAnimation/ResponsiveIconScroll";
 import Image from "next/image";
 import useMousePosition from "../../hooks/UseMousePosition";
 import { useWindow } from "../../hooks/UseWindow";

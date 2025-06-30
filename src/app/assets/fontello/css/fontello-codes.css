@@ -2,6 +2,7 @@
 .icon-calendar:before { content: '\e800'; } /* '' */
 .icon-up-open:before { content: '\e801'; } /* '' */
 .icon-down-open:before { content: '\e802'; } /* '' */
+.icon-right:before { content: '\e803'; } /* '' */
 .icon-cancel:before { content: '\e807'; } /* '' */
 .icon-sun:before { content: '\e808'; } /* '' */
 .icon-moon:before { content: '\e809'; } /* '' */

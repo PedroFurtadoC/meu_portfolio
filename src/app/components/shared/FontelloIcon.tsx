@@ -12,7 +12,8 @@ interface Props {
 		| "icon-sun"
 		| "icon-moon"
 		| "icon-up-open"
-		| "icon-down-open";
+		| "icon-down-open"
+		| "icon-right";
 	classStyling?: string | undefined;
 	style?: StyleProps | undefined;
 }

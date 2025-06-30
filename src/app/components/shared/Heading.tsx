@@ -18,7 +18,7 @@ const Heading = ({ children, subtitle, style }: Props) => {
 				</h1>
 				<hr className="border-b border-accent max-w-[80vw] mx-auto" />
 				{subtitle && (
-					<p className="text-xl md:text-3xl text-center font-light mt-4">
+					<p className="text-xl md:text-3xl text-center font-light mt-4 px-5">
 						{subtitle}
 					</p>
 				)}
