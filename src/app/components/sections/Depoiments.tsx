@@ -30,6 +30,11 @@ function DepoimentsSlider() {
 	const [atEnd, setAtEnd] = useState(false);
 	const containerRef = useRef<HTMLDivElement>(null);
 
+	// Variáveis de drag
+	const startXRef = useRef<number | null>(null);
+	const endXRef = useRef<number | null>(null);
+	const isDraggingRef = useRef(false);
+
 	const handlePrev = () => {
 		const container = containerRef.current;
 		if (!container) return;
@@ -50,6 +55,7 @@ function DepoimentsSlider() {
 		}
 	};
 
+	// Controle do index
 	useEffect(() => {
 		const container = containerRef.current;
 		const item = container?.children[currentIndex] as
@@ -68,15 +74,97 @@ function DepoimentsSlider() {
 				behavior: "smooth",
 			});
 
-			// Chegou no início?
 			setAtStart(currentIndex === 0);
 
-			// Chegou no fim?
 			const maxScrollLeft = container.scrollWidth - container.clientWidth;
 			const isAtEnd = scrollPosition >= maxScrollLeft - 10;
 			setAtEnd(isAtEnd);
 		}
 	}, [currentIndex]);
+
+	// Eventos de mouse e touch
+	useEffect(() => {
+		const container = containerRef.current;
+		if (!container) return;
+
+		/* MOUSE */
+		const handleMouseDown = (e: MouseEvent) => {
+			startXRef.current = e.clientX;
+			isDraggingRef.current = true;
+		};
+
+		const handleMouseMove = (e: MouseEvent) => {
+			if (!isDraggingRef.current) return;
+			endXRef.current = e.clientX;
+		};
+
+		const handleMouseUp = () => {
+			if (
+				!isDraggingRef.current ||
+				startXRef.current === null ||
+				endXRef.current === null
+			)
+				return;
+
+			const deltaX = endXRef.current - startXRef.current;
+			if (Math.abs(deltaX) > 50) {
+				deltaX > 0 ? handlePrev() : handleNext();
+			}
+
+			startXRef.current = null;
+			endXRef.current = null;
+			isDraggingRef.current = false;
+		};
+
+		/* TOUCH */
+		const handleTouchStart = (e: TouchEvent) => {
+			startXRef.current = e.touches[0].clientX;
+			isDraggingRef.current = true;
+		};
+
+		const handleTouchMove = (e: TouchEvent) => {
+			if (!isDraggingRef.current) return;
+			endXRef.current = e.touches[0].clientX;
+		};
+
+		const handleTouchEnd = () => {
+			if (
+				!isDraggingRef.current ||
+				startXRef.current === null ||
+				endXRef.current === null
+			)
+				return;
+
+			const deltaX = endXRef.current - startXRef.current;
+			if (Math.abs(deltaX) > 50) {
+				deltaX > 0 ? handlePrev() : handleNext();
+			}
+
+			startXRef.current = null;
+			endXRef.current = null;
+			isDraggingRef.current = false;
+		};
+
+		// Listeners
+		container.addEventListener("mousedown", handleMouseDown);
+		container.addEventListener("mousemove", handleMouseMove);
+		window.addEventListener("mouseup", handleMouseUp);
+
+		container.addEventListener("touchstart", handleTouchStart);
+		container.addEventListener("touchmove", handleTouchMove);
+		window.addEventListener("touchend", handleTouchEnd);
+
+		// Cleanup
+		return () => {
+			container.removeEventListener("mousedown", handleMouseDown);
+			container.removeEventListener("mousemove", handleMouseMove);
+			window.removeEventListener("mouseup", handleMouseUp);
+
+			container.removeEventListener("touchstart", handleTouchStart);
+			container.removeEventListener("touchmove", handleTouchMove);
+			window.removeEventListener("touchend", handleTouchEnd);
+		};
+	}, []);
 
 	return (
 		<div className="w-screen mt-20">
