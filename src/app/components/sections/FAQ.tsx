@@ -13,7 +13,7 @@ const FAQSection = () => {
 	return (
 		<div id="FAQ" className="bg-background w-screen py-20">
 			<section
-				className="wrapper flex flex-col"
+				className="wrapper flex flex-col text-light-contrast"
 				data-aos="fade-up"
 				ref={FAQRef}
 			>
@@ -25,7 +25,7 @@ const FAQSection = () => {
 				</div>
 				<button
 					onClick={toggleCalendly}
-					className="self-center h-16 w-[90%] md:w-1/2 xl:w-1/3 rounded-xl font-bold text-xl bg-accent shadow-md shadow-[#0005] hover:bg-[#b35b18] transition-all"
+					className="self-center h-16 w-[90%] md:w-1/2 xl:w-1/3 rounded-xl font-bold text-xl bg-primary-button shadow-md shadow-[#0005] hover:bg-primary-button-hover transition-all"
 				>
 					Quero entrar em contato{" "}
 					<FontelloIcon name="icon-right" classStyling="ml-2" />

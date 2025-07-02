@@ -52,33 +52,27 @@ export default function MainSection() {
 							options={{ loop: true }}
 							onInit={(typewriter) => {
 								typewriter
-									.typeString(
-										'<span class="Typewriter__mobile">Inteligentes</span>'
-									)
+									.typeString("Inteligentes")
 									.pauseFor(2500)
 									.deleteAll()
-									.typeString(
-										'<span class="Typewriter__desktop">Descomplicadas</span>'
-									)
+									.typeString("Descomplicadas")
 									.pauseFor(2500)
 									.deleteAll()
-									.typeString(
-										'<span class="Typewriter__web">Estratégicas</span>'
-									)
+									.typeString("Estratégicas")
 									.pauseFor(2500)
 									.deleteAll()
 									.start();
 							}}
 						/>
 					</div>
-					<section className="flex flex-col items-center md:flex-row mt-10">
+					<section className="flex flex-col items-center md:flex-row mt-10 text-light-contrast">
 						<button
 							onClick={() =>
 								openNewTab(
 									"https://www.linkedin.com/in/pedro-furtado-33159023b/"
 								)
 							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-primary shadow-md shadow-[#0005] hover:bg-[#0e76a8] transition-all"
+							className="h-16 w-full rounded-xl text-xl font-bold bg-primary shadow-md shadow-[#0005] hover:bg-blue-hover transition-all"
 						>
 							<FontelloIcon
 								name={"icon-linkedin"}
@@ -90,7 +84,7 @@ export default function MainSection() {
 							onClick={() =>
 								openEmail("pedrocunha.furtado@gmail.com")
 							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-primary mx-0 my-5 md:mx-4 md:my-0 shadow-md shadow-[#0005] hover:bg-[#b35b18] transition-all"
+							className="h-16 w-full rounded-xl text-xl font-bold bg-primary mx-0 my-5 md:mx-4 md:my-0 shadow-md shadow-[#0005] hover:bg-fixed-button-hover transition-all"
 						>
 							<FontelloIcon
 								name={"icon-mail-alt"}
@@ -100,7 +94,7 @@ export default function MainSection() {
 						</button>
 					</section>
 					<div className="flex flex-row mt-10 items-center">
-						<p className="text-xl mr-4">Veja mais!</p>
+						<p className="text-xl mr-4 font-semibold">Veja mais!</p>
 						<ResponsiveIconScroll />
 					</div>
 				</aside>

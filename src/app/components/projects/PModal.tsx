@@ -39,7 +39,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 	return (
 		<Portal>
 			<div
-				className={`fixed flex z-[100] h-screen w-screen bg-[#000b] justify-center items-center backdrop-blur-sm`}
+				className={`fixed flex z-[100] h-screen w-screen bg-[#000b] justify-center items-center backdrop-blur-sm text-light-contrast`}
 				style={{ right: 0, bottom: 0 }}
 			>
 				<div className="relative w-[90%] h-[90%] md:w-[80%] md:h-[80%] max-w-[1800px] max-h-[850px] rounded-2xl pt-16 pb-6 bg-primary">

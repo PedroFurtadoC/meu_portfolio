@@ -15,12 +15,12 @@ export default function AboutMe() {
 			>
 				<div
 					id="about-me-div"
-					className="flex flex-col my-20 px-5 py-8 md:p-20 wrapper rounded-[2rem] bg-primary"
+					className="flex flex-col my-20 px-5 py-8 md:p-20 wrapper rounded-[2rem] bg-primary text-light-contrast"
 				>
 					<p className="text-2xl md:text-3xl mb-2 font-light tracking-[0.5em] md:tracking-[0.75em]">
 						SOBRE MIM
 					</p>
-					<h1 className="text-4xl md:text-[80px] md:leading-[84px] mb-3 text-secondary font-extrabold">
+					<h1 className="text-4xl md:text-[80px] md:leading-[84px] mb-3 text-[#00a8e8] font-extrabold">
 						Pedro Furtado Cunha
 					</h1>
 					<h2 className="text-2xl md:text-3xl text-extra-blue font-bold">
@@ -54,7 +54,7 @@ export default function AboutMe() {
 									"https://www.linkedin.com/in/pedro-furtado-33159023b/"
 								)
 							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-extra-blue shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
+							className="h-16 w-full rounded-xl text-xl font-bold bg-extra-blue shadow-md shadow-[#0005] hover:bg-blue-hover transition-all"
 						>
 							<FontelloIcon
 								name={"icon-linkedin"}
@@ -66,7 +66,7 @@ export default function AboutMe() {
 							onClick={() =>
 								openEmail("pedrocunha.furtado@gmail.com")
 							}
-							className="h-16 w-full rounded-xl text-xl font-bold bg-accent ml-4 shadow-md shadow-[#0005] hover:bg-[#b35b18] transition-all"
+							className="h-16 w-full rounded-xl text-xl font-bold bg-fixed-button ml-4 shadow-md shadow-[#0005] hover:bg-fixed-button-hover transition-all"
 						>
 							<FontelloIcon
 								name={"icon-mail-alt"}

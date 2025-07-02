@@ -9,7 +9,7 @@ export default function Footer() {
 		>
 			<div
 				data-aos="fade"
-				className="wrapper font-[family-name:var(--font-geist-mono)] pt-20 lg:pt-36 pb-20 flex flex-col lg:flex-row justify-between lg:items-center"
+				className="text-light-contrast wrapper pt-20 lg:pt-36 pb-20 flex flex-col lg:flex-row justify-between lg:items-center"
 			>
 				<div className="mb-10 lg:mb-0">
 					<p className="text-3xl font-bold mb-2">
@@ -33,7 +33,7 @@ export default function Footer() {
 									"https://github.com/PedroFurtadoC/meu_portfolio"
 								)
 							}
-							className="text-violet-300 hover:cursor-pointer"
+							className="text-light-blue hover:cursor-pointer"
 						>
 							Github
 							<FontelloIcon

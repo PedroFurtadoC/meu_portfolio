@@ -3,14 +3,25 @@
 @tailwind utilities;
 
 :root {
-	--background: #0f1c2e;
-	--foreground: #f5f7fa;
-	--accent: #ff6b6b;
-	--muted: #a0aec0;
-	--primary: #1b3a4b;
-	--secondary: #b8e0d2;
+	--background: #f7f9fc;
+	--foreground: #003244;
+	--accent: #00a8e8;
+	--muted: #515963;
+	--primary: #003244;
+	--secondary: #ff6d00;
+	--nav: #e2e2e2;
+	--nav-hover: #d4d4d4;
+	--primary-button: #00a8e8;
+	--primary-button-hover: #0f6086;
+	--secondary-button: #ff6d00;
+	--secondary-button-hover: #af4c00;
+	/* FIXED */
+	--light-blue: #00a8e8;
 	--extra-blue: #007ea7;
-	--nav: #2b4f63;
+	--blue-hover: #0f6086;
+	--light-contrast: #f5f7fa;
+	--fixed-button: #ff6d00;
+	--fixed-button-hover: #af4c00;
 	--shadow-gradient: #00acf0, #007ea7, #004f88, #004f88, #007ea7, #00acf0;
 }
 
@@ -22,8 +33,12 @@
 		--muted: #a0aec0;
 		--primary: #003459;
 		--secondary: #00a8e8;
-		--extra-blue: #007ea7;
-		--nav: #2b4f63;
+		--nav: #002633;
+		--nav-hover: #003446;
+		--primary-button: #ff6d00;
+		--primary-button-hover: #af4c00;
+		--secondary-button: #00a8e8;
+		--secondary-button-hover: #0f6086;
 	}
 }
 
@@ -34,14 +49,18 @@ html {
 }
 
 html.light {
-	--background: #0f1c2e;
-	--foreground: #f5f7fa;
-	--accent: #ff6b6b;
-	--muted: #a0aec0;
-	--primary: #1b3a4b;
-	--secondary: #b8e0d2;
-	--extra-blue: #007ea7;
-	--nav: #2b4f63;
+	--background: #f7f9fc;
+	--foreground: #003244;
+	--accent: #00a8e8;
+	--muted: #515963;
+	--primary: #003244;
+	--secondary: #ff6d00;
+	--nav: #e2e2e2;
+	--nav-hover: #d4d4d4;
+	--primary-button: #00a8e8;
+	--primary-button-hover: #0f6086;
+	--secondary-button: #ff6d00;
+	--secondary-button-hover: #af4c00;
 }
 
 html.dark {
@@ -51,8 +70,12 @@ html.dark {
 	--muted: #a0aec0;
 	--primary: #003459;
 	--secondary: #00a8e8;
-	--extra-blue: #007ea7;
-	--nav: #2b4f63;
+	--nav: #002633;
+	--nav-hover: #003446;
+	--primary-button: #ff6d00;
+	--primary-button-hover: #af4c00;
+	--secondary-button: #00a8e8;
+	--secondary-button-hover: #0f6086;
 }
 
 body {
@@ -101,7 +124,7 @@ body {
 }
 
 .active-link {
-	color: var(--accent);
+	color: var(--fixed-button);
 	transform: scale(1.05);
 }
 
@@ -145,19 +168,7 @@ html.light #home::before {
 .Typewriter__wrapper,
 .Typewriter__cursor {
 	line-height: 1;
-	@apply text-[1.3rem] md:text-[2.75rem];
-}
-
-.Typewriter__mobile {
-	@apply text-accent;
-}
-
-.Typewriter__desktop {
-	@apply text-accent;
-}
-
-.Typewriter__web {
-	@apply text-accent;
+	@apply text-[1.3rem] md:text-[2.75rem] text-accent;
 }
 
 #main-section {
@@ -223,6 +234,16 @@ html.light #home::before {
 	box-shadow: inset 0px 0px 38px 40px var(--background);
 	opacity: 0.5;
 	z-index: -1;
+}
+
+html.dark .svg-background::before {
+	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
+	background-image: url("/endless-constellation.svg");
+}
+
+html.light .svg-background::before {
+	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
+	background-image: url("/endless-constellation-light.svg");
 }
 
 .project {

@@ -22,7 +22,7 @@ export default function Contact() {
 				ref={contactRef}
 				id="contact-section"
 				data-aos="fade"
-				className="relative w-screen pt-3 md:pt-32 pb-32"
+				className="relative w-screen pt-3 md:pt-32 pb-32 text-light-contrast"
 			>
 				<div
 					id="contact-div"
@@ -30,7 +30,7 @@ export default function Contact() {
 				>
 					<div className="flex flex-col justify-center items-center w-[90%] lg:w-[60%]">
 						<div className="w-full">
-							<h1 className="text-4xl md:text-6xl text-secondary font-light tracking-[0.33em] mb-10">
+							<h1 className="text-4xl md:text-6xl text-light-blue font-light tracking-[0.33em] mb-10">
 								CONTATO
 							</h1>
 							<h2 className="text-2xl md:text-3xl">
@@ -46,7 +46,7 @@ export default function Contact() {
 										"https://www.linkedin.com/in/pedro-furtado-33159023b/"
 									)
 								}
-								className="h-16 w-full rounded-xl text-xl font-bold bg-extra-blue shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
+								className="h-16 w-full rounded-xl text-xl font-bold bg-extra-blue shadow-md shadow-[#0005] hover:bg-blue-hover transition-all"
 							>
 								<FontelloIcon
 									name={"icon-linkedin"}
@@ -58,7 +58,7 @@ export default function Contact() {
 								onClick={() =>
 									openEmail("pedrocunha.furtado@gmail.com")
 								}
-								className="h-16 w-full rounded-xl text-xl font-bold bg-extra-blue shadow-md shadow-[#0005] hover:bg-[#0f6086] transition-all"
+								className="h-16 w-full rounded-xl text-xl font-bold bg-extra-blue shadow-md shadow-[#0005] hover:bg-blue-hover transition-all"
 							>
 								<FontelloIcon
 									name={"icon-mail-alt"}
@@ -70,7 +70,7 @@ export default function Contact() {
 						<div className="flex flex-row mt-4 w-full">
 							<button
 								onClick={toggleCalendly}
-								className="h-16 w-full rounded-xl text-xl font-bold bg-accent shadow-md shadow-[#0005] hover:bg-[#b35b18] transition-all"
+								className="h-16 w-full rounded-xl text-xl font-bold bg-fixed-button shadow-md shadow-[#0005] hover:bg-fixed-button-hover transition-all"
 							>
 								<FontelloIcon
 									name={"icon-calendar"}
@@ -96,7 +96,7 @@ export default function Contact() {
 					<GoToStartShape
 						height="md"
 						width="sm"
-						left={"80%"}
+						left={"78%"}
 						top={"93%"}
 						zIndex={99}
 						onClick={() => navigate("#home")}

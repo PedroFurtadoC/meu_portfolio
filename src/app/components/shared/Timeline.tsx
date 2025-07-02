@@ -92,7 +92,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 
 	return (
 		<div
-			className="flex items-center w-full"
+			className="flex items-center w-full text-light-contrast"
 			style={{
 				marginBottom: length === 1 ? "0px" : "80px",
 				flexDirection: index % 2 === 0 ? "row" : "row-reverse",
@@ -101,7 +101,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 			{renderEndDivision(index)}
 			<div
 				ref={cardRef}
-				className={`min-h-[200px] w-[90%] md:w-[80%] bg-primary rounded-xl py-8 px-10 md:px-20 flex flex-col text-white font-bold z-10`}
+				className={`min-h-[200px] w-[90%] md:w-[80%] bg-primary rounded-xl py-8 px-10 md:px-20 flex flex-col font-bold z-10`}
 			>
 				<div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6 gap-5">
 					<h2 className="text-accent text-3xl md:text-4xl max-w-[100%] lg:max-w-[50%]">
@@ -111,12 +111,12 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 						{item.start.toUpperCase()} | {item.end.toUpperCase()}
 					</h3>
 				</div>
-				<p className="text-foreground font-normal text-xl md:text-2xl mb-4">
+				<p className="font-normal text-xl md:text-2xl mb-4">
 					{item.text}
 				</p>
 				{item.habilities && (
 					<>
-						<p className="text-foreground font-normal text-xl md:text-2xl mt-10 mb-4">
+						<p className="font-normal text-xl md:text-2xl mt-10 mb-4">
 							Habilidades específicas
 						</p>
 						<ul className="font-light font-inter list-disc list-inside text-xl md:text-2xl md:columns-2">

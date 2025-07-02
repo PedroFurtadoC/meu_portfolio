@@ -169,7 +169,7 @@ function DepoimentsSlider() {
 	return (
 		<div className="w-screen mt-20">
 			<div
-				className="flex overflow-hidden px-5"
+				className="flex overflow-hidden px-5 text-light-contrast"
 				ref={containerRef}
 				style={{ scrollBehavior: "smooth" }}
 			>
@@ -191,7 +191,7 @@ function DepoimentsSlider() {
 				<button
 					onClick={handlePrev}
 					className={`transition-colors ${
-						atStart ? "text-muted" : "text-accent"
+						atStart ? "text-muted" : "text-fixed-button"
 					}`}
 					disabled={atStart}
 					aria-label="Voltar depoimento"
@@ -201,7 +201,7 @@ function DepoimentsSlider() {
 				<button
 					onClick={handleNext}
 					className={`transition-colors ${
-						atEnd ? "text-muted" : "text-accent"
+						atEnd ? "text-muted" : "text-fixed-button"
 					}`}
 					disabled={atEnd}
 					aria-label="Avançar depoimento"
