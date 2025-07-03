@@ -16,8 +16,7 @@ export default function Solutions() {
 					{solutionsContent.map((solution, index) => (
 						<SolutionsCard
 							key={"solution" + index + solution.title}
-							image={solution.image}
-							imageAlt={solution.imageAlt}
+							lottie={solution.lottie}
 							title={solution.title}
 							text={solution.text}
 							optionalText={solution.optionalText}

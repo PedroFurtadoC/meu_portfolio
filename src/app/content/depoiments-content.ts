@@ -12,8 +12,8 @@ export const depoiments: Depoiment[] = [
 			"“Pedro me explicou tudo com calma, criou exatamente o que eu precisava e entregou uma solução leve, funcional e organizada. Foi além do esperado.”",
 	},
 	{
-		name: "Teste 1",
-		role: "Professora e Historiadora",
+		name: "Luciene F.",
+		role: "Head Consultora de Negócios",
 		depoiment:
 			"“Pedro me explicou tudo com calma, criou exatamente o que eu precisava e entregou uma solução leve, funcional e organizada. Foi além do esperado.”",
 	},

@@ -70,7 +70,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 									/>
 									{content.link && (
 										<p
-											className="my-10 text-lg md:text-2xl font-light text-secondary cursor-pointer"
+											className="my-10 text-lg md:text-2xl font-light text-fixed-button cursor-pointer"
 											role="button"
 											onClick={() =>
 												openNewTab(content.link?.url!)
@@ -107,7 +107,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 										/>
 										{content.link && (
 											<p
-												className="my-10 text-lg md:text-2xl font-light text-secondary cursor-pointer"
+												className="my-10 text-lg md:text-2xl font-light text-fixed-button cursor-pointer"
 												role="button"
 												onClick={() =>
 													openNewTab(

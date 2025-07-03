@@ -119,10 +119,10 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 						<p className="font-normal text-xl md:text-2xl mt-10 mb-4">
 							Habilidades específicas
 						</p>
-						<ul className="font-light font-inter list-disc list-inside text-xl md:text-2xl md:columns-2">
+						<ul className="font-light font-inter list-disc pl-[1.5rem] text-xl md:text-2xl lg:columns-2">
 							{item.habilities.map((hability) => (
 								<li
-									className="mb-2"
+									className="mb-2.5"
 									key={item.title + " " + hability}
 								>
 									{hability}

@@ -16,10 +16,11 @@ import useRoot from "./hooks/UseRoot";
 import useCalendlyStore from "./stores/calendlyStore";
 import FontelloIcon from "./components/shared/FontelloIcon";
 import useMobile from "./hooks/UseMobile";
-import usePageLoaded from "./hooks/UsePageLoaded";
 import { useThemeStore } from "./stores/themeStore";
 import Depoiments from "./components/sections/Depoiments";
 import FAQSection from "./components/sections/FAQ";
+import PageLoader from "./components/shared/PageLoader";
+import usePageLoading from "./hooks/UsePageLoading";
 
 export default function Home() {
 	useEffect(() => {
@@ -37,7 +38,7 @@ export default function Home() {
 
 	const root = useRoot();
 
-	const isPageLoading = usePageLoaded();
+	const isPageLoading = usePageLoading();
 
 	const initTheme = useThemeStore((s) => s.initTheme);
 
@@ -51,9 +52,7 @@ export default function Home() {
 			className="flex flex-col w-screen font-inter text-foreground"
 			style={{ overflowX: "hidden" }}
 		>
-			{/* {isPageLoading && (
-				<div className="h-screen w-screen absolute top-0 left-0 bg-black z-[999]"></div>
-			)} */}
+			<PageLoader isLoading={isPageLoading} />
 			<Header />
 			<MainSection />
 			<AboutMe />

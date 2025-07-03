@@ -72,7 +72,7 @@ const FAQCard = ({ FAQ }: { FAQ: FAQ }) => {
 					marginTop: expanded ? "20px" : "0px",
 				}}
 			>
-				<p className="font-light py-5">{FAQ.answer}</p>
+				<p className="font-light pb-5">{FAQ.answer}</p>
 			</div>
 		</button>
 	);

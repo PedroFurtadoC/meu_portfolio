@@ -61,8 +61,19 @@ export default function RootLayout({
 					href="/soft-fabric-background-light.webp"
 					as="image"
 				/>
+				<link
+					rel="preload"
+					href="/soft-fabric-background-mobile.webp"
+					as="image"
+				/>
+				<link
+					rel="preload"
+					href="/soft-fabric-background-light-mobile.webp"
+					as="image"
+				/>
 			</head>
 			<body
+				style={{ overflowY: "hidden" }}
 				className={`${inter.variable} antialiased select-none text-foreground`}
 			>
 				{children}
