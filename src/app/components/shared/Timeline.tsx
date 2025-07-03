@@ -32,15 +32,13 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 	const { elementHeight: cardHeight } = useSize(cardRef);
 
 	const { width: windowWidth } = useWindowResize();
-	const width = windowWidth * 0.9;
-	const maxWidth = windowWidth > 1200 ? "750px" : "600px";
 
 	const renderStartDivision = (index: number) => {
 		if (index < length - 1) {
-			/* if (windowWidth < 1000)
+			if (windowWidth < 1000)
 				return (
 					<hr className="h-[150px] w-[1px] border-l-[7px] border-l-secondary border-dashed" />
-				); */
+				);
 
 			return (
 				<div
@@ -66,6 +64,8 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 	};
 
 	const renderEndDivision = (index: number) => {
+		if (windowWidth < 1000) return null;
+
 		if (index === 0) {
 			return <div className="w-[5%] md:w-[10%]" />;
 		} else {
@@ -94,14 +94,24 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 		<div
 			className="flex items-center w-full text-light-contrast"
 			style={{
-				marginBottom: length === 1 ? "0px" : "80px",
-				flexDirection: index % 2 === 0 ? "row" : "row-reverse",
+				marginBottom:
+					windowWidth >= 1000
+						? length === 1
+							? "0px"
+							: "80px"
+						: "0px",
+				flexDirection:
+					windowWidth >= 1000
+						? index % 2 === 0
+							? "row"
+							: "row-reverse"
+						: "column",
 			}}
 		>
 			{renderEndDivision(index)}
 			<div
 				ref={cardRef}
-				className={`min-h-[200px] w-[90%] md:w-[80%] bg-primary rounded-xl py-8 px-10 md:px-20 flex flex-col font-bold z-10`}
+				className={`min-h-[200px] w-full md:w-[80%] bg-primary rounded-xl py-8 px-10 md:px-20 flex flex-col font-bold z-10`}
 			>
 				<div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6 gap-5">
 					<h2 className="text-accent text-3xl md:text-4xl max-w-[100%] lg:max-w-[50%]">
