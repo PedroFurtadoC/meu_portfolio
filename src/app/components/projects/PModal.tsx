@@ -17,9 +17,31 @@ interface Props {
 export default function PModal({ isVisible, onClose, content }: Props) {
 	useEffect(() => {
 		if (!isVisible) return;
-		const handleKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+		/* Fecha no ESC  */
+		const handleKey = (e: KeyboardEvent) => {
+			if (e.key === "Escape") onClose();
+		};
+
+		/* Fecha no botão “voltar”  */
+		const handlePop = () => {
+			onClose();
+		};
+
 		window.addEventListener("keydown", handleKey);
-		return () => window.removeEventListener("keydown", handleKey);
+		window.addEventListener("popstate", handlePop);
+
+		// Adiciona uma entrada fantasma no histórico
+		window.history.pushState({ modal: true }, "");
+
+		return () => {
+			window.removeEventListener("keydown", handleKey);
+			window.removeEventListener("popstate", handlePop);
+
+			// Ao fechar manualmente, removemos a entrada fantasma
+			if (window.history.state?.modal) {
+				window.history.back();
+			}
+		};
 	}, [isVisible, onClose]);
 
 	useEffect(() => {
@@ -50,7 +72,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 				onClick={onClose}
 			>
 				<div
-					className="relative w-[90%] h-[90%] md:w-[80%] md:h-[80%] max-w-[1800px] max-h-[850px] rounded-2xl pt-16 pb-6 bg-primary"
+					className="relative w-[90%] h-[90dvh] md:w-[80%] md:h-[80%] max-w-[1800px] max-h-[850px] rounded-2xl pt-16 pb-6 bg-primary"
 					onClick={(e) => e.stopPropagation()}
 				>
 					<div className="absolute top-4 right-4">
@@ -67,7 +89,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 						</h1>
 						<div
 							id="teste"
-							className={`flex gap-10 pl-10 pr-1 pb-5 w-full flex-1 min-h-0 ${
+							className={`flex gap-10 pl-8 md:pl-10 pr-1 pb-5 w-full flex-1 min-h-0 ${
 								windowWidth < 1000 ? "flex-col" : "flex-row"
 							}`}
 						>
@@ -92,7 +114,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 									)}
 								</aside>
 							)}
-							<SimpleBar className="overflow-y-auto overflow-x-hidden w-full h-full pr-10">
+							<SimpleBar className="overflow-y-auto overflow-x-hidden w-full h-full pr-8 md:pr-10">
 								<div className="flex flex-col gap-5">
 									<h2 className="text-2xl md:text-3xl text-secondary font-semibold">
 										{content.subtitle}

@@ -21,9 +21,32 @@ export default function Modal({
 }: ModalProps) {
 	useEffect(() => {
 		if (!isOpen) return;
-		const handleKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+
+		/* Fecha no ESC  */
+		const handleKey = (e: KeyboardEvent) => {
+			if (e.key === "Escape") onClose();
+		};
+
+		/* Fecha no botão “voltar”  */
+		const handlePop = () => {
+			onClose();
+		};
+
 		window.addEventListener("keydown", handleKey);
-		return () => window.removeEventListener("keydown", handleKey);
+		window.addEventListener("popstate", handlePop);
+
+		// Adiciona uma entrada fantasma no histórico
+		window.history.pushState({ modal: true }, "");
+
+		return () => {
+			window.removeEventListener("keydown", handleKey);
+			window.removeEventListener("popstate", handlePop);
+
+			// Ao fechar manualmente, removemos a entrada fantasma
+			if (window.history.state?.modal) {
+				window.history.back();
+			}
+		};
 	}, [isOpen, onClose]);
 
 	if (!isOpen) return null;
@@ -32,7 +55,7 @@ export default function Modal({
 		<Portal>
 			{/* backdrop ---------------------------------------------------------- */}
 			<div
-				className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center"
+				className="fixed inset-0 z-[999] bg-black/55 flex items-center justify-center"
 				onClick={onClose}
 			>
 				{/* conteúdo -------------------------------------------------------- */}
