@@ -53,26 +53,6 @@ export default function RootLayout({
 		<html lang="pt-BR">
 			<head>
 				<link rel="icon" href={`${prefix}/favicon.ico`} sizes="any" />
-				<link
-					rel="preload"
-					as="image"
-					href={`${prefix}/soft-fabric-background.webp`}
-				/>
-				<link
-					rel="preload"
-					as="image"
-					href={`${prefix}/soft-fabric-background-light.webp`}
-				/>
-				<link
-					rel="preload"
-					as="image"
-					href={`${prefix}/soft-fabric-background-mobile.webp`}
-				/>
-				<link
-					rel="preload"
-					as="image"
-					href={`${prefix}/soft-fabric-background-light-mobile.webp`}
-				/>
 			</head>
 			<body
 				style={{ overflowY: "hidden" }}
