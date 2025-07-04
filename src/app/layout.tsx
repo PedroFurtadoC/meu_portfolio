@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./assets/fontello/css/fontello.css";
+import { prefix } from "./libs/prefix";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 	description:
 		"Sou apaixonado por computação e consultor em tecnologia. Crio automações e soluções digitais funcionais, acessíveis e sob medida.",
 	keywords: "Pedro",
-	//other: { "google-site-verification": "" },
+	/* other: { "google-site-verification": "" }, */
 	authors: [
 		{
 			name: "Pedro Furtado Cunha",
@@ -51,27 +52,27 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR">
 			<head>
-				<link rel="icon" href="./favicon.ico" sizes="any" />
-				{/* <link
+				<link rel="icon" href={`${prefix}/favicon.ico`} sizes="any" />
+				<link
 					rel="preload"
-					href="./soft-fabric-background.webp"
 					as="image"
+					href={`${prefix}/soft-fabric-background.webp`}
 				/>
 				<link
 					rel="preload"
-					href="./soft-fabric-background-light.webp"
 					as="image"
+					href={`${prefix}/soft-fabric-background-light.webp`}
 				/>
 				<link
 					rel="preload"
-					href="./soft-fabric-background-mobile.webp"
 					as="image"
+					href={`${prefix}/soft-fabric-background-mobile.webp`}
 				/>
 				<link
 					rel="preload"
-					href="./soft-fabric-background-light-mobile.webp"
 					as="image"
-				/> */}
+					href={`${prefix}/soft-fabric-background-light-mobile.webp`}
+				/>
 			</head>
 			<body
 				style={{ overflowY: "hidden" }}
