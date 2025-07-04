@@ -1,7 +1,7 @@
 .theme-switch {
 	position: relative;
 	width: 96px;
-	height: 40px;
+	height: 44px;
 	padding: 0;
 	border: 2px solid #d6d6d6;
 	border-radius: 9999px;
@@ -31,6 +31,8 @@
 }
 
 .switch-handle {
+	margin-block: auto;
+	margin-inline: 2px;
 	position: absolute;
 	left: 0px;
 	width: 36px;
@@ -48,7 +50,7 @@
 }
 
 .theme-switch.dark .switch-handle {
-	transform: translateX(56px);
+	transform: translateX(52px);
 	background-color: #0f0f0f;
 	color: rgb(247, 247, 247);
 }

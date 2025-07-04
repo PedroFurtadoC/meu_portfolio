@@ -40,7 +40,7 @@
 		--primary-button-hover: #af4c00;
 		--secondary-button: #00a8e8;
 		--secondary-button-hover: #0f6086;
-		--hero-bg: #003244;
+		--hero-bg: #003459;
 	}
 }
 
@@ -79,7 +79,7 @@ html.dark {
 	--primary-button-hover: #af4c00;
 	--secondary-button: #00a8e8;
 	--secondary-button-hover: #0f6086;
-	--hero-bg: #003244;
+	--hero-bg: #003459;
 }
 
 body {
@@ -142,16 +142,16 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	background-color: var(--primary);
+	background-color: var(--hero-bg);
 }
 
 html.dark #home::before {
-	background-color: var(--primary);
+	background-color: var(--hero-bg);
 	background-image: url("./soft-fabric-background.webp");
 }
 
 html.light #home::before {
-	background-color: var(--primary);
+	background-color: var(--hero-bg);
 	background-image: url("./soft-fabric-background-light.webp");
 }
 
