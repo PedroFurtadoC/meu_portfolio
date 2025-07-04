@@ -1,12 +1,11 @@
 import { PContent } from "@/app/content/projects-content";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import FontelloIcon from "../shared/FontelloIcon";
 import Portal from "../shared/Portal";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import useWindowResize from "@/app/hooks/useWindowResize";
-import useSize from "@/app/hooks/UseSize";
 import openNewTab from "@/app/functions/NewTab";
 
 interface Props {
@@ -70,7 +69,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 									/>
 									{content.link && (
 										<p
-											className="my-10 text-lg md:text-2xl font-light text-fixed-button cursor-pointer"
+											className="my-10 text-lg md:text-2xl text-fixed-button cursor-pointer w-fit"
 											role="button"
 											onClick={() =>
 												openNewTab(content.link?.url!)
@@ -83,20 +82,52 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 								</aside>
 							)}
 							<SimpleBar className="overflow-y-auto overflow-x-hidden w-full h-full pr-10">
-								<div className="flex flex-col gap-2">
-									<p className="text-xl md:text-2xl">
+								<div className="flex flex-col gap-5">
+									<h2 className="text-2xl md:text-3xl text-secondary font-semibold">
+										{content.subtitle}
+									</h2>
+									<p className="text-xl md:text-2xl font-light">
 										{content.text}
 									</p>
 									{content.optionalText && (
-										<p className="text-xl md:text-2xl mt-5">
+										<p className="text-xl md:text-2xl font-light">
 											{content.optionalText}
 										</p>
 									)}
 									{content.optionalText2 && (
-										<p className="text-xl md:text-2xl mt-5">
+										<p className="text-xl md:text-2xl font-light">
 											{content.optionalText2}
 										</p>
 									)}
+									{content.technologies &&
+										content.technologies.length !== 0 && (
+											<>
+												<h2 className="text-2xl md:text-3xl text-secondary font-semibold">
+													Tecnologias utilizadas:
+												</h2>
+												<ul className="flex flex-wrap text-xl md:text-2xl font-light">
+													{content.technologies.map(
+														(tech, index, arr) => (
+															<li
+																key={
+																	content.title +
+																	tech
+																}
+															>
+																{tech}
+																{index !==
+																	arr.length -
+																		1 && (
+																	<span className="mx-2">
+																		·
+																	</span>
+																)}
+															</li>
+														)
+													)}
+												</ul>
+											</>
+										)}
 								</div>
 								{windowWidth < 1000 && (
 									<div className="h-fit mt-8">
@@ -107,7 +138,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 										/>
 										{content.link && (
 											<p
-												className="my-10 text-lg md:text-2xl font-light text-fixed-button cursor-pointer"
+												className="my-10 text-lg md:text-2xl text-fixed-button cursor-pointer w-fit"
 												role="button"
 												onClick={() =>
 													openNewTab(

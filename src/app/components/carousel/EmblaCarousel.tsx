@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
@@ -10,6 +10,8 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { Certificate } from "@/app/content/certificate-content";
+import Portal from "../shared/Portal";
+import Modal from "../shared/Modal";
 
 type PropType = {
 	slides: Certificate[];
@@ -88,68 +90,98 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 		}
 	};
 
+	/* MODAL */
+	const [activeImg, setActiveImg] = useState<{
+		src: string;
+		alt: string;
+	} | null>(null);
+
+	const open = useCallback(
+		(src: string, alt: string) => setActiveImg({ src, alt }),
+		[]
+	);
+	const close = () => setActiveImg(null);
+
 	return (
-		<section className="embla">
-			<div className="embla__viewport" ref={emblaRef}>
-				<div className="embla__container">
-					{slides.map((certificate, index) => (
-						<div className="embla__slide" key={index}>
-							<div className="embla__slide__number">
-								<Image
-									className="brightness-[0.85]"
-									src={certificate.image}
-									unoptimized
-									alt={certificate.description}
-									loading="lazy"
-								/>
+		<>
+			<section className="embla">
+				<div className="embla__viewport" ref={emblaRef}>
+					<div className="embla__container">
+						{slides.map((certificate, index) => (
+							<div className="embla__slide" key={index}>
+								<div className="embla__slide__number">
+									<Image
+										className="brightness-[0.85] h-full w-auto rounded-2xl border-4 border-accent cursor-pointer"
+										src={certificate.image}
+										unoptimized
+										alt={certificate.description}
+										loading="lazy"
+										onClick={() =>
+											open(
+												certificate.image,
+												certificate.description
+											)
+										}
+									/>
+								</div>
+								<p className="text-center mt-4">
+									{certificate.description}
+								</p>
 							</div>
-							<p className="text-center mt-4">
-								{certificate.description}
-							</p>
-						</div>
-					))}
-				</div>
-			</div>
-
-			<div className="embla__controls">
-				<div className="embla__buttons">
-					<PrevButton
-						aria-label="Slide anterior"
-						onClick={onPrevButtonClick}
-						disabled={prevBtnDisabled}
-					/>
-					<NextButton
-						aria-label="Próximo slide"
-						onClick={onNextButtonClick}
-						disabled={nextBtnDisabled}
-					/>
+						))}
+					</div>
 				</div>
 
-				<div className="embla__dots">
-					{scrollSnaps.map((_, index, arr) => (
-						<DotButton
-							style={{
-								scale: selectionScale(index, arr.length),
-								display:
-									selectionScale(index, arr.length) === 0
-										? "none"
-										: "block",
-							}}
-							aria-label={"Ir para slide " + (index + 1)}
-							key={index}
-							onClick={() => onDotButtonClick(index)}
-							className={
-								"embla__dot".concat(
-									index === selectedIndex
-										? " embla__dot--selected"
-										: ""
-								) + " transition-all"
-							}
+				<div className="embla__controls">
+					<div className="embla__buttons">
+						<PrevButton
+							aria-label="Slide anterior"
+							onClick={onPrevButtonClick}
+							disabled={prevBtnDisabled}
 						/>
-					))}
+						<NextButton
+							aria-label="Próximo slide"
+							onClick={onNextButtonClick}
+							disabled={nextBtnDisabled}
+						/>
+					</div>
+
+					<div className="embla__dots">
+						{scrollSnaps.map((_, index, arr) => (
+							<DotButton
+								style={{
+									scale: selectionScale(index, arr.length),
+									display:
+										selectionScale(index, arr.length) === 0
+											? "none"
+											: "block",
+								}}
+								aria-label={"Ir para slide " + (index + 1)}
+								key={index}
+								onClick={() => onDotButtonClick(index)}
+								className={
+									"embla__dot".concat(
+										index === selectedIndex
+											? " embla__dot--selected"
+											: ""
+									) + " transition-all"
+								}
+							/>
+						))}
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+			<Modal isOpen={!!activeImg} onClose={close}>
+				{activeImg && (
+					<Image
+						src={activeImg.src}
+						alt={activeImg.alt}
+						className="rounded-lg shadow-lg h-auto w-auto max-h-[85vh] max-w-[80vw]"
+						unoptimized
+					/>
+				)}
+			</Modal>
+		</>
 	);
 };
 

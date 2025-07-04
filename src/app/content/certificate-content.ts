@@ -5,64 +5,16 @@ export interface Certificate {
 
 const certificates: Certificate[] = [
 	{
-		image: require("../assets/image.png"),
-		description: "Teste 1",
+		image: require("../assets/Certificado_Fundamentos_do_Suporte_Tecnico.jpg"),
+		description: "Fundamentos de Suporte Técnico",
 	},
 	{
-		image: require("../assets/image.png"),
-		description: "Teste 2",
+		image: require("../assets/Declaracao_Monitoria_Lab_BD-1.png"),
+		description: "Monitoria de Lab. de Banco de Dados 1",
 	},
 	{
-		image: require("../assets/image.png"),
-		description: "Teste 3",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 4",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 5",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 6",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 7",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 8",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 9",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 10",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 11",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 12",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 13",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 14",
-	},
-	{
-		image: require("../assets/image.png"),
-		description: "Teste 15",
+		image: require("../assets/Declaracao_Monitoria_Sistemas_Operacionais.jpg"),
+		description: "Monitoria de Sistemas Operacionais",
 	},
 ];
 

@@ -14,7 +14,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
 	title: "Pedro Furtado - Portfólio",
-	description: "",
+	description:
+		"Sou apaixonado por computação e consultor em tecnologia. Crio automações e soluções digitais funcionais, acessíveis e sob medida.",
 	keywords: "Pedro",
 	//other: { "google-site-verification": "" },
 	authors: [
