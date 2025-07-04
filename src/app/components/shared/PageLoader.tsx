@@ -20,7 +20,7 @@ const PageLoader = ({ isLoading }: Props) => {
 			{isLoading && (
 				<div className="flex flex-col items-center gap-10">
 					<div className="loader" />
-					<div className="wavy-text">
+					<div className="wavy-text text-[#f0f0f0]">
 						{[...text].map((letter, index) => (
 							<span
 								key={letter + index}
