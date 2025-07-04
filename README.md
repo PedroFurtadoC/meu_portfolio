@@ -1,16 +1,17 @@
 # Meu Portfólio - Pedro Furtado Cunha
 
 ### Descrição
+
 Este é o meu portfólio pessoal, desenvolvido com **HTML5** e **CSS3**. O site apresenta informações sobre minha trajetória, habilidades, experiências e serviços que ofereço.
 
 ---
 
 ## Tecnologias Utilizadas
 
-- **HTML5** e **CSS3**
-- **Google Fonts**
-- **Flexbox** e **Grid Layout** para layouts responsivos
-- **AOS (Animate on Scroll)** para animações
+-   **HTML5** e **CSS3**
+-   **Google Fonts**
+-   **Flexbox** e **Grid Layout** para layouts responsivos
+-   **AOS (Animate on Scroll)** para animações
 
 ---
 
@@ -28,17 +29,32 @@ Este é o meu portfólio pessoal, desenvolvido com **HTML5** e **CSS3**. O site 
 ## Como Rodar o Projeto
 
 1. **Clone o Repositório**
-   ```bash
-   git clone https://github.com/PedroFurtadoC/portfolio.git
-   ```
+    ```bash
+    git clone -b develop --single-branch https://github.com/PedroFurtadoC/meu_portfolio
+    ```
 2. **Abra o Projeto**
-   ```bash
-   cd portfolio
-   code .
-   ```
 
-3. **Execute no Navegador**  
-   Abra o arquivo `index.html` diretamente ou use uma extensão de servidor local como o **Live Server** no VS Code.
+    ```bash
+    cd meu_portfolio
+    code .
+    ```
+
+3. **Instale as dependências**
+
+    ```bash
+     npm i
+    ```
+
+4. **Execute o projeto**
+
+    ```bash
+     npm run dev
+    ```
+
+5. **Abra no navegador**
+    ```bash
+     http://localhost:3000
+    ```
 
 ---
 
