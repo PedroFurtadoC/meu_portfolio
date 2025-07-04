@@ -54,22 +54,22 @@ export default function RootLayout({
 				<link rel="icon" href="/favicon.ico" sizes="any" />
 				<link
 					rel="preload"
-					href="/soft-fabric-background.webp"
+					href="./soft-fabric-background.webp"
 					as="image"
 				/>
 				<link
 					rel="preload"
-					href="/soft-fabric-background-light.webp"
+					href="./soft-fabric-background-light.webp"
 					as="image"
 				/>
 				<link
 					rel="preload"
-					href="/soft-fabric-background-mobile.webp"
+					href="./soft-fabric-background-mobile.webp"
 					as="image"
 				/>
 				<link
 					rel="preload"
-					href="/soft-fabric-background-light-mobile.webp"
+					href="./soft-fabric-background-light-mobile.webp"
 					as="image"
 				/>
 			</head>

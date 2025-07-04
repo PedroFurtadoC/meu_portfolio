@@ -15,6 +15,7 @@
 	--primary-button-hover: #0f6086;
 	--secondary-button: #ff6d00;
 	--secondary-button-hover: #af4c00;
+	--hero-bg: #ececec;
 	/* FIXED */
 	--light-blue: #00a8e8;
 	--extra-blue: #007ea7;
@@ -39,6 +40,7 @@
 		--primary-button-hover: #af4c00;
 		--secondary-button: #00a8e8;
 		--secondary-button-hover: #0f6086;
+		--hero-bg: #003244;
 	}
 }
 
@@ -61,6 +63,7 @@ html.light {
 	--primary-button-hover: #0f6086;
 	--secondary-button: #ff6d00;
 	--secondary-button-hover: #af4c00;
+	--hero-bg: #ececec;
 }
 
 html.dark {
@@ -76,6 +79,7 @@ html.dark {
 	--primary-button-hover: #af4c00;
 	--secondary-button: #00a8e8;
 	--secondary-button-hover: #0f6086;
+	--hero-bg: #003244;
 }
 
 body {
@@ -132,7 +136,7 @@ body {
 #home::before {
 	content: "";
 	position: absolute;
-	background-image: "/meu_portfolio/soft-fabric-background.webp";
+	background-image: url("/meu_portfolio/soft-fabric-background.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -142,11 +146,13 @@ body {
 }
 
 html.dark #home::before {
-	background-image: "/meu_portfolio/soft-fabric-background.webp";
+	background-color: var(--primary);
+	background-image: url("/meu_portfolio/soft-fabric-background.webp");
 }
 
 html.light #home::before {
-	background-image: "/meu_portfolio/soft-fabric-background-light.webp";
+	background-color: var(--primary);
+	background-image: url("/meu_portfolio/soft-fabric-background-light.webp");
 }
 
 @media screen and (max-width: 1280px) {
@@ -155,11 +161,11 @@ html.light #home::before {
 	} */
 
 	html.dark #home::before {
-		background-image: "/meu_portfolio/soft-fabric-background-mobile.webp";
+		background-image: url("/meu_portfolio/soft-fabric-background-mobile.webp");
 	}
 
 	html.light #home::before {
-		background-image: "/meu_portfolio/soft-fabric-background-light-mobile.webp";
+		background-image: url("/meu_portfolio/soft-fabric-background-light-mobile.webp");
 	}
 }
 
