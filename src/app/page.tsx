@@ -72,7 +72,7 @@ export default function Home() {
 				/>
 			) : null}
 			{isMobile ? null : (
-				<div className="fixed flex mt-8 w-fit h-fit z-[99] right-4 bottom-4">
+				<div className="fixed flex mt-8 w-fit h-fit z-[99] right-4 bottom-4 font-semibold">
 					<button
 						onClick={toggleCalendly}
 						className="text-light-contrast flex flex-row items-center p-3 h-full w-full rounded-xl text-lg bg-fixed-button ml-4 shadow-md shadow-[#0005] hover:bg-fixed-button-hover transition-all"

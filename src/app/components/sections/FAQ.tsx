@@ -57,7 +57,7 @@ const FAQCard = ({ FAQ }: { FAQ: FAQ }) => {
 			onClick={() => setExpanded(!expanded)}
 		>
 			<div className="flex justify-between items-center">
-				<h3 className="text-xl font-bold">{FAQ.question}</h3>
+				<h2 className="text-xl font-bold">{FAQ.question}</h2>
 				<FontelloIcon
 					name={expanded ? "icon-up-open" : "icon-down-open"}
 					classStyling="text-3xl"
