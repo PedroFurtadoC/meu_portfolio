@@ -136,7 +136,7 @@ body {
 #home::before {
 	content: "";
 	position: absolute;
-	background-image: url("/meu_portfolio/soft-fabric-background.webp");
+	background-image: url("./soft-fabric-background.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -147,12 +147,12 @@ body {
 
 html.dark #home::before {
 	background-color: var(--primary);
-	background-image: url("/meu_portfolio/soft-fabric-background.webp");
+	background-image: url("./soft-fabric-background.webp");
 }
 
 html.light #home::before {
 	background-color: var(--primary);
-	background-image: url("/meu_portfolio/soft-fabric-background-light.webp");
+	background-image: url("./soft-fabric-background-light.webp");
 }
 
 @media screen and (max-width: 1280px) {
@@ -161,11 +161,11 @@ html.light #home::before {
 	} */
 
 	html.dark #home::before {
-		background-image: url("/meu_portfolio/soft-fabric-background-mobile.webp");
+		background-image: url("./soft-fabric-background-mobile.webp");
 	}
 
 	html.light #home::before {
-		background-image: url("/meu_portfolio/soft-fabric-background-light-mobile.webp");
+		background-image: url("./soft-fabric-background-light-mobile.webp");
 	}
 }
 
@@ -244,7 +244,7 @@ html.light #home::before {
 	position: absolute;
 	inset: 0;
 	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
-	background-image: url("/endless-constellation.svg");
+	background-image: url("./endless-constellation.svg");
 	box-shadow: inset 0px 0px 38px 40px var(--background);
 	opacity: 0.5;
 	z-index: -1;
@@ -252,12 +252,12 @@ html.light #home::before {
 
 html.dark .svg-background::before {
 	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
-	background-image: url("/endless-constellation.svg");
+	background-image: url("./endless-constellation.svg");
 }
 
 html.light .svg-background::before {
 	/* Background by: https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */
-	background-image: url("/endless-constellation-light.svg");
+	background-image: url("./endless-constellation-light.svg");
 }
 
 .project {
