@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	basePath: "/meu_portfolio",
+	output: "export",
 	reactStrictMode: true,
 };
 
