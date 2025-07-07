@@ -16,8 +16,9 @@ export const metadata: Metadata = {
 	title: "Pedro Furtado - Portfólio",
 	description:
 		"Sou apaixonado por computação e consultor em tecnologia. Crio automações e soluções digitais funcionais, acessíveis e sob medida.",
-	keywords: "Pedro",
-	/* other: { "google-site-verification": "" }, */
+	keywords:
+		"Pedro, portfolio, consultor em tecnlogia, soluções digitais, soluções acessíveis, soluções sob medida",
+	verification: { google: "qSekFOpbKc2n7wXSn4G3KSl1vSF7PGikZbClkxGw2Yk" },
 	authors: [
 		{
 			name: "Pedro Furtado Cunha",
