@@ -35,9 +35,9 @@ export const metadata: Metadata = {
 		url: "https://pedrofurtadoc.github.io/meu_portfolio",
 		images: [
 			{
-				url: "https://pedrofurtadoc.github.io/meu_portfolio/WebsitePreview.jpg",
+				url: "https://pedrofurtadoc.github.io/meu_portfolio/WebsitePreview.JPG",
 				secureUrl:
-					"https://pedrofurtadoc.github.io/meu_portfolio/WebsitePreview.jpg",
+					"https://pedrofurtadoc.github.io/meu_portfolio/WebsitePreview.JPG",
 				alt: "Portfolio Preview",
 				type: "image/jpg",
 			},
