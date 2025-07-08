@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import Heading from "../shared/Heading";
-import { depoiments } from "@/app/content/depoiments-content";
+import { Depoiment, depoiments } from "@/app/content/depoiments-content";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
+// =====================
+// Section
+// =====================
 const Depoiments = () => {
 	const depoimentsRef = useHeaderAnchor("depoiments");
 
@@ -24,6 +29,9 @@ const Depoiments = () => {
 
 export default Depoiments;
 
+// =====================
+// Slider
+// =====================
 function DepoimentsSlider() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [atStart, setAtStart] = useState(true);
@@ -174,16 +182,7 @@ function DepoimentsSlider() {
 				style={{ scrollBehavior: "smooth" }}
 			>
 				{depoiments.map((item, index) => (
-					<div
-						key={index}
-						className="flex flex-col min-w-[90%] md:min-w-[650px] lg:min-w-[780px] md:h-[300px] p-10 box-border bg-primary mx-5 rounded-xl gap-3"
-					>
-						<h2 className="text-4xl font-bold text-accent">
-							{item.name}
-						</h2>
-						<h3 className="font-[700] text-lg">{item.role}</h3>
-						<p className="font-[400] text-lg">{item.depoiment}</p>
-					</div>
+					<DepoimentCard key={item.name} data={item} />
 				))}
 			</div>
 
@@ -209,6 +208,94 @@ function DepoimentsSlider() {
 					&#x276F;
 				</button>
 			</div>
+		</div>
+	);
+}
+
+// =====================
+// Card
+// =====================
+function DepoimentCard({ data }: { data: Depoiment }) {
+	const [expanded, setExpanded] = useState(false);
+	const [hasOverflow, setHasOverflow] = useState(false);
+
+	const contentRef = useRef<HTMLElement | null>(null);
+
+	// mede sempre que texto mudar ou viewport for redimensionada
+	useEffect(() => {
+		const el = contentRef.current;
+		if (!el) return;
+
+		const measure = () => {
+			// scrollHeight = altura total do conteúdo
+			// clientHeight  = altura visível (limitada pelo max-h)
+			setHasOverflow(el.scrollHeight > el.clientHeight);
+		};
+
+		// mede na montagem
+		measure();
+
+		// mede ao redimensionar a janela
+		window.addEventListener("resize", measure);
+
+		// mede se algo dentro do card mudar de tamanho
+		// (caso depoimento chegue de API depois)
+		const ro = new ResizeObserver(measure);
+		ro.observe(el);
+
+		return () => {
+			window.removeEventListener("resize", measure);
+			ro.disconnect();
+		};
+	}, [contentRef]);
+
+	useEffect(() => {
+		if (!expanded) {
+			contentRef.current?.scrollTo({ top: 0, left: 0, behavior: "auto" });
+		}
+	}, [expanded]);
+
+	return (
+		<div className="flex flex-col min-w-[90%] md:min-w-[650px] lg:min-w-[780px] h-[600px] md:h-[350px] p-8 md:p-10 box-border bg-primary mx-5 rounded-xl">
+			<SimpleBar
+				scrollableNodeProps={{
+					ref: contentRef,
+				}}
+				className="flex flex-col relative h-fit overflow-x-hidden"
+				style={{
+					overflowY: expanded ? "auto" : "hidden",
+				}}
+			>
+				<h2 className="text-4xl font-bold text-accent mb-3">
+					{data.name}
+				</h2>
+				<h3 className="font-bold text-lg mb-3">{data.role}</h3>
+				<p
+					className="text-lg leading-relaxed"
+					style={{ paddingRight: expanded ? "20px" : "0px" }}
+				>
+					{data.depoiment}
+				</p>
+				{!expanded && hasOverflow && (
+					<div
+						className="pointer-events-none absolute bottom-0 left-0 w-full h-8
+                        bg-gradient-to-t from-primary to-transparent
+                        flex justify-end items-end pr-2 pb-0.5
+                        text-lg font-bold select-none"
+					/>
+				)}
+			</SimpleBar>
+
+			{/* botão */}
+			{hasOverflow && (
+				<button
+					onClick={() => setExpanded(!expanded)}
+					aria-expanded={expanded}
+					className="mt-2 self-end underline"
+				>
+					{expanded ? "ver menos" : "ver mais"}
+				</button>
+			)}
 		</div>
 	);
 }

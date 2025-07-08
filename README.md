@@ -2,26 +2,25 @@
 
 ### Descrição
 
-Este é o meu portfólio pessoal, desenvolvido com **HTML5** e **CSS3**. O site apresenta informações sobre minha trajetória, habilidades, experiências e serviços que ofereço.
+Este é o meu portfólio pessoal, desenvolvido com **Next.js**. O site apresenta informações sobre minha trajetória, habilidades, experiências e serviços que ofereço.
 
 ---
 
 ## Tecnologias Utilizadas
 
--   **HTML5** e **CSS3**
+-   **Next.js**
 -   **Google Fonts**
--   **Flexbox** e **Grid Layout** para layouts responsivos
 -   **AOS (Animate on Scroll)** para animações
 
 ---
 
-## Estrutura de Páginas
+## Estrutura da Página
 
-1. **Home** - Saudação e projetos.
-2. **Sobre** - Minha trajetória e o objetivo do portfólio.
-3. **Serviços** - Descrição dos serviços oferecidos.
-4. **Habilidades** - Minhas principais habilidades.
-5. **Experiências** - Minhas experiências profissionais e acadêmicas.
+1. **Sobre mim** - Saudação e projetos.
+2. **Soluções** - Minha trajetória e o objetivo do portfólio.
+3. **Depoimentos** - Descrição dos serviços oferecidos.
+4. **FAQ** - Minhas principais habilidades.
+5. **Jornada** - Minhas experiências profissionais e acadêmicas.
 6. **Contato** - Formulário de contato funcional e informações adicionais.
 
 ---
@@ -53,7 +52,7 @@ Este é o meu portfólio pessoal, desenvolvido com **HTML5** e **CSS3**. O site 
 
 5. **Abra no navegador**
     ```bash
-     http://localhost:3000
+     http://localhost:3000/meu_portfolio
     ```
 
 ---

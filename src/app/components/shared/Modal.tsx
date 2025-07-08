@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import Portal from "./Portal";
 import FontelloIcon from "./FontelloIcon";
 
@@ -22,32 +22,22 @@ export default function Modal({
 	useEffect(() => {
 		if (!isOpen) return;
 
-		/* Fecha no ESC  */
-		const handleKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") onClose();
-		};
-
-		/* Fecha no botão “voltar”  */
-		const handlePop = () => {
-			onClose();
-		};
-
+		const handleKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
 		window.addEventListener("keydown", handleKey);
-		window.addEventListener("popstate", handlePop);
 
-		// Adiciona uma entrada fantasma no histórico
-		window.history.pushState({ modal: true }, "");
-
-		return () => {
-			window.removeEventListener("keydown", handleKey);
-			window.removeEventListener("popstate", handlePop);
-
-			// Ao fechar manualmente, removemos a entrada fantasma
-			if (window.history.state?.modal) {
-				window.history.back();
-			}
-		};
+		return () => window.removeEventListener("keydown", handleKey);
 	}, [isOpen, onClose]);
+
+	const contentRef = useRef<HTMLDivElement>(null);
+
+	const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+		if (
+			contentRef.current &&
+			!contentRef.current.contains(e.target as Node)
+		) {
+			onClose();
+		}
+	};
 
 	if (!isOpen) return null;
 
@@ -56,10 +46,11 @@ export default function Modal({
 			{/* backdrop ---------------------------------------------------------- */}
 			<div
 				className="fixed inset-0 z-[999] bg-black/55 flex items-center justify-center"
-				onClick={onClose}
+				onClick={handleBackdropClick}
 			>
 				{/* conteúdo -------------------------------------------------------- */}
 				<div
+					ref={contentRef}
 					className="max-w-[90vw] max-h-[90vh]"
 					onClick={(e) => e.stopPropagation()}
 				>

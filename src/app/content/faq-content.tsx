@@ -8,7 +8,7 @@ export interface FAQ {
 
 const FAQContent: FAQ[] = [
 	{
-		question: "Pra quem é meu trabalho?",
+		question: "Para quem é o seu trabalho?",
 		answer: "Para quem quer simplificar, automatizar ou resolver algo com tecnologia de forma leve e funcional. Atendo pessoas e empresas que buscam clareza, organização e soluções que realmente façam sentido no dia a dia.",
 	},
 	{
@@ -16,15 +16,15 @@ const FAQContent: FAQ[] = [
 		answer: "Não. Meu trabalho é justamente traduzir o que parece complexo em soluções simples, acessíveis e que funcionam. Eu escuto, entendo sua realidade e construo algo que faz sentido para você.",
 	},
 	{
-		question: "Atendo empresas ou pessoas físicas?",
+		question: "Você atende empresas ou pessoas físicas?",
 		answer: "Atendo os dois. Trabalho com empreendedores, equipes e também com pessoas físicas que precisam de suporte técnico, automações sob medida ou soluções digitais práticas.",
 	},
 	{
-		question: "Como marcar uma reunião comigo?",
+		question: "Como marco uma reunião com você?",
 		answer: <Meeting />,
 	},
 	{
-		question: "Quais são as etapas do seu trabalho?",
+		question: "Como funciona o seu processo de trabalho?",
 		answer: "Tudo começa pela escuta. A partir do que você traz, eu organizo o cenário, proponho uma solução clara e coloco em prática com foco em leveza, desempenho e resultado real. Cada etapa é adaptada à sua realidade.",
 	},
 ];

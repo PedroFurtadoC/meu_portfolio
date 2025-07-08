@@ -4,7 +4,7 @@ import useIsVisible from "./UseIsVisible";
 
 export default function useHeaderAnchor(
 	anchor: string,
-	options: IntersectionObserverInit = { threshold: 0.01 }
+	options: IntersectionObserverInit = { threshold: 0.001 }
 ) {
 	const [elementRef, isVisible] = useIsVisible(options);
 	const setAnchor = useHeaderAnchorStore((s) => s.setActiveAnchor);

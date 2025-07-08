@@ -12,9 +12,10 @@ const SolutionsCard = ({ lottie, title, text, optionalText }: Solution) => {
 		>
 			<DotLottieReact
 				src={lottie}
-				dotLottieRefCallback={setDotLottie}
+				/* dotLottieRefCallback={setDotLottie}
 				onMouseEnter={() => dotLottie?.play()}
-				onMouseLeave={() => dotLottie?.pause()}
+				onMouseLeave={() => dotLottie?.pause()} */
+				autoplay
 				loop
 				className="hidden xl:contents"
 				width={"100%"}

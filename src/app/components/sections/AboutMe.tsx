@@ -4,7 +4,7 @@ import FontelloIcon from "../shared/FontelloIcon";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function AboutMe() {
-	const aboutRef = useHeaderAnchor("about-me");
+	const aboutRef = useHeaderAnchor("about-me", { threshold: 0.01 });
 
 	return (
 		<section id="about-me" className="bg-background">
@@ -26,25 +26,33 @@ export default function AboutMe() {
 					<h2 className="text-2xl md:text-3xl text-extra-blue font-bold">
 						Ribeirão Preto, SP
 					</h2>
-					<div className="my-10">
-						<p className="text-xl md:text-2xl mb-3">
-							Sou engenheiro da computação, desenvolvedor e
-							consultor de tecnologia com foco total em soluções
-							que funcionam de verdade. Não acredito em
-							complicação. Acredito em entender bem o problema,
-							propor ideias com clareza e transformar tudo isso em
-							sistemas simples, seguros e eficientes. Gosto de
-							escutar com atenção, pensar com lógica e entregar
-							com qualidade.
+					<div className="flex flex-col gap-3 my-10">
+						<p className="text-xl md:text-2xl">
+							Sou desenvolvedor e consultor de tecnologia com base
+							em Ribeirão Preto, atendendo presencialmente na
+							região e online pessoas e empresas de qualquer
+							lugar.
 						</p>
 						<p className="text-xl md:text-2xl">
-							Trabalho com automações, sites, sistemas e
-							consultorias em tecnologia, sempre buscando o que
-							realmente importa: resultado com leveza. Atendo
-							pessoas e negócios de qualquer lugar, com
-							organização, propósito e um olhar que combina
-							técnica, empatia e estratégia. Cada projeto que
-							entrego é uma extensão do meu cuidado.
+							Atuo no desenvolvimento de sites, sistemas
+							personalizados, automações sob medida e consultorias
+							de TI, sempre com foco em soluções que realmente
+							funcionam.
+						</p>
+						<p className="text-xl md:text-2xl">
+							Sou apaixonado por criar ferramentas digitais que
+							fazem sentido. Gosto de entender o problema com
+							calma, escutar com atenção e propor ideias
+							inteligentes que se transformam em soluções seguras,
+							leves e bem estruturadas.
+						</p>
+						<p className="text-xl md:text-2xl">
+							Acredito que a tecnologia deve ser acessível e
+							humana. Por isso, cada projeto que entrego é pensado
+							com organização, criatividade e estratégia, sempre
+							buscando o melhor resultado para quem confia em mim.
+							Cada entrega carrega meu cuidado, minha escuta e meu
+							propósito.
 						</p>
 					</div>
 					<div className="flex flex-row">

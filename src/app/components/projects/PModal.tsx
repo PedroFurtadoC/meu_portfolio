@@ -17,31 +17,11 @@ interface Props {
 export default function PModal({ isVisible, onClose, content }: Props) {
 	useEffect(() => {
 		if (!isVisible) return;
-		/* Fecha no ESC  */
-		const handleKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") onClose();
-		};
 
-		/* Fecha no botão “voltar”  */
-		const handlePop = () => {
-			onClose();
-		};
-
+		const handleKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
 		window.addEventListener("keydown", handleKey);
-		window.addEventListener("popstate", handlePop);
 
-		// Adiciona uma entrada fantasma no histórico
-		window.history.pushState({ modal: true }, "");
-
-		return () => {
-			window.removeEventListener("keydown", handleKey);
-			window.removeEventListener("popstate", handlePop);
-
-			// Ao fechar manualmente, removemos a entrada fantasma
-			if (window.history.state?.modal) {
-				window.history.back();
-			}
-		};
+		return () => window.removeEventListener("keydown", handleKey);
 	}, [isVisible, onClose]);
 
 	useEffect(() => {

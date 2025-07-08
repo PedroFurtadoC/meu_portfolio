@@ -51,7 +51,9 @@ export default function GoToStartShape({
 				name={"icon-up-open"}
 				classStyling="text-[3em] md:text-4xl"
 			/>
-			<p className="text-[1.75em] md:text-xl mt-0 md:mt-3">Home</p>
+			<p className="text-[1.75em] md:text-xl mt-0 md:mt-3 text-center">
+				Voltar
+			</p>
 		</div>
 	);
 }

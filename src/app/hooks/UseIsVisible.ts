@@ -20,7 +20,7 @@ export default function useIsVisible(
 				observer.unobserve(ref.current);
 			}
 		};
-	}, [options]);
+	}, [options, ref]);
 
 	return [ref, isVisible];
 }
