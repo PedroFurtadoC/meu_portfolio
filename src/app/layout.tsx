@@ -29,7 +29,8 @@ export const metadata: Metadata = {
 		locale: "pt-BR",
 		type: "website",
 		title: "Pedro Furtado - Portfólio",
-		description: "",
+		description:
+			"Sou apaixonado por computação e consultor em tecnologia. Crio automações e soluções digitais funcionais, acessíveis e sob medida.",
 		siteName: "Portfólio",
 		url: "https://pedrofurtadoc.github.io/meu_portfolio",
 		images: [
