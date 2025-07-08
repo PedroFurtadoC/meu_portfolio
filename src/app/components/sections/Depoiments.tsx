@@ -291,7 +291,7 @@ function DepoimentCard({ data }: { data: Depoiment }) {
 				<button
 					onClick={() => setExpanded(!expanded)}
 					aria-expanded={expanded}
-					className="mt-2 self-end underline"
+					className="mt-2 self-end underline text-light-blue"
 				>
 					{expanded ? "ver menos" : "ver mais"}
 				</button>

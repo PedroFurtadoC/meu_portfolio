@@ -7,6 +7,7 @@ import Portal from "../shared/Portal";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import useWindowResize from "@/app/hooks/useWindowResize";
 import openNewTab from "@/app/functions/NewTab";
+import { Highlighter } from "../shared/Highlighter";
 
 interface Props {
 	isVisible: boolean;
@@ -99,18 +100,28 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 									<h2 className="text-2xl md:text-3xl text-secondary font-semibold">
 										{content.subtitle}
 									</h2>
-									<p className="text-xl md:text-2xl font-light">
-										{content.text}
-									</p>
+									<Highlighter
+										className="text-xl md:text-2xl font-light"
+										text={content.text}
+										highlights={content.highlights ?? [""]}
+									/>
 									{content.optionalText && (
-										<p className="text-xl md:text-2xl font-light">
-											{content.optionalText}
-										</p>
+										<Highlighter
+											className="text-xl md:text-2xl font-light"
+											text={content.optionalText}
+											highlights={
+												content.highlights ?? [""]
+											}
+										/>
 									)}
 									{content.optionalText2 && (
-										<p className="text-xl md:text-2xl font-light">
-											{content.optionalText2}
-										</p>
+										<Highlighter
+											className="text-xl md:text-2xl font-light"
+											text={content.optionalText2}
+											highlights={
+												content.highlights ?? [""]
+											}
+										/>
 									)}
 									{content.technologies &&
 										content.technologies.length !== 0 && (

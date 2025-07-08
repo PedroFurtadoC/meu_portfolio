@@ -9,6 +9,7 @@ export interface PContent {
 	text: string;
 	optionalText?: string;
 	optionalText2?: string;
+	highlights?: string[];
 	technologies?: string[];
 	/* ID do vídeo do Youtube (aquele código no final do link) */
 	ytVideoId: string;
@@ -33,6 +34,7 @@ export const projectContent: Project[] = [
 				"Com recursos como desligamento automático por geolocalização, relatórios inteligentes, gráficos em tempo real e controle remoto de tomadas, o NeuroVolt transforma a relação com a energia elétrica em algo intuitivo e sustentável.",
 			optionalText2:
 				"Este projeto foi vencedor do 19º Desafio da Computação da UNAERP por sua inovação, aplicabilidade e impacto direto na rotina de uso consciente de tecnologia.",
+			highlights: ["vencedor do 19º Desafio da Computação da UNAERP"],
 			technologies: [
 				"n8n",
 				"Firebase",
