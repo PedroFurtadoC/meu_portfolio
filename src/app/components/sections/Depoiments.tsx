@@ -95,6 +95,13 @@ function DepoimentsSlider() {
 		const container = containerRef.current;
 		if (!container) return;
 
+		// REFS PARA O MOUSE / TOUCH
+		const startXRef = { current: null as number | null };
+		const startYRef = { current: null as number | null };
+		const endXRef = { current: null as number | null };
+		const endYRef = { current: null as number | null };
+		const isDraggingRef = { current: false };
+
 		/* MOUSE */
 		const handleMouseDown = (e: MouseEvent) => {
 			startXRef.current = e.clientX;
@@ -127,29 +134,44 @@ function DepoimentsSlider() {
 		/* TOUCH */
 		const handleTouchStart = (e: TouchEvent) => {
 			startXRef.current = e.touches[0].clientX;
+			startYRef.current = e.touches[0].clientY;
 			isDraggingRef.current = true;
 		};
 
 		const handleTouchMove = (e: TouchEvent) => {
 			if (!isDraggingRef.current) return;
 			endXRef.current = e.touches[0].clientX;
+			endYRef.current = e.touches[0].clientY;
 		};
 
 		const handleTouchEnd = () => {
 			if (
 				!isDraggingRef.current ||
 				startXRef.current === null ||
-				endXRef.current === null
+				startYRef.current === null ||
+				endXRef.current === null ||
+				endYRef.current === null
 			)
 				return;
 
 			const deltaX = endXRef.current - startXRef.current;
-			if (Math.abs(deltaX) > 50) {
+			const deltaY = endYRef.current - startYRef.current;
+
+			// AJUSTE DE SENSIBILIDADE DO SWIPE
+			const MIN_SWIPE_DISTANCE = 50;
+			const HORIZONTAL_DOMINANCE = 1.2; // quanto maior, mais difícil acionar horizontal se tiver vertical
+
+			if (
+				Math.abs(deltaX) > MIN_SWIPE_DISTANCE &&
+				Math.abs(deltaX) > Math.abs(deltaY) * HORIZONTAL_DOMINANCE
+			) {
 				deltaX > 0 ? handlePrev() : handleNext();
 			}
 
 			startXRef.current = null;
+			startYRef.current = null;
 			endXRef.current = null;
+			endYRef.current = null;
 			isDraggingRef.current = false;
 		};
 
