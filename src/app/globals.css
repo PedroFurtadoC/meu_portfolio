@@ -133,7 +133,7 @@ body {
 }
 
 /*******************************************MAIN SECTION********************************************/
-#home::before {
+/* #home::before {
 	content: "";
 	position: absolute;
 	background-image: url("/meu_portfolio/soft-fabric-background.webp");
@@ -154,11 +154,8 @@ html.light #home::before {
 	background-color: var(--hero-bg);
 	background-image: url("/meu_portfolio/soft-fabric-background-light.webp");
 }
-
-@media screen and (max-width: 1280px) {
-	/* #home::before {
-		background-position: center;
-	} */
+ */
+/* @media screen and (max-width: 1280px) {
 
 	html.dark #home::before {
 		background-image: url("/meu_portfolio/soft-fabric-background-mobile.webp");
@@ -167,7 +164,7 @@ html.light #home::before {
 	html.light #home::before {
 		background-image: url("/meu_portfolio/soft-fabric-background-light-mobile.webp");
 	}
-}
+} */
 
 .main-blob {
 	scale: 5;

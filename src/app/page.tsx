@@ -3,24 +3,26 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import MainSection from "./sections/MainSection";
-import Header from "./sections/Header";
-import AboutMe from "./sections/AboutMe";
-import Solutions from "./sections/Solutions";
-import Projects from "./sections/Projects";
-import Journey from "./sections/Journey";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
 import { PopupModal } from "react-calendly";
 import useRoot from "./hooks/UseRoot";
 import useCalendlyStore from "./stores/calendlyStore";
 import FontelloIcon from "./components/shared/FontelloIcon";
 import useMobile from "./hooks/UseMobile";
 import { useThemeStore } from "./stores/themeStore";
+import usePageLoading from "./hooks/UsePageLoading";
+
+/* SECTIONS */
+import PageLoader from "./components/shared/PageLoader";
+import Header from "./sections/Header";
+import HeroSection from "./sections/HeroSection";
+import AboutMe from "./sections/AboutMe";
 import Depoiments from "./sections/Depoiments";
 import FAQSection from "./sections/FAQ";
-import PageLoader from "./components/shared/PageLoader";
-import usePageLoading from "./hooks/UsePageLoading";
+import Solutions from "./sections/Solutions";
+import Projects from "./sections/Projects";
+import Journey from "./sections/Journey";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 export default function Home() {
 	useEffect(() => {
@@ -54,7 +56,7 @@ export default function Home() {
 		>
 			<PageLoader isLoading={isPageLoading} />
 			<Header />
-			<MainSection />
+			<HeroSection />
 			<AboutMe />
 			<Solutions />
 			<Depoiments />

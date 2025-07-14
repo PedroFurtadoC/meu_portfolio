@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Typewriter from "typewriter-effect";
 import FontelloIcon from "../components/shared/FontelloIcon";
 import ResponsiveIconScroll from "../components/scrollAnimation/ResponsiveIconScroll";
@@ -11,8 +12,13 @@ import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 import useMobile from "../hooks/UseMobile";
 import Pedro_600x900 from "../assets/Pedro_600x900.webp";
 import Pedro_fullHD from "../assets/Pedro_fullHD.webp";
+import bg_dark from "../assets/soft-fabric-background.webp";
+import bg_dark_mobile from "../assets/soft-fabric-background-mobile.webp";
+import bg_light from "../assets/soft-fabric-background-light.webp";
+import bg_light_mobile from "../assets/soft-fabric-background-light-mobile.webp";
+import { useThemeStore } from "../stores/themeStore";
 
-export default function MainSection() {
+export default function HeroSection() {
 	const homeRef = useHeaderAnchor("home");
 
 	let mouseDistanceX = 0;
@@ -27,8 +33,19 @@ export default function MainSection() {
 	}
 
 	const isMobile = useMobile();
+	const theme = useThemeStore((s) => s.theme);
 
-	const src = isMobile ? Pedro_600x900 : Pedro_fullHD;
+	const pedroSrc = useMemo(() => {
+		if (isMobile) return Pedro_600x900;
+		return Pedro_fullHD;
+	}, [isMobile]);
+
+	const backgroundSrc = useMemo(() => {
+		if (isMobile && theme === "dark") return bg_dark_mobile;
+		if (isMobile && theme === "light") return bg_light_mobile;
+		if (!isMobile && theme === "dark") return bg_dark;
+		return bg_light;
+	}, [isMobile, theme]);
 
 	return (
 		<main
@@ -38,6 +55,17 @@ export default function MainSection() {
 				overflowX: "hidden",
 			}}
 		>
+			<Image
+				src={backgroundSrc}
+				alt=""
+				role="presentation"
+				aria-hidden
+				fill
+				priority
+				fetchPriority="high"
+				className="object-cover z-0 absolute"
+				unoptimized
+			/>
 			<div className="flex flex-row wrapper z-10 relative">
 				<aside
 					id="main-section"
@@ -119,7 +147,7 @@ export default function MainSection() {
 					<Image
 						className="min-w-[350px] min-h-[350px] mb-[-3rem] md:mb-0 md:min-w-[600px] md:min-h-[600px] relative z-10 ml-auto mr-auto"
 						aria-hidden
-						src={src}
+						src={pedroSrc}
 						alt="Imagem do Pedro"
 						width={600}
 						height={600}
@@ -131,6 +159,7 @@ export default function MainSection() {
 							}px)`,
 							filter: "drop-shadow(5px 0 10px black)",
 						}}
+						fetchPriority="high"
 					/>
 				</picture>
 			</div>
