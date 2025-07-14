@@ -1,7 +1,7 @@
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
-import Heading from "../shared/Heading";
+import Heading from "../components/shared/Heading";
 import FAQContent, { FAQ } from "@/app/content/faq-content";
-import FontelloIcon from "../shared/FontelloIcon";
+import FontelloIcon from "../components/shared/FontelloIcon";
 import { useEffect, useRef, useState } from "react";
 import useCalendlyStore from "@/app/stores/calendlyStore";
 

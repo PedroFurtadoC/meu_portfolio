@@ -1,6 +1,6 @@
-import openNewTab from "../../functions/NewTab";
-import openEmail from "../../functions/OpenEmail";
-import FontelloIcon from "../shared/FontelloIcon";
+import openNewTab from "../functions/NewTab";
+import openEmail from "../functions/OpenEmail";
+import FontelloIcon from "../components/shared/FontelloIcon";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function AboutMe() {

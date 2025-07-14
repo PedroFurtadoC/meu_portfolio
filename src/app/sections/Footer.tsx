@@ -1,5 +1,5 @@
-import openNewTab from "../../functions/NewTab";
-import FontelloIcon from "../shared/FontelloIcon";
+import openNewTab from "../functions/NewTab";
+import FontelloIcon from "../components/shared/FontelloIcon";
 
 export default function Footer() {
 	return (

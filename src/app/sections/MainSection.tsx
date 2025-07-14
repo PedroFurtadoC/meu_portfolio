@@ -1,13 +1,16 @@
 import Typewriter from "typewriter-effect";
-import FontelloIcon from "../shared/FontelloIcon";
-import ResponsiveIconScroll from "../scrollAnimation/ResponsiveIconScroll";
+import FontelloIcon from "../components/shared/FontelloIcon";
+import ResponsiveIconScroll from "../components/scrollAnimation/ResponsiveIconScroll";
 import Image from "next/image";
-import useMousePosition from "../../hooks/UseMousePosition";
-import { useWindow } from "../../hooks/UseWindow";
-import openNewTab from "../../functions/NewTab";
-import openEmail from "../../functions/OpenEmail";
-import Blob from "../shared/Blob";
+import useMousePosition from "../hooks/UseMousePosition";
+import { useWindow } from "../hooks/UseWindow";
+import openNewTab from "../functions/NewTab";
+import openEmail from "../functions/OpenEmail";
+import Blob from "../components/shared/Blob";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useMobile from "../hooks/UseMobile";
+import Pedro_600x900 from "../assets/Pedro_600x900.webp";
+import Pedro_fullHD from "../assets/Pedro_fullHD.webp";
 
 export default function MainSection() {
 	const homeRef = useHeaderAnchor("home");
@@ -22,6 +25,10 @@ export default function MainSection() {
 		mouseDistanceX = x / (windowRef?.innerWidth || 1);
 		mouseDistanceY = y / (windowRef?.innerHeight || 1);
 	}
+
+	const isMobile = useMobile();
+
+	const src = isMobile ? Pedro_600x900 : Pedro_fullHD;
 
 	return (
 		<main
@@ -112,8 +119,10 @@ export default function MainSection() {
 					<Image
 						className="min-w-[350px] min-h-[350px] mb-[-3rem] md:mb-0 md:min-w-[600px] md:min-h-[600px] relative z-10 ml-auto mr-auto"
 						aria-hidden
-						src={require("../../assets/Pedro.webp")}
+						src={src}
 						alt="Imagem do Pedro"
+						width={600}
+						height={600}
 						unoptimized
 						priority
 						style={{

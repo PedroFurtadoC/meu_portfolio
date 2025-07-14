@@ -1,6 +1,6 @@
-import { projectContent } from "../../content/projects-content";
-import PCard from "../projects/PCard";
-import Heading from "../shared/Heading";
+import { projectContent } from "../content/projects-content";
+import PCard from "../components/projects/PCard";
+import Heading from "../components/shared/Heading";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Projects() {

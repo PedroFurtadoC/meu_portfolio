@@ -1,6 +1,6 @@
-import { solutionsContent } from "../../content/solutions-content";
-import SolutionsCard from "../shared/SolutionsCard";
-import Heading from "../shared/Heading";
+import { solutionsContent } from "../content/solutions-content";
+import SolutionsCard from "../components/shared/SolutionsCard";
+import Heading from "../components/shared/Heading";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Solutions() {

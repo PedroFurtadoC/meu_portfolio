@@ -1,6 +1,6 @@
-import Carousel from "../carousel/Carousel";
-import Timeline from "../shared/Timeline";
-import Heading from "../shared/Heading";
+import Carousel from "../components/carousel/Carousel";
+import Timeline from "../components/shared/Timeline";
+import Heading from "../components/shared/Heading";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
 
 export default function Journey() {
