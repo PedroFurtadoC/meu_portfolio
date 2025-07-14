@@ -1,4 +1,6 @@
 import { useMemo } from "react";
+import { useThemeStore } from "../stores/themeStore";
+import useWindowResize from "../hooks/useWindowResize";
 import Typewriter from "typewriter-effect";
 import FontelloIcon from "../components/shared/FontelloIcon";
 import ResponsiveIconScroll from "../components/scrollAnimation/ResponsiveIconScroll";
@@ -9,14 +11,13 @@ import openNewTab from "../functions/NewTab";
 import openEmail from "../functions/OpenEmail";
 import Blob from "../components/shared/Blob";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
-import useMobile from "../hooks/UseMobile";
 import Pedro_600x900 from "../assets/Pedro_600x900.webp";
 import Pedro_fullHD from "../assets/Pedro_fullHD.webp";
+import Pedro_400x600 from "../assets/Pedro_400x600.webp";
 import bg_dark from "../assets/soft-fabric-background.webp";
 import bg_dark_mobile from "../assets/soft-fabric-background-mobile.webp";
 import bg_light from "../assets/soft-fabric-background-light.webp";
 import bg_light_mobile from "../assets/soft-fabric-background-light-mobile.webp";
-import { useThemeStore } from "../stores/themeStore";
 
 export default function HeroSection() {
 	const homeRef = useHeaderAnchor("home");
@@ -32,20 +33,21 @@ export default function HeroSection() {
 		mouseDistanceY = y / (windowRef?.innerHeight || 1);
 	}
 
-	const isMobile = useMobile();
 	const theme = useThemeStore((s) => s.theme);
+	const { width: windowWidth } = useWindowResize();
 
 	const pedroSrc = useMemo(() => {
-		if (isMobile) return Pedro_600x900;
-		return Pedro_fullHD;
-	}, [isMobile]);
+		if (windowWidth > 1000) return Pedro_fullHD;
+		if (windowWidth > 700) return Pedro_600x900;
+		return Pedro_400x600;
+	}, [windowWidth]);
 
 	const backgroundSrc = useMemo(() => {
-		if (isMobile && theme === "dark") return bg_dark_mobile;
-		if (isMobile && theme === "light") return bg_light_mobile;
-		if (!isMobile && theme === "dark") return bg_dark;
+		if (windowWidth < 1000 && theme === "dark") return bg_dark_mobile;
+		if (windowWidth < 1000 && theme === "light") return bg_light_mobile;
+		if (windowWidth > 1000 && theme === "dark") return bg_dark;
 		return bg_light;
-	}, [isMobile, theme]);
+	}, [windowWidth, theme]);
 
 	return (
 		<main
