@@ -26,7 +26,7 @@ export const useThemeStore = create<ThemeStore>((set, get) => ({
 		} else {
 			const systemTheme = getSystemTheme();
 			document.documentElement.classList.add(systemTheme);
-			set({ theme: undefined });
+			set({ theme: systemTheme });
 		}
 	},
 
