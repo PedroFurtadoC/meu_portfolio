@@ -111,7 +111,7 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 			{renderEndDivision(index)}
 			<div
 				ref={cardRef}
-				className={`min-h-[200px] w-full md:w-[80%] bg-primary rounded-xl py-8 px-8 md:px-20 flex flex-col font-bold z-10`}
+				className={`min-h-[200px] w-full md:w-[80%] bg-primary rounded-xl py-8 px-8 md:px-12 xl:px-20 flex flex-col font-bold z-10`}
 			>
 				<div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6 gap-5">
 					<h2 className="text-accent text-3xl md:text-4xl max-w-[100%] lg:max-w-[50%]">

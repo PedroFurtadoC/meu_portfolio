@@ -52,7 +52,7 @@ const FAQCard = ({ FAQ }: { FAQ: FAQ }) => {
 
 	return (
 		<button
-			className="w-full h-auto px-10 py-3 bg-primary rounded-3xl transition-all text-left"
+			className="w-full h-auto px-5 md:px-10 py-4 md:py-3 bg-primary rounded-3xl transition-all text-left"
 			aria-label={"Abrir FAQ: " + FAQ.question}
 			onClick={() => setExpanded(!expanded)}
 		>

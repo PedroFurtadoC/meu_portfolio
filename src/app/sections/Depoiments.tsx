@@ -232,7 +232,7 @@ function DepoimentsSlider() {
 // =====================
 function DepoimentCard({ data }: { data: Depoiment }) {
 	return (
-		<div className="flex flex-col min-w-[90%] md:min-w-[650px] lg:min-w-[780px] h-[600px] md:h-[350px] p-8 md:p-10 box-border bg-primary mx-5 rounded-xl">
+		<div className="flex flex-col min-w-[90%] md:min-w-[650px] lg:min-w-[780px] h-[750px] md:h-[450px] xl:h-[380px] p-8 md:p-10 box-border bg-primary mx-5 rounded-xl">
 			<h2 className="text-4xl font-bold text-accent mb-3">{data.name}</h2>
 			<h3 className="font-bold text-lg mb-3">{data.role}</h3>
 			<p className="text-lg leading-relaxed">{data.depoiment}</p>
