@@ -15,7 +15,7 @@ export const depoiments: Depoiment[] = [
 		name: "Luciene F.",
 		role: "Head Consultora de Negócios",
 		depoiment:
-			"“Tive a sorte de contar com o apoio do Pedro para otimizar meu notebook, e posso dizer que recebi muito mais do que um serviço técnico. Além de realizar todo o serviço com foco em desempenho, ele me ofereceu uma verdadeira consultoria,  uma aula clara e didática sobre melhores práticas de uso, cuidados, e até mesmo sobre a adequação da máquina às minhas necessidades profissionais. Pedro foi disponível, analítico e extremamente responsável em cada etapa. Transmitiu conhecimento e confiança com naturalidade, indo muito além do esperado. O resultado foi não só uma máquina mais eficiente, mas também a certeza de que posso contar com um profissional competente e comprometido. Sem dúvida, me tornei uma cliente fidelizada.”",
+			"“Recebi muito mais que um serviço técnico. O Pedro otimizou meu notebook com foco em desempenho e ainda me deu uma consultoria didática sobre boas práticas, cuidados e adequação às minhas necessidades. Foi disponível, analítico e responsável, transmitindo confiança e conhecimento em cada etapa. O resultado foi uma máquina mais eficiente e a certeza de poder contar com um profissional comprometido. Me tornei cliente fidelizada.”",
 	},
 	{
 		name: "Cássia R. F",

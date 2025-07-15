@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Heading from "../components/shared/Heading";
 import { Depoiment, depoiments } from "@/app/content/depoiments-content";
 import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
-import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
 
 // =====================
 // Section
@@ -37,11 +35,6 @@ function DepoimentsSlider() {
 	const [atStart, setAtStart] = useState(true);
 	const [atEnd, setAtEnd] = useState(false);
 	const containerRef = useRef<HTMLDivElement>(null);
-
-	// Variáveis de drag
-	const startXRef = useRef<number | null>(null);
-	const endXRef = useRef<number | null>(null);
-	const isDraggingRef = useRef(false);
 
 	const handlePrev = () => {
 		const container = containerRef.current;
@@ -238,6 +231,15 @@ function DepoimentsSlider() {
 // Card
 // =====================
 function DepoimentCard({ data }: { data: Depoiment }) {
+	return (
+		<div className="flex flex-col min-w-[90%] md:min-w-[650px] lg:min-w-[780px] h-[600px] md:h-[350px] p-8 md:p-10 box-border bg-primary mx-5 rounded-xl">
+			<h2 className="text-4xl font-bold text-accent mb-3">{data.name}</h2>
+			<h3 className="font-bold text-lg mb-3">{data.role}</h3>
+			<p className="text-lg leading-relaxed">{data.depoiment}</p>
+		</div>
+	);
+}
+/* function DepoimentCard({ data }: { data: Depoiment }) {
 	const [expanded, setExpanded] = useState(false);
 	const [hasOverflow, setHasOverflow] = useState(false);
 
@@ -308,7 +310,6 @@ function DepoimentCard({ data }: { data: Depoiment }) {
 				)}
 			</SimpleBar>
 
-			{/* botão */}
 			{hasOverflow && (
 				<button
 					onClick={() => setExpanded(!expanded)}
@@ -320,4 +321,4 @@ function DepoimentCard({ data }: { data: Depoiment }) {
 			)}
 		</div>
 	);
-}
+} */

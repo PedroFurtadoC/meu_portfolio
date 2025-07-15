@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./assets/fontello/css/fontello.css";
+import "simplebar-react/dist/simplebar.min.css";
 
 const inter = Inter({
 	variable: "--font-inter",

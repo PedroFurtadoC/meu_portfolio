@@ -1,7 +1,6 @@
 import { PContent } from "@/app/content/projects-content";
 import { useEffect } from "react";
 import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
 import FontelloIcon from "../shared/FontelloIcon";
 import Portal from "../shared/Portal";
 import { YouTubeEmbed } from "@next/third-parties/google";
