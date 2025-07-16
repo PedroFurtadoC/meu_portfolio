@@ -74,12 +74,13 @@ Você pode editar diretamente os arquivos dessa pasta para modificar o conteúdo
 
 A estrutura da página é composta por seções principais, cada uma localizada na pasta [`meu_portfolio/src/app/sections/`](./src/app/sections/):
 
-1. **Sobre mim** - Saudação e projetos.
-2. **Soluções** - Minha trajetória e o objetivo do portfólio.
-3. **Depoimentos** - Descrição dos serviços oferecidos.
-4. **FAQ** - Minhas principais habilidades.
-5. **Jornada** - Minhas experiências profissionais e acadêmicas.
-6. **Contato** - Formulário de contato funcional e informações adicionais.
+1. **Sobre mim**
+2. **Soluções**
+3. **Depoimentos**
+4. **FAQ**
+5. **Projetos**
+6. **Jornada**
+7. **Contato**
 
 ---
 

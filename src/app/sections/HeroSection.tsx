@@ -147,7 +147,7 @@ export default function HeroSection() {
 						}}
 					/>
 					<Image
-						className="min-w-[350px] min-h-[350px] mb-[-3rem] md:mb-0 md:min-w-[600px] md:min-h-[600px] relative z-10 ml-auto mr-auto"
+						className="min-w-[350px] min-h-[350px] mb-[-1rem] xl:mb-0 md:min-w-[600px] md:min-h-[600px] relative z-10 ml-auto mr-auto"
 						aria-hidden
 						src={pedroSrc}
 						alt="Imagem do Pedro"

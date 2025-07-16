@@ -59,7 +59,7 @@ body {
 }
 
 .wrapper {
-	@apply h-full max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[1310px] mx-auto;
+	@apply h-full max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[90%] 2xl:max-w-[1310px] mx-auto;
 }
 
 .card {
@@ -81,7 +81,7 @@ body {
 	display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1380px) {
 	#nav-header {
 		display: none;
 	}
@@ -102,39 +102,6 @@ body {
 }
 
 /*******************************************MAIN SECTION********************************************/
-/* #home::before {
-	content: "";
-	position: absolute;
-	background-image: url("/meu_portfolio/soft-fabric-background.webp");
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	background-color: var(--hero-bg);
-}
-
-html.dark #home::before {
-	background-color: var(--hero-bg);
-	background-image: url("/meu_portfolio/soft-fabric-background.webp");
-}
-
-html.light #home::before {
-	background-color: var(--hero-bg);
-	background-image: url("/meu_portfolio/soft-fabric-background-light.webp");
-}
- */
-/* @media screen and (max-width: 1280px) {
-
-	html.dark #home::before {
-		background-image: url("/meu_portfolio/soft-fabric-background-mobile.webp");
-	}
-
-	html.light #home::before {
-		background-image: url("/meu_portfolio/soft-fabric-background-light-mobile.webp");
-	}
-} */
-
 .main-blob {
 	scale: 5;
 }
@@ -155,7 +122,7 @@ html.light #home::before {
 	min-width: 700px;
 }
 
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1250px) {
 	#home {
 		height: fit-content;
 	}
