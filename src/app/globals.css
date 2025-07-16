@@ -279,7 +279,7 @@ html.light .svg-background::before {
 	background-size: 300%;
 	background-position-x: 100%;
 	animation: shimmer 3s infinite linear;
-	@apply h-screen w-screen flex justify-center items-center fixed top-0 left-0 z-[999] transition-opacity duration-1000 pointer-events-none;
+	@apply h-screen w-screen flex justify-center items-center fixed top-0 left-0 z-[999] transition-opacity duration-1000;
 }
 
 @keyframes shimmer {
