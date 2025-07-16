@@ -125,7 +125,6 @@ Este projeto está sob a **Licença MIT**.
 
 **Pedro Furtado Cunha**  
 📧 [pedrocunha.furtado@gmail.com](mailto:pedrocunha.furtado@gmail.com)  
-🔗 [LinkedIn](https://linkedin.com/in/pedro-furtado-33159023b) | [GitHub](https://github.com/PedroFurtadoC)
-🔗 [Portfólio Online](https://pedrofurtadoc.github.io/meu_portfolio/)
+🔗 [LinkedIn](https://linkedin.com/in/pedro-furtado-33159023b) | [GitHub](https://github.com/PedroFurtadoC) | [Portfólio Online](https://pedrofurtadoc.github.io/meu_portfolio/)
 
 ---
