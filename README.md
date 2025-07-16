@@ -14,6 +14,60 @@ Este é o meu portfólio pessoal, desenvolvido com **Next.js**. O site apresenta
 
 ---
 
+## Estrutura do Projeto
+
+```
+meu_portfolio/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── public/
+│   └── assets
+│
+├── src/
+│   └── app/
+│       ├── assets/
+│       │
+│       ├── components/
+│       │
+│       ├── content/
+│       │
+│       ├── sections/
+│       │
+│       ├── stores/
+│       │
+│       ├── utils/
+│       │   ├── functions/
+│       │   └── hooks/
+│       │
+│       ├── global.css
+│       ├── layout.tsx
+│       └── page.tsx
+│
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── tailwind.config.ts
+└── tsconfig.json
+```
+
+---
+
+## Conteúdo Personalizável
+
+A pasta [`meu_portfolio/src/app/content/`](./src/app/content/) contém todos os conteúdos alteráveis da página. Nela você encontrará os arquivos responsáveis por textos, listas de projetos, habilidades, experiências e outras seções que aparecem no site.
+
+### Como editar
+
+Você pode editar diretamente os arquivos dessa pasta para modificar o conteúdo exibido, sem precisar alterar a estrutura ou os componentes do layout. Isso facilita a personalização do portfólio de forma rápida e segura.
+
+> ⚠️ Importante: Evite remover arquivos da pasta `content/` sem saber se eles são utilizados por alguma parte da aplicação. Modificações incorretas podem quebrar o layout ou causar erros de renderização.
+
+---
+
 ## Estrutura da Página
 
 1. **Sobre mim** - Saudação e projetos.

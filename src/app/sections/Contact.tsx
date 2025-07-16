@@ -1,13 +1,13 @@
-import navigate from "../functions/Navigate";
-import openNewTab from "../functions/NewTab";
-import openEmail from "../functions/OpenEmail";
+import navigate from "../utils/functions/Navigate";
+import openNewTab from "../utils/functions/NewTab";
+import openEmail from "../utils/functions/OpenEmail";
 import FontelloIcon from "../components/shared/FontelloIcon";
-import GoToStartShape from "../components/shared/GoToStartShape";
-import useRoot from "../hooks/UseRoot";
+import GoToStartShape from "../components/GoToStartShape";
+import useRoot from "../utils/hooks/UseRoot";
 import { PopupModal } from "react-calendly";
 import useCalendlyStore from "../stores/calendlyStore";
 import Image from "next/image";
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Contact() {
 	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Heading from "../components/shared/Heading";
 import { Depoiment, depoiments } from "@/app/content/depoiments-content";
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 // =====================
 // Section

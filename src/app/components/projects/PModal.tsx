@@ -4,8 +4,8 @@ import SimpleBar from "simplebar-react";
 import FontelloIcon from "../shared/FontelloIcon";
 import Portal from "../shared/Portal";
 import { YouTubeEmbed } from "@next/third-parties/google";
-import useWindowResize from "@/app/hooks/useWindowResize";
-import openNewTab from "@/app/functions/NewTab";
+import useWindowResize from "@/app/utils/hooks/useWindowResize";
+import openNewTab from "@/app/utils/functions/NewTab";
 import { Highlighter } from "../shared/Highlighter";
 
 interface Props {

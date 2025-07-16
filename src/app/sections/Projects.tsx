@@ -1,7 +1,7 @@
 import { projectContent } from "../content/projects-content";
 import PCard from "../components/projects/PCard";
 import Heading from "../components/shared/Heading";
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Projects() {
 	const projectRef = useHeaderAnchor("projects");

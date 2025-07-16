@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useHeaderAnchorStore from "../stores/headerAnchorStore";
+import useHeaderAnchorStore from "../../stores/headerAnchorStore";
 import useIsVisible from "./UseIsVisible";
 
 export default function useHeaderAnchor(

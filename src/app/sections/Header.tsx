@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FontelloIcon from "../components/shared/FontelloIcon";
-import navigate from "../functions/Navigate";
+import navigate from "../utils/functions/Navigate";
 import useHeaderAnchorStore from "../stores/headerAnchorStore";
 import ThemeSwitch from "../components/themeSwitch/ThemeSwitch";
 

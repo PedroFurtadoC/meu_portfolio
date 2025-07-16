@@ -1,7 +1,7 @@
-import openNewTab from "../functions/NewTab";
-import openEmail from "../functions/OpenEmail";
+import openNewTab from "../utils/functions/NewTab";
+import openEmail from "../utils/functions/OpenEmail";
 import FontelloIcon from "../components/shared/FontelloIcon";
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function AboutMe() {
 	const aboutRef = useHeaderAnchor("about-me", { threshold: 0.01 });

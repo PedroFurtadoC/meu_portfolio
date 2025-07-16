@@ -1,7 +1,7 @@
 import Carousel from "../components/carousel/Carousel";
-import Timeline from "../components/shared/Timeline";
+import Timeline from "../components/Timeline";
 import Heading from "../components/shared/Heading";
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Journey() {
 	const journeyRef = useHeaderAnchor("journey");

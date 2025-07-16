@@ -3,20 +3,6 @@
 @tailwind utilities;
 
 :root {
-	--background: #f7f9fc;
-	--foreground: #003244;
-	--accent: #00a8e8;
-	--muted: #515963;
-	--primary: #003244;
-	--secondary: #ff6d00;
-	--nav: #e2e2e2;
-	--nav-hover: #d4d4d4;
-	--primary-button: #00a8e8;
-	--primary-button-hover: #0f6086;
-	--secondary-button: #ff6d00;
-	--secondary-button-hover: #af4c00;
-	--hero-bg: #ececec;
-	/* FIXED */
 	--light-blue: #00a8e8;
 	--extra-blue: #007ea7;
 	--blue-hover: #0f6086;
@@ -26,30 +12,13 @@
 	--shadow-gradient: #00acf0, #007ea7, #004f88, #004f88, #007ea7, #00acf0;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #00171f;
-		--foreground: #f5f7fa;
-		--accent: #ff6d00;
-		--muted: #a0aec0;
-		--primary: #003459;
-		--secondary: #00a8e8;
-		--nav: #002633;
-		--nav-hover: #003446;
-		--primary-button: #ff6d00;
-		--primary-button-hover: #af4c00;
-		--secondary-button: #00a8e8;
-		--secondary-button-hover: #0f6086;
-		--hero-bg: #003459;
-	}
-}
-
 html {
 	scroll-behavior: smooth;
 	scroll-padding: 5rem;
 	color-scheme: light dark;
 }
 
+html,
 html.light {
 	--background: #f7f9fc;
 	--foreground: #003244;

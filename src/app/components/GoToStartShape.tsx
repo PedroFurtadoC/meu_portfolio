@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import FontelloIcon from "./FontelloIcon";
+import FontelloIcon from "./shared/FontelloIcon";
 
 interface Props {
 	width?: "sm" | "md" | "lg" | "xl";

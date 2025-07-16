@@ -2,8 +2,8 @@ import {
 	TimelineContent,
 	timelineContent,
 } from "@/app/content/timeline-content";
-import useSize from "@/app/hooks/UseSize";
-import useWindowResize from "@/app/hooks/useWindowResize";
+import useSize from "@/app/utils/hooks/UseSize";
+import useWindowResize from "@/app/utils/hooks/useWindowResize";
 import { useRef } from "react";
 
 export default function Timeline() {

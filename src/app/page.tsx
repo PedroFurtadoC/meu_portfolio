@@ -4,15 +4,15 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { PopupModal } from "react-calendly";
-import useRoot from "./hooks/UseRoot";
+import useRoot from "./utils/hooks/UseRoot";
 import useCalendlyStore from "./stores/calendlyStore";
 import FontelloIcon from "./components/shared/FontelloIcon";
-import useMobile from "./hooks/UseMobile";
+import useMobile from "./utils/hooks/UseMobile";
 import { useThemeStore } from "./stores/themeStore";
-import usePageLoading from "./hooks/UsePageLoading";
+import usePageLoading from "./utils/hooks/UsePageLoading";
 
 /* SECTIONS */
-import PageLoader from "./components/shared/PageLoader";
+import PageLoader from "./components/PageLoader";
 import Header from "./sections/Header";
 import HeroSection from "./sections/HeroSection";
 import AboutMe from "./sections/AboutMe";

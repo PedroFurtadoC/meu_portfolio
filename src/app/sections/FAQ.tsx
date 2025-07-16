@@ -1,4 +1,4 @@
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 import Heading from "../components/shared/Heading";
 import FAQContent, { FAQ } from "@/app/content/faq-content";
 import FontelloIcon from "../components/shared/FontelloIcon";

@@ -1,9 +1,9 @@
 import { Project } from "@/app/content/projects-content";
-import useSize from "@/app/hooks/UseSize";
+import useSize from "@/app/utils/hooks/UseSize";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { useRef, useState } from "react";
 import PModal from "./PModal";
-import useMobile from "@/app/hooks/UseMobile";
+import useMobile from "@/app/utils/hooks/UseMobile";
 
 interface Props extends Project {
 	aosDelay: string;

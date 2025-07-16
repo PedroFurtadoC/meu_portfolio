@@ -1,7 +1,7 @@
 import { solutionsContent } from "../content/solutions-content";
-import SolutionsCard from "../components/shared/SolutionsCard";
+import SolutionsCard from "../components/SolutionsCard";
 import Heading from "../components/shared/Heading";
-import useHeaderAnchor from "@/app/hooks/UseHeaderAnchor";
+import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Solutions() {
 	const solutionRef = useHeaderAnchor("solutions");
