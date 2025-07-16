@@ -4,9 +4,11 @@
 
 Este é o meu portfólio pessoal, desenvolvido com **Next.js**. O site apresenta informações sobre minha trajetória, habilidades, experiências e serviços que ofereço.
 
+![Preview do Site](https://pedrofurtadoc.github.io/meu_portfolio/WebsitePreview.JPG)
+
 ---
 
-## Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 -   **Next.js**
 -   **Google Fonts**
@@ -14,7 +16,7 @@ Este é o meu portfólio pessoal, desenvolvido com **Next.js**. O site apresenta
 
 ---
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 meu_portfolio/
@@ -56,11 +58,11 @@ meu_portfolio/
 
 ---
 
-## Conteúdo Personalizável
+## 📁 Conteúdo Personalizável
 
 A pasta [`meu_portfolio/src/app/content/`](./src/app/content/) contém todos os conteúdos alteráveis da página. Nela você encontrará os arquivos responsáveis por textos, listas de projetos, habilidades, experiências e outras seções que aparecem no site.
 
-### Como editar
+### ✏️ Como editar
 
 Você pode editar diretamente os arquivos dessa pasta para modificar o conteúdo exibido, sem precisar alterar a estrutura ou os componentes do layout. Isso facilita a personalização do portfólio de forma rápida e segura.
 
@@ -68,7 +70,9 @@ Você pode editar diretamente os arquivos dessa pasta para modificar o conteúdo
 
 ---
 
-## Estrutura da Página
+## 📄 Estrutura da Página
+
+A estrutura da página é composta por seções principais, cada uma localizada na pasta [`meu_portfolio/src/app/sections/`](./src/app/sections/):
 
 1. **Sobre mim** - Saudação e projetos.
 2. **Soluções** - Minha trajetória e o objetivo do portfólio.
@@ -79,7 +83,7 @@ Você pode editar diretamente os arquivos dessa pasta para modificar o conteúdo
 
 ---
 
-## Como Rodar o Projeto
+## 🛠️ Como Rodar o Projeto
 
 1. **Clone o Repositório**
     ```bash
@@ -111,16 +115,17 @@ Você pode editar diretamente os arquivos dessa pasta para modificar o conteúdo
 
 ---
 
-## Licença
+## 📄 Licença
 
 Este projeto está sob a **Licença MIT**.
 
 ---
 
-## Contato
+## 📬 Contato
 
 **Pedro Furtado Cunha**  
 📧 [pedrocunha.furtado@gmail.com](mailto:pedrocunha.furtado@gmail.com)  
 🔗 [LinkedIn](https://linkedin.com/in/pedro-furtado-33159023b) | [GitHub](https://github.com/PedroFurtadoC)
+🔗 [Portfólio Online](https://pedrofurtadoc.github.io/meu_portfolio/)
 
 ---
