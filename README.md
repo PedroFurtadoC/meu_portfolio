@@ -88,7 +88,7 @@ A estrutura da página é composta por seções principais, cada uma localizada 
 
 1. **Clone o Repositório**
     ```bash
-    git clone -b develop --single-branch https://github.com/PedroFurtadoC/meu_portfolio
+    git clone -b main --single-branch https://github.com/PedroFurtadoC/meu_portfolio.git
     ```
 2. **Abra o Projeto**
 
