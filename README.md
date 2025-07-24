@@ -58,6 +58,33 @@ meu_portfolio/
 
 ---
 
+## 🗂️ Detalhamento das Pastas
+
+Abaixo estão descrições detalhadas das principais pastas dentro da estrutura do projeto, para facilitar a compreensão e manutenção do código:
+
+-   **`utils/`** (`./src/app/utils/`):  
+    Contém utilitários reutilizáveis da aplicação. Está dividida em:
+
+    -   **`hooks/`** (`./src/app/utils/hooks/`):  
+        Hooks personalizados utilizados para abstrair lógicas de estado ou efeitos colaterais.
+
+    -   **`functions/`** (`./src/app/utils/functions/`):  
+        Funções utilitárias reutilizáveis que auxiliam em cálculos, formatações e outras tarefas.
+
+-   **`stores/`** (`./src/app/utils/stores/`):  
+    Arquivos responsáveis pelo gerenciamento de estado global utilizando **Zustand**. Cada store centraliza dados e ações relacionadas à sua parte da aplicação.
+
+-   **`content/`** (`./src/app/utils/content/`):  
+    Contém os dados que alimentam as seções da página, como textos, listas de projetos, perguntas frequentes etc. Ideal para personalização sem alterar a lógica da aplicação.
+
+-   **`sections/`** (`./src/app/utils/sections/`):  
+    Componentes principais da página, divididos por seção (ex: Sobre, Projetos, Contato). Cada arquivo representa uma área visível do site.
+
+-   **`components/`** (`./src/app/utils/components/`):  
+    Componentes reutilizáveis menores, como botões, cards, ícones, ou elementos visuais utilizados em várias partes do layout.
+
+---
+
 ## 📁 Conteúdo Personalizável
 
 A pasta [`meu_portfolio/src/app/content/`](./src/app/content/) contém todos os conteúdos alteráveis da página. Nela você encontrará os arquivos responsáveis por textos, listas de projetos, habilidades, experiências e outras seções que aparecem no site.
