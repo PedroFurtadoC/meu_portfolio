@@ -4,26 +4,26 @@ import "./style/ThemeSwitch.css";
 import FontelloIcon from "../shared/FontelloIcon";
 
 export default function ThemeSwitch() {
-	const rawTheme = useThemeStore((s) => s.theme);
-	const getCurrentTheme = useThemeStore((s) => s.getCurrentTheme);
-	const toggleTheme = useThemeStore((s) => s.toggleTheme);
+	const rawTheme = useThemeStore((s) => s.theme); // Tema atual no estado global (pode ser undefined)
+	const getCurrentTheme = useThemeStore((s) => s.getCurrentTheme); // Função para obter tema real considerando sistema
+	const toggleTheme = useThemeStore((s) => s.toggleTheme); // Função para alternar tema
 
-	const [mounted, setMounted] = useState(false);
+	const [mounted, setMounted] = useState(false); // Controla se o componente já montou
 	const [activeTheme, setActiveTheme] = useState<
 		"dark" | "light" | undefined
-	>(undefined);
+	>(undefined); // Tema efetivo para renderização
 
 	useEffect(() => {
-		setMounted(true);
+		setMounted(true); // Marca o componente como montado após primeiro render
 	}, []);
 
 	useEffect(() => {
 		if (mounted) {
-			setActiveTheme(getCurrentTheme()); // pega o tema real. Se estiver como undefined usa sistema
+			setActiveTheme(getCurrentTheme()); // Atualiza o tema real após montar e sempre que rawTheme mudar
 		}
 	}, [mounted, rawTheme]);
 
-	const isDark = activeTheme === "dark";
+	const isDark = activeTheme === "dark"; // Verifica se o tema ativo é escuro
 
 	return (
 		<button

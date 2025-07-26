@@ -10,13 +10,13 @@ interface Props extends Project {
 }
 
 export default function PCard({ aosDelay, ...rest }: Props) {
-	const [expanded, setExpanded] = useState(false);
+	const [expanded, setExpanded] = useState(false); // Controla visibilidade do modal
 
 	const cardRef = useRef(null);
 
-	const { elementWidth } = useSize(cardRef);
+	const { elementWidth } = useSize(cardRef); // Obtém largura do card para ajustar vídeo
 
-	const isMobile = useMobile();
+	const isMobile = useMobile(); // Detecta se está em dispositivo móvel
 
 	return (
 		<>

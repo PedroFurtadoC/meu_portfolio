@@ -2,6 +2,7 @@ import useMobile from "@/app/utils/hooks/UseMobile";
 import "./styles/scrollAnimation.css";
 
 export default function ResponsiveIconScroll() {
+	// Variavél para identificar se é mobile
 	const isMobile = useMobile();
 
 	return (

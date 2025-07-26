@@ -4,6 +4,7 @@ import Heading from "../components/shared/Heading";
 import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Projects() {
+	// Cria uma ref associada à seção "projects"
 	const projectRef = useHeaderAnchor("projects");
 	return (
 		<>

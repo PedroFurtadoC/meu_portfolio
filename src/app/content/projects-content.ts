@@ -1,27 +1,34 @@
+/**
+ * Este arquivo define a interface e os dados dos projetos apresentados no portfólio.
+ * Cada projeto inclui título, descrição detalhada, tecnologias utilizadas,
+ * destaques, link opcional e vídeo de apresentação no YouTube.
+ */
+
 export interface Project {
 	title: string;
 	modalContent: PContent;
 }
 
+// Conteúdo detalhado que será exibido ao abrir um projeto no modal
 export interface PContent {
 	title: string;
 	subtitle: string;
 	text: string;
-	optionalText?: string;
-	optionalText2?: string;
-	highlights?: string[];
-	technologies?: string[];
-	/* ID do vídeo do Youtube (aquele código no final do link) */
-	ytVideoId: string;
-	link?: PLink;
+	optionalText?: string; // Parágrafo complementar opcional
+	optionalText2?: string; // Segundo parágrafo complementar opcional
+	highlights?: string[]; // Destaques, como premiações
+	technologies?: string[]; // Tecnologias utilizadas
+	ytVideoId: string; // ID do vídeo do YouTube (código no final da URL)
+	link?: PLink; // Link externo, como post no LinkedIn
 }
 
+// Estrutura opcional para link associado ao projeto
 export interface PLink {
 	url: string;
-	/* Se não houver descrição, aparecerá apenas o link */
-	description?: string;
+	description?: string; // Descrição opcional que será exibida no botão/link
 }
 
+// Lista dos projetos do portfólio
 export const projectContent: Project[] = [
 	{
 		title: "NeuroVolt",

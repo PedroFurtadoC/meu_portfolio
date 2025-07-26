@@ -1,12 +1,28 @@
+/**
+ * Este arquivo contém os eventos e experiências profissionais organizadas em ordem cronológica
+ * para serem exibidas na timeline do portfólio.
+ *
+ * Cada item representa uma etapa importante da trajetória profissional.
+ */
+
 export interface TimelineContent {
+	// Título da experiência ou cargo. Deve ser único (usado como chave).
 	title: string;
+
+	// Mês e ano de início.
 	start: string;
+
+	// Mês e ano de término ou "atualmente".
 	end: string;
+
+	// Descrição da experiência.
 	text: string;
+
+	// Lista opcional de habilidades desenvolvidas ou aplicadas na experiência.
 	habilities?: string[];
 }
 
-//IMPORTANTE: o "title" é utilizado como key, não podem haver repetições
+// IMPORTANTE: o "title" é utilizado como key, portanto não podem haver repetições.
 
 export const timelineContent: TimelineContent[] = [
 	{

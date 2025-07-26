@@ -4,6 +4,7 @@ import FontelloIcon from "../components/shared/FontelloIcon";
 import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function AboutMe() {
+	// Cria uma ref associada à seção "about-me", ativada quando pelo menos 1% (threshold 0.01) está visível na viewport
 	const aboutRef = useHeaderAnchor("about-me", { threshold: 0.01 });
 
 	return (

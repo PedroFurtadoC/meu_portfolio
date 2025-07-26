@@ -1,9 +1,15 @@
+/**
+ * Define a estrutura de um depoimento e exporta uma lista de depoimentos recebidos.
+ * Cada depoimento contém o nome da pessoa, seu cargo/profissão e o conteúdo do depoimento.
+ */
+
 export interface Depoiment {
-	name: string;
-	role: string;
-	depoiment: string;
+	name: string; // Nome da pessoa que forneceu o depoimento
+	role: string; // Profissão ou cargo da pessoa
+	depoiment: string; // Texto do depoimento
 }
 
+// Lista de depoimentos de clientes que receberam suporte técnico ou consultoria personalizada
 export const depoiments: Depoiment[] = [
 	{
 		name: "Sandra R. M.",

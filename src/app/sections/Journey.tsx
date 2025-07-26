@@ -4,6 +4,7 @@ import Heading from "../components/shared/Heading";
 import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Journey() {
+	// Cria uma ref associada à seção "journey"
 	const journeyRef = useHeaderAnchor("journey");
 
 	return (

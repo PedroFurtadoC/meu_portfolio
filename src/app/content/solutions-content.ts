@@ -1,20 +1,30 @@
+/**
+ * Este arquivo define as **soluções** que o portfólio oferece.
+ * Cada solução representa uma área de atuação, com destaque para automações, desenvolvimento web,
+ * consultorias e resolução de problemas reais através da tecnologia.
+ *
+ * A animação Lottie deve ser colocada na pasta `public` e referenciada com o prefixo `/meu_portfolio/`.
+ */
+
 export interface Solution {
-	/* 
-	A animação lottie deve ser
-	colocada na pasta Public
-	
-	IMPORTANTE: sempre referenciar
-	o /meu_portfolio/ na string
-	
-	Ex: "/meu_portfolio/arquivo.lottie"
+	/*
+	Animação Lottie correspondente à solução.
+	Deve estar na pasta `public` e conter o prefixo correto no caminho:
+	Exemplo válido: "/meu_portfolio/arquivo.lottie"
 	*/
 	lottie: string;
+
+	// Título da solução. Deve ser único, pois é usado como chave.
 	title: string;
+
+	// Texto principal que explica o que a solução oferece.
 	text: string;
+
+	// Texto adicional (opcional) com mais detalhes ou reforço do valor entregue.
 	optionalText?: string;
 }
 
-//IMPORTANTE: o "title" é utilizado como key, não podem haver repetições
+// IMPORTANTE: o "title" é utilizado como chave (key), portanto, não pode se repetir.
 
 export const solutionsContent: Solution[] = [
 	{

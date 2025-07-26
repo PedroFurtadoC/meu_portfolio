@@ -6,8 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import useCalendlyStore from "@/app/stores/calendlyStore";
 
 const FAQSection = () => {
+	// Cria uma ref associada à seção "FAQ"
 	const FAQRef = useHeaderAnchor("FAQ");
 
+	// Controle do calendly
 	const toggleCalendly = useCalendlyStore((s) => s.toggleCalendly);
 
 	return (
@@ -38,15 +40,16 @@ const FAQSection = () => {
 export default FAQSection;
 
 const FAQCard = ({ FAQ }: { FAQ: FAQ }) => {
-	const [expanded, setExpanded] = useState(false);
-	const contentRef = useRef<HTMLDivElement>(null);
-	const [maxHeight, setMaxHeight] = useState("0px");
+	const [expanded, setExpanded] = useState(false); // Estado para expandir/recolher resposta
+	const contentRef = useRef<HTMLDivElement>(null); // Ref para o conteúdo da resposta
+	const [maxHeight, setMaxHeight] = useState("0px"); // Controla a altura máxima para animação
 
+	// Ajusta altura máxima para permitir transição suave na expansão/retração
 	useEffect(() => {
 		if (expanded && contentRef.current) {
-			setMaxHeight(contentRef.current.scrollHeight + "px");
+			setMaxHeight(contentRef.current.scrollHeight + "px"); // Define altura do conteúdo para expandir
 		} else {
-			setMaxHeight("0px");
+			setMaxHeight("0px"); // Fecha o conteúdo
 		}
 	}, [expanded]);
 

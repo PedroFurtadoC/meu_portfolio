@@ -7,6 +7,7 @@ import useWindowResize from "@/app/utils/hooks/useWindowResize";
 import { useRef } from "react";
 
 export default function Timeline() {
+	// Renderiza a lista completa de cards da timeline
 	return (
 		<div className="w-full py-20">
 			{timelineContent.map((item, index, arr) => (
@@ -29,17 +30,20 @@ interface TimelineCardProps {
 
 const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 	const cardRef = useRef(null);
-	const { elementHeight: cardHeight } = useSize(cardRef);
+	const { elementHeight: cardHeight } = useSize(cardRef); // Obtém altura do card para ajustar linhas de divisão dinamicamente
 
-	const { width: windowWidth } = useWindowResize();
+	const { width: windowWidth } = useWindowResize(); // Largura da janela para layout responsivo
 
+	// Renderiza a linha/divisor inicial entre cards, diferente para mobile e desktop
 	const renderStartDivision = (index: number) => {
 		if (index < length - 1) {
 			if (windowWidth < 1000)
+				// Linha vertical para mobile
 				return (
 					<hr className="h-[150px] w-[1px] border-l-[7px] border-l-secondary border-dashed" />
 				);
 
+			// Linhas horizontais e verticais com ajuste de altura para desktop
 			return (
 				<div
 					style={{
@@ -59,16 +63,20 @@ const TimelineCard = ({ item, index, length }: TimelineCardProps) => {
 				</div>
 			);
 		} else {
+			// Espaço vazio após o último card
 			return <div className="w-[5%] md:w-[10%]" />;
 		}
 	};
 
+	// Renderiza a linha/divisor final entre cards (desktop apenas)
 	const renderEndDivision = (index: number) => {
-		if (windowWidth < 1000) return null;
+		if (windowWidth < 1000) return null; // Não renderiza para mobile
 
 		if (index === 0) {
+			// Espaço vazio antes do primeiro card
 			return <div className="w-[5%] md:w-[10%]" />;
 		} else {
+			// Linhas horizontais e verticais com ajuste de altura para desktop
 			return (
 				<div
 					style={{

@@ -5,8 +5,10 @@ import useHeaderAnchorStore from "../stores/headerAnchorStore";
 import ThemeSwitch from "../components/themeSwitch/ThemeSwitch";
 
 export default function Header() {
+	// Controla visibilidade do menu lateral
 	const [isMenuVisible, setMenuVisible] = useState(false);
 
+	// Obtém a seção ativa
 	const activeAnchor = useHeaderAnchorStore((s) => s.activeAnchor);
 
 	return (

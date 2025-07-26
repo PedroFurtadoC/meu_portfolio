@@ -10,10 +10,13 @@ import Image from "next/image";
 import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Contact() {
+	// Controle do Calendly
 	const { isCalendlyOpen, toggleCalendly } = useCalendlyStore();
 
+	// Obtém o elemento Root
 	const root = useRoot();
 
+	// Cria uma ref associada à seção "contact"
 	const contactRef = useHeaderAnchor("contact");
 
 	return (

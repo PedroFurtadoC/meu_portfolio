@@ -20,28 +20,37 @@ import bg_light from "../assets/soft-fabric-background-light.webp";
 import bg_light_mobile from "../assets/soft-fabric-background-light-mobile.webp";
 
 export default function HeroSection() {
+	// Cria uma ref associada à seção "home"
 	const homeRef = useHeaderAnchor("home");
 
-	let mouseDistanceX = 0;
-	let mouseDistanceY = 0;
-
+	// Obtém posição do mouse relativa ao id "home"
 	const { x, y } = useMousePosition("home");
+
+	// Obtém objeto window para dimensões da janela
 	const windowRef = useWindow();
 
+	// Calcula posição normalizada do mouse entre 0 e 1 para X e Y
+	let mouseDistanceX = 0;
+	let mouseDistanceY = 0;
 	if (windowRef) {
 		mouseDistanceX = x / (windowRef?.innerWidth || 1);
 		mouseDistanceY = y / (windowRef?.innerHeight || 1);
 	}
 
+	// Estado do tema (dark/light) via Zustand
 	const theme = useThemeStore((s) => s.theme);
+
+	// Largura atual da janela
 	const { width: windowWidth } = useWindowResize();
 
+	// Memoiza a escolha da imagem do Pedro conforme largura da janela
 	const pedroSrc = useMemo(() => {
 		if (windowWidth > 1000) return Pedro_fullHD;
 		if (windowWidth > 700) return Pedro_600x900;
 		return Pedro_400x600;
 	}, [windowWidth]);
 
+	// Memoiza background conforme tema e largura da janela
 	const backgroundSrc = useMemo(() => {
 		if (windowWidth < 1000 && theme === "dark") return bg_dark_mobile;
 		if (windowWidth < 1000 && theme === "light") return bg_light_mobile;

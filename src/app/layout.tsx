@@ -59,26 +59,6 @@ export default function RootLayout({
 					href={`/meu_portfolio/favicon.ico`}
 					sizes="any"
 				/>
-				{/* <link
-					rel="preload"
-					as="image"
-					href={`/meu_portfolio/soft-fabric-background.webp`}
-				/>
-				<link
-					rel="preload"
-					as="image"
-					href={`/meu_portfolio/soft-fabric-background-light.webp`}
-				/>
-				<link
-					rel="preload"
-					as="image"
-					href={`/meu_portfolio/soft-fabric-background-mobile.webp`}
-				/>
-				<link
-					rel="preload"
-					as="image"
-					href={`/meu_portfolio/soft-fabric-background-light-mobile.webp`}
-				/> */}
 			</head>
 			<body
 				style={{ overflowY: "hidden" }}

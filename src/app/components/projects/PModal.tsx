@@ -15,6 +15,7 @@ interface Props {
 }
 
 export default function PModal({ isVisible, onClose, content }: Props) {
+	// Fecha modal ao pressionar Esc
 	useEffect(() => {
 		if (!isVisible) return;
 
@@ -24,14 +25,16 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 		return () => window.removeEventListener("keydown", handleKey);
 	}, [isVisible, onClose]);
 
+	// Controla overflow do body para evitar scroll fora do modal
 	useEffect(() => {
 		document.body.style.overflowY = isVisible ? "hidden" : "auto";
 	}, [isVisible]);
 
+	// Largura da janela para responsividade do vídeo
 	const { width: windowWidth } = useWindowResize();
 
+	// Define largura do vídeo baseado no tamanho da janela
 	let width = 600;
-
 	if (windowWidth >= 1500) {
 		width = 600;
 	} else if (windowWidth >= 1200) {
@@ -42,7 +45,7 @@ export default function PModal({ isVisible, onClose, content }: Props) {
 		width = windowWidth * 0.75;
 	}
 
-	if (!isVisible) return null;
+	if (!isVisible) return null; // Não renderiza se não visível
 
 	return (
 		<Portal>

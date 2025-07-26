@@ -4,6 +4,7 @@ import Heading from "../components/shared/Heading";
 import useHeaderAnchor from "@/app/utils/hooks/UseHeaderAnchor";
 
 export default function Solutions() {
+	// Cria uma ref associada à seção "solutions"
 	const solutionRef = useHeaderAnchor("solutions");
 
 	return (

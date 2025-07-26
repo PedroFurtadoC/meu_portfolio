@@ -1,8 +1,14 @@
+/**
+ * Define a estrutura de um certificado e exporta uma lista com certificados concluídos.
+ * Cada certificado contém uma imagem (comprovante) e uma descrição textual.
+ */
+
 export interface Certificate {
-	image: string;
-	description: string;
+	image: string; // Caminho da imagem do certificado
+	description: string; // Título ou descrição do certificado
 }
 
+// Lista de certificados disponíveis
 const certificates: Certificate[] = [
 	{
 		image: require("../assets/Certificado_Fundamentos_do_Suporte_Tecnico.jpg"),

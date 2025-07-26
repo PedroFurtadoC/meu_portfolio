@@ -1,10 +1,8 @@
 import { Solution } from "@/app/content/solutions-content";
-import { DotLottie, DotLottieReact } from "@lottiefiles/dotlottie-react";
-import React, { useState } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import React from "react";
 
 const SolutionsCard = ({ lottie, title, text, optionalText }: Solution) => {
-	const [dotLottie, setDotLottie] = useState<DotLottie | null>(null);
-
 	return (
 		<div
 			className="relative flex gap-12 solution-card w-full"
@@ -12,9 +10,6 @@ const SolutionsCard = ({ lottie, title, text, optionalText }: Solution) => {
 		>
 			<DotLottieReact
 				src={lottie}
-				/* dotLottieRefCallback={setDotLottie}
-				onMouseEnter={() => dotLottie?.play()}
-				onMouseLeave={() => dotLottie?.pause()} */
 				autoplay
 				loop
 				className="hidden xl:contents"

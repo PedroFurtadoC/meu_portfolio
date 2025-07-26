@@ -5,27 +5,29 @@ interface Props {
 }
 
 const PageLoader = ({ isLoading }: Props) => {
-	const [shouldRender, setShouldRender] = useState(isLoading);
+	const [shouldRender, setShouldRender] = useState(isLoading); // Controla se o loader deve ser renderizado
 
 	useEffect(() => {
 		let timeout: NodeJS.Timeout;
 
 		if (isLoading) {
-			setShouldRender(true);
-			document.body.style.overflowY = "hidden";
+			setShouldRender(true); // Mostrar loader imediatamente
+			document.body.style.overflowY = "hidden"; // Bloqueia scroll da página enquanto carrega
 		} else {
-			document.body.style.overflowY = "auto";
+			document.body.style.overflowY = "auto"; // Libera scroll quando não está carregando
+			// Após delay, esconde loader para permitir transição suave
 			timeout = setTimeout(() => {
 				setShouldRender(false);
 			}, 1100);
 		}
 
+		// Limpa timeout se o componente desmontar ou isLoading mudar
 		return () => clearTimeout(timeout);
 	}, [isLoading]);
 
 	const text = "CARREGANDO CONTEÚDO...";
 
-	if (!shouldRender) return null;
+	if (!shouldRender) return null; // Não renderiza nada se não deve mostrar
 
 	return (
 		<div

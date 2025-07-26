@@ -1,11 +1,19 @@
+/**
+ * Lista de perguntas frequentes (FAQ) com suas respectivas respostas.
+ * As respostas podem ser textos simples ou elementos React (como um botão de agendamento).
+ * Também inclui o componente `Meeting`, usado em uma das respostas para permitir marcação de reunião via Calendly.
+ */
+
 import { ReactElement } from "react";
 import useCalendlyStore from "../stores/calendlyStore";
 
+// Interface que define o formato de uma FAQ
 export interface FAQ {
-	question: string;
-	answer: string | ReactElement;
+	question: string; // Pergunta frequente
+	answer: string | ReactElement; // Resposta (pode ser texto ou JSX)
 }
 
+// Lista de perguntas frequentes sobre o serviço
 const FAQContent: FAQ[] = [
 	{
 		question: "Para quem é o seu trabalho?",
@@ -21,7 +29,7 @@ const FAQContent: FAQ[] = [
 	},
 	{
 		question: "Como marco uma reunião com você?",
-		answer: <Meeting />,
+		answer: <Meeting />, // Componente JSX que oferece interação direta com o Calendly
 	},
 	{
 		question: "Como funciona o seu processo de trabalho?",
@@ -31,6 +39,7 @@ const FAQContent: FAQ[] = [
 
 export default FAQContent;
 
+// Componente JSX usado como resposta interativa na FAQ
 function Meeting() {
 	const toggleCalendly = useCalendlyStore((s) => s.toggleCalendly);
 	return (
